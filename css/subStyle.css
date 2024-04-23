@@ -112,6 +112,7 @@
 /* 게시판 정보 */
 .brd-info {display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 1.6rem;}
 .brd-btn-wrap {display: flex; align-items: center; justify-content: space-between; gap: 12px;}
+.brd-btn-wrap a, .brd-btn-wrap input[type="button"] {height: 4rem;}
 .brd-num {display: flex; align-items: center; font-size: 1.4rem;}
 .brd-num li:after {display: inline-block; content: ''; height: 12px; width: 1px; background: #999; margin: 0 10px;}
 .brd-num li:last-child:after {display: none;}
