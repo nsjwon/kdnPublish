@@ -17,155 +17,344 @@
     </style>
 </head>
 <body class="scroll">
-    <!-- wrap layout:s -->
-    <div id="wrap">        
-        
-        <!-- 분임조목록 등록/수정 팝업 시작 -->
-        <div id="CircleEdit" class="popup-panel">
-            <div class="popup-bg"></div>
-            <div class="popup-content popup-content-tmofAdd">
-                <div class="popup-header">
-                    <h2>분임조 목록</h2>
-                    <a class="close-button" href="#none"></a>
-                </div>
-                <div class="popup-body flex-col">
-                    
-                    <!-- 분임조 파일 등록/수정 테이블:s -->
-                    <table class="board-table popup">
-                        <caption class="hide">분임조 목록</caption>
-                        <colgroup>
-                            <col style="width: 157px;">
-                            <col>
-                            <col style="width: 157px;">
-                            <col>
-                        </colgroup>
-                        <tbody>
-                            <tr>
-                                <th scope="row">제목</th>
-                                <td colspan="3" class="check-type">
-                                    <input type="text" name="fileTitle">
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>등록자</th>
-                                <td>홍길동(123456)</td>
-                                <th>등록일</th>
-                                <td>2024. 07. 03</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">파일첨부</th>
-                                <td  colspan="3" class="file-upload">
-                                    <div class="flex-col">
-                                        <div class="flex-bt">
-                                            <input type="text" name="loadFile" id="loadFile" value="첨부파일.hwp" class="overtext" readonly>
-                                            <input type="button" class="btn-searchfile" value="파일찾기" id="searchFileBtn">
-                                        </div>
-                                        <ul class="att-file">
-                                            <li>첨부파일.hwp<span>(283.52KB)</span><a href="#none" class="ml8"><img src="../images/board/ic_del-file.svg" alt=""></a></li>
-                                        </ul>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>등록양식 다운로드</th>
-                                <td colspan="3">분임조원목록_등록양식.xls</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <!-- 분임조 파일 등록/수정 테이블:e -->
-
-                    <!-- board note:s -->
-                    <!-- <div class="board-note-wrap"> -->
-                        <p class="caution-txt mt10">※ 파일첨부는 등록양식을 다운받아 양식에 맞게 작성하여 등록해 주시기 바랍니다. 등록양식에 맞지 않을경우 조원목록이 화면에 보이지 않습니다.</p>
-                    <!-- </div> -->
-                    <!-- board note:e -->
-
-                    <!-- 분임조 목록 상세현황:s -->
-                    <div class="board-block mt20">
-                        <div class="board-title">
-                            <!-- <h4 class="h4-tit">분임조 목록 상세현황</h4> -->
-                        </div>
-                        <div class="inner-table-wrap square">    
-                            <table class="board-table inner-table align-center">
-                                <caption class="hide">분임조 목록 상세현황 리스트</caption>
-                                <colgroup>
-                                    <col style="width: 4%;">
-                                    <col style="width: 10%;">
-                                    <col style="width: 20%;">
-                                    <col style="width: 8%;">
-                                    <col style="width: 8%;">
-                                    <col style="width: 8%;">
-                                    <col style="width: 8%;">
-                                </colgroup>
-                                <thead>
-                                    <tr>
-                                        <th>No</th>
-                                        <th>분임조명</th>
-                                        <th>과제명</th>
-                                        <th>부서명</th>
-                                        <th>성명</th>
-                                        <th>역할</th>
-                                        <th>상세역할</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>2024년도 분임조</td>
-                                        <td>연말정산 시스템 고도화로 업무처리시간 단축</td>
-                                        <td>품질혁신부</td>
-                                        <td>김지은(321654)</td>
-                                        <td>조원</td>
-                                        <td>발표자</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>2024년도 분임조</td>
-                                        <td>연말정산 시스템 고도화로 업무처리시간 단축</td>
-                                        <td>품질혁신부</td>
-                                        <td>김상은(321654)</td>
-                                        <td>조원</td>
-                                        <td>오퍼레이션</td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>2024년도 분임조</td>
-                                        <td>연말정산 시스템 고도화로 업무처리시간 단축</td>
-                                        <td>품질혁신부</td>
-                                        <td>김지호(321654)</td>
-                                        <td>조원</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>4</td>
-                                        <td>2024년도 분임조</td>
-                                        <td>내부역량 강화 세미나 기획안</td>
-                                        <td>품질혁신부</td>
-                                        <td>김지유(321654)</td>
-                                        <td>조원</td>
-                                        <td></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <!-- 분임조 목록 상세현황:e -->
-                </div>
-                <div class="popup-btn-wrap">
-                    <div class="btn-wrap">
-                        <input type="button" value="닫기" class="btn-lightgray close-button">
-                        <!-- <input type="button" value="삭제" class="btn-delete"> -->
-                        <input type="button" value="등록" class="btn-confirm">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- 분임조목록 등록/수정 팝업 끝 -->
-
-
+    <!-- 반복영역 건너뛰기 -->
+    <div id="skipNav">
+        <a href="#main">본문 바로가기</a>
+        <a href="#footer-sub">하단 바로가기</a>
     </div>
-    <!-- wrap layout:e -->
-    
+    <!-- //반복영역 건너뛰기 -->
+    <div id="wrap">
+        <header id="header" class="open">
+            <div class="header-layout sub-page">
+                <div class="header-left">
+                    <h1 id="logo"><a href="./SGST-UI-01-001.html"><img src="../images/main/kdn_logo.svg" alt="kdn 제안관리시스템"></a></h1>
+                    <nav id="gnb">
+                        <ul>
+                            <li>
+                                <a href="#none"><span>제안검토</span></a>
+                                <ul class="depth2">
+                                    <li><a href="./SGST-UI-02-001.html">사전검토</a></li>
+                                    <li><a href="./SGST-UI-02-005.html">검토접수</a></li>
+                                    <li><a href="./SGST-UI-02-007.html">검토결과</a></li>
+                                    <li><a href="./SGST-UI-02-009.html">부서장승인</a></li>
+                                    <li><a href="./SGST-UI-02-011.html">개선활동</a></li>
+                                    <li><a href="./SGST-UI-02-014.html">심의결과</a></li>
+                                    <li><a href="./SGST-UI-02-017.html">사후관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none"><span>테마제안</span></a>
+                                <ul class="depth2">
+                                    <li><a href="./SGST-UI-03-001.html">테마제안</a></li>
+                                    <li><a href="./SGST-UI-08-022.html">테마이벤트</a></li>
+                                    <li><a href="./SGST-UI-03-007.html">포상금지급관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none"><span>경진대회</span></a>
+                                <ul class="depth2">
+                                    <li><a href="./SGST-UI-04-001.html">경진대회</a></li>
+                                    <li><a href="./SGST-UI-04-010.html">포상금지급관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none"><span>분임조</span></a>
+                                <ul class="depth2">
+                                    <li><a href="./SGST-UI-05-001.html">분임조관리</a></li>
+                                    <li><a href="./SGST-UI-05-010.html">과제선정평가</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none"><span>제안검색</span></a>
+                                <ul class="depth2">
+                                    <li><a href="./SGST-UI-06-001.html">통합검색</a></li>
+                                    <li><a href="./SGST-UI-06-003.html">우수과제</a></li>
+                                    <li><a href="./SGST-UI-06-005.html">부서실적</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none"><span>나의활동</span></a>
+                                <ul class="depth2">
+                                    <li><a href="./SGST-UI-07-001.html">제안실적</a></li>
+                                    <li><a href="./SGST-UI-04-008.html">경진대회실적</a></li>
+                                    <li><a href="./SGST-UI-05-009.html">분임조실적</a></li>
+                                </ul>
+                            </li>
+                            <li class="focus">
+                                <a href="#none"><span>관리</span></a>
+                                <ul class="depth2">
+                                    <li><a href="./SGST-UI-08-001.html">코드관리</a></li>
+                                    <li><a href="./SGST-UI-08-005.html">권한관리</a></li>
+                                    <li><a href="./SGST-UI-08-009.html">포상금지급관리</a></li>
+                                    <li><a href="./SGST-UI-08-011.html">공지사항관리</a></li>
+                                    <li><a href="./SGST-UI-08-014.html">검토기준표관리</a></li>
+                                    <li><a href="./SGST-UI-08-015.html">사전검토 메시지관리</a></li>
+                                    <li><a href="./SGST-UI-08-017.html">사후관리</a></li>
+                                    <li><a href="./SGST-UI-08-032.html">이벤트관리</a></li>
+                                    <li><a href="./SGST-UI-08-028.html">검토요청</a></li>
+                                    <li><a href="./SGST-UI-08-029.html">분임조목록</a></li>
+                                    <li><a href="./SGST-UI-08-030.html">제안통계정보</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header-right">
+                    <div class="user-wrap">
+                        <div class="log-time">
+                            <span>2024-01-05 10:04</span>
+                        </div>
+                        <span><em>윤지완 [기획관리본부]</em>님, 안녕하세요.</span>
+                    </div>
+                    <a href="#none" class="btn-login">로그아웃</a>
+                </div>
+                <div class="gnb-bg"></div>
+                <div class="dim"></div>
+            </div>
+        </header>
+        <main id="sub-container">
+            <div id="sub-gnb-wrap">
+                <ul class="one-depth">
+                    <li class="d1">
+                        <a href="#none">제안검토</a>
+                        <ul class="two-depth">
+                            <li><a href="./SGST-UI-02-001.html">사전검토</a></li>
+                            <li><a href="./SGST-UI-02-005.html">검토접수</a></li>
+                            <li><a href="./SGST-UI-02-007.html">검토결과</a></li>
+                            <li><a href="./SGST-UI-02-009.html">부서장승인</a></li>
+                            <li><a href="./SGST-UI-02-011.html">개선활동</a></li>
+                            <li><a href="./SGST-UI-02-014.html">심의결과</a></li>
+                            <li><a href="./SGST-UI-02-017.html">사후관리</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="d1">
+                        <a href="#none">테마제안</a>
+                        <ul class="two-depth">
+                            <li><a href="./SGST-UI-03-001.html">테마제안</a></li>
+                            <li><a href="./SGST-UI-08-022.html">테마이벤트</a></li>
+                            <li><a href="./SGST-UI-03-007.html">포상금지급관리</a></li>
+                        </ul>
+                    </li>
+                    <li class="d1">
+                        <a href="#none">경진대회</a>
+                        <ul class="two-depth">
+                            <li><a href="./SGST-UI-04-001.html">경진대회</a></li>
+                            <li><a href="./SGST-UI-04-010.html">포상금지급관리</a></li>
+                        </ul>
+                    </li>
+                    <li class="d1">
+                        <a href="#none">분임조</a>
+                        <ul class="two-depth">
+                            <li><a href="./SGST-UI-05-001.html">분임조관리</a></li>
+                            <li><a href="./SGST-UI-05-010.html">과제선정평가</a></li>
+                        </ul>
+                    </li>
+                    <li class="d1">
+                        <a href="#none">제안검색</a>
+                        <ul class="two-depth">
+                            <li><a href="./SGST-UI-06-001.html">통합검색</a></li>
+                            <li><a href="./SGST-UI-06-003.html">우수과제</a></li>
+                            <li><a href="./SGST-UI-06-005.html">부서실적</a></li>
+                        </ul>
+                    </li>
+                    <li class="d1">
+                        <a href="#none">나의활동</a>
+                        <ul class="two-depth">
+                            <li><a href="./SGST-UI-07-001.html">제안실적</a></li>
+                            <li><a href="./SGST-UI-04-008.html">경진대회실적</a></li>
+                            <li><a href="./SGST-UI-05-009.html">분임조실적</a></li>
+                        </ul>
+                    </li>
+                    <li class="d1 active">
+                        <a href="#none">관리</a>
+                        <ul class="two-depth">
+                            <li><a href="./SGST-UI-08-001.html">코드관리</a></li>
+                            <li><a href="./SGST-UI-08-005.html">권한관리</a></li>
+                            <li><a href="./SGST-UI-08-009.html">포상금지급관리</a></li>
+                            <li><a href="./SGST-UI-08-011.html">공지사항관리</a></li>
+                            <li><a href="./SGST-UI-08-014.html">검토기준표관리</a></li>
+                            <li><a href="./SGST-UI-08-015.html">사전검토 메시지관리</a></li>
+                            <li><a href="./SGST-UI-08-017.html">사후관리</a></li>
+                            <li><a href="./SGST-UI-08-032.html">이벤트관리</a></li>
+                            <li><a href="./SGST-UI-08-028.html">검토요청</a></li>
+                            <li class="focus"><a href="./SGST-UI-08-029.html">분임조목록</a></li>
+                            <li><a href="./SGST-UI-08-030.html">제안통계정보</a></li>
+                        </ul>
+                    </li>
+                    <li class="d1 one-menu">
+                        <a href="./SGST-UI-01-003.html">공지사항</a>
+                    </li>
+                    <li class="regist-card">
+                        <a href="./SGST-UI-07-003.html" class="gt-regist"><span>제안등록 바로가기</span></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 서브페이지 컨텐츠 layout:s -->
+            <div class="sub-content-wrap">
+                <div class="sub-content">
+                    <!-- 현재 페이지 경로:s -->
+                    <ul class="menu-nav">
+                        <li><img src="../images/board/ic_home.svg" alt="home"></li>
+                        <li><img src="../images/board/ic_depth.svg" alt="depth"></li>
+                        <li>관리</li>
+                        <li><img src="../images/board/ic_depth.svg" alt="depth"></li>
+                        <li>분임조목록</li>
+                    </ul>
+                    <!-- 현재 페이지 경로:e -->
+                    <div class="dt-wrap">
+                        <h2 class="h2-tit">분임조목록</h2>
+                    </div>
+                    <div class="sub-content-inner">
+                        <div class="board-block">
+                            <div class="board-title">
+                                <h4 class="h4-tit">분임조 등록</h4>
+                                <!-- <p><span class="rq-mark">*</span>표시는 필수 입력사항으로 반드시 입력 바랍니다.</p> -->
+                            </div>
+                            <div class="board-list">
+                                <!-- 분임조 파일 등록/수정 테이블:s -->
+                                <table class="board-table">
+                                    <caption class="hide">분임조 목록</caption>
+                                    <colgroup>
+                                        <col style="width: 157px;">
+                                        <col>
+                                        <col style="width: 157px;">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">제목</th>
+                                            <td colspan="3" class="check-type">
+                                                <input type="text" name="fileTitle">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>등록자</th>
+                                            <td>홍길동(123456)</td>
+                                            <th>등록일</th>
+                                            <td>2024. 07. 03</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">파일첨부</th>
+                                            <td  colspan="3" class="file-upload">
+                                                <div class="flex-col">
+                                                    <div class="flex-bt">
+                                                        <input type="text" name="loadFile" id="loadFile" value="첨부파일.hwp" class="overtext" readonly>
+                                                        <input type="button" class="btn-searchfile" value="파일찾기" id="searchFileBtn">
+                                                    </div>
+                                                    <ul class="att-file">
+                                                        <li>첨부파일.hwp<span>(283.52KB)</span><a href="#none" class="ml8"><img src="../images/board/ic_del-file.svg" alt=""></a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>등록양식 다운로드</th>
+                                            <td colspan="3">분임조원목록_등록양식.xls</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!-- 분임조 파일 등록/수정 테이블:e -->
+            
+                                <!-- board note:s -->
+                                <!-- <div class="board-note-wrap"> -->
+                                    <p class="caution-txt mt10 pcol1">※ 파일첨부는 등록양식을 다운받아 양식에 맞게 작성하여 등록해 주시기 바랍니다. 등록양식에 맞지 않을경우 조원목록이 화면에 보이지 않습니다.</p>
+                                <!-- </div> -->
+                                <!-- board note:e -->
+            
+                                <!-- 분임조 목록 상세현황:s -->
+                                <div class="board-block mt20">
+                                    <div class="board-title">
+                                        <!-- <h4 class="h4-tit">분임조 목록 상세현황</h4> -->
+                                    </div>
+                                    <div class="inner-table-wrap square">    
+                                        <table class="board-table inner-table align-center">
+                                            <caption class="hide">분임조 목록 상세현황 리스트</caption>
+                                            <colgroup>
+                                                <col style="width: 4%;">
+                                                <col style="width: 10%;">
+                                                <col style="width: 20%;">
+                                                <col style="width: 8%;">
+                                                <col style="width: 8%;">
+                                                <col style="width: 8%;">
+                                                <col style="width: 8%;">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>No</th>
+                                                    <th>분임조명</th>
+                                                    <th>과제명</th>
+                                                    <th>부서명</th>
+                                                    <th>성명</th>
+                                                    <th>역할</th>
+                                                    <th>상세역할</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>2024년도 분임조</td>
+                                                    <td>연말정산 시스템 고도화로 업무처리시간 단축</td>
+                                                    <td>품질혁신부</td>
+                                                    <td>김지은(321654)</td>
+                                                    <td>조원</td>
+                                                    <td>발표자</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>2024년도 분임조</td>
+                                                    <td>연말정산 시스템 고도화로 업무처리시간 단축</td>
+                                                    <td>품질혁신부</td>
+                                                    <td>김상은(321654)</td>
+                                                    <td>조원</td>
+                                                    <td>오퍼레이션</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>2024년도 분임조</td>
+                                                    <td>연말정산 시스템 고도화로 업무처리시간 단축</td>
+                                                    <td>품질혁신부</td>
+                                                    <td>김지호(321654)</td>
+                                                    <td>조원</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>2024년도 분임조</td>
+                                                    <td>내부역량 강화 세미나 기획안</td>
+                                                    <td>품질혁신부</td>
+                                                    <td>김지유(321654)</td>
+                                                    <td>조원</td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!-- 분임조 목록 상세현황:e -->
+                            </div>
+                        </div>
+                        <!-- 버튼 영역:s -->
+                        <div class="board-btn-wrap">
+                            <div class="btn-wrap">
+                                <input type="button" value="목록" class="btn-listview">
+                                <input type="button" value="삭제" class="btn-delete">
+                                <input type="button" value="수정" class="btn-edit">
+                            </div>
+                        </div>
+                        <!-- 버튼 영역:e -->
+                    </div>
+                </div>
+                <!-- 서브페이지 풋터:s -->
+                <footer id="footer-sub">
+                    <p>(58322)전라남도 나주시 빛가람로 661 (BITGARAM-RO 661)</p>
+                    <p>© 한전KDN(주). All right reserved.</p>
+                </footer>
+                <!-- 서브페이지 풋터:e -->
+            </div>
+            <!-- 서브페이지 컨텐츠 layout:e -->
+        </main>
+    </div>
 </body>
 </html>
 
