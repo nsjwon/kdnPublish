@@ -56,8 +56,9 @@
 .brd-half-type {display: flex; gap: 4rem; align-items: flex-start; justify-content: space-between;}
 .brd-search {position: relative; display: flex; justify-content: space-between; width: 100%; margin-right: 4rem; margin-bottom: 3rem; border-radius: 6px; background: #e4e9f3; border: 1px solid #c5cce0; padding: 3rem 4rem;}
 .brd-search {flex: 1;}
-.brd-search.oneline .search-section > div {min-width: unset; width: fit-content;}
+.brd-search.oneline .search-section > div {min-width: 30%; width: 100%;}
 .brd-search.oneline .search-section > div:nth-child(2n), .brd-search.oneline .search-section > div {margin-right: 5rem;}
+.brd-search.twoline .search-section > div {min-width: 0; width: 46%;}
 .brd-search-btn {display: flex; align-items: flex-end; justify-content: flex-end;}
 .brd-search-btn.float {position: absolute; right: 4rem; bottom: 3rem;}
 .brd-search .search-section {display: flex; justify-content: flex-start; align-items: center; flex-wrap: wrap; gap: 10px;}
@@ -358,7 +359,7 @@ input {padding: 0.8rem 1.3rem 0.8rem 1.3rem; margin: 0; border-radius: 4px; -web
 input[type="checkbox"], input[type="radio"] {cursor: pointer; vertical-align: middle; width: 2rem; height: 2rem; margin: 0; opacity: .5; -webkit-appearance: auto;}
 input[type="checkbox"]:checked, input[type="radio"]:checked {opacity: 1; accent-color: #242424;}
 input[type="checkbox"]:disabled {cursor: default;}
-select {text-transform: none; display: block; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; background: url(../images/common/select-arrow.svg) no-repeat calc(100% - 1.2rem) 52%/12px auto; border: 1px solid #e9e9ec;}
+select {text-transform: none; display: block; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; background: url(../images/common/select-arrow.svg) no-repeat right 1.2rem center; border: 1px solid #e9e9ec;}
 button, input[type=button] {transition: all ease 0.2s 0s;}
 textarea {position: relative; resize: none; background-color: #ffffff; line-height: 2.4rem; width: 100%; display: inline-block; margin: 0; box-sizing: border-box; vertical-align: middle; border: 1px solid #e9e9ec; border-radius: 4px; font-size: 1.5rem;}
 textarea::-webkit-scrollbar {width: 1em;}
