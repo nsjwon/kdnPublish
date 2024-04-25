@@ -21,7 +21,7 @@ caption, legend {position: absolute; width: 1px; height: 1px; padding: 0; margin
 button, input, optgroup, select, textarea {font-weight: 400; appearance:none; padding: 0;}
 select, input {color: #383939; vertical-align: middle; font-family: 'Pretendard','Noto Sans KR','Apple SD Gothic Neo','맑은 고딕','Malgun Gothic','돋움','Dotum','굴림','Gulim','AppleGothic','Sans-serif'; font-weight: 400;}
 select::placeholder, input::placeholder {font-family: 'Pretendard','Noto Sans KR','Apple SD Gothic Neo','맑은 고딕','Malgun Gothic','돋움','Dotum','굴림','Gulim','AppleGothic','Sans-serif'; font-weight: 400; color: #D1D2D2;}
-select {-webkit-appearance:none; /* for chrome */-moz-appearance:none; /*for firefox*/appearance:none; background: url('../images/ic_select.svg') no-repeat 100% 50%/34px auto;}
+select {-webkit-appearance:none; /* for chrome */-moz-appearance:none; /*for firefox*/appearance:none;}
 select::-ms-expand{display:none;/*for IE10,11*/}
 em {font-weight: 600;}
 b, strong {font-weight: 700;}
