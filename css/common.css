@@ -4,6 +4,8 @@
 Author : jwshin
 Create date : 2024-01-19
 Version : v1.0
+Revision date : 2024-04-24
+Version : v2.0
 -------------------------------------------------*/
 
 /* usual setting */
@@ -269,3 +271,13 @@ ul.circle-30 li:before {position: absolute; content: ''; display: block; width: 
 	100% {transform: translate(-50%, -48%);}
 }
 
+
+/* IE10+ */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    header, main, nav, section, footer {display: block;}
+}
+
+/* IE9,10 */
+@media screen and (min-width:0\0){
+    header, main, nav, section, footer {display: block;}
+} 

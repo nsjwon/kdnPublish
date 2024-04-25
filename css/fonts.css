@@ -113,33 +113,36 @@ http://scripts.sil.org/OFL
     font-family: 'GmarketSans';
     font-weight: 300;
     font-style: normal;
-    src: url('fonts/gmarket/GmarketSansLight.eot');
-    src: url('fonts/gmarket/GmarketSansLight.eot?#iefix') format('embedded-opentype'),
-        url('fonts/gmarket/GmarketSansLight.woff2') format('woff2'),
-		url('fonts/gmarket/GmarketSansLight.woff') format('woff'),
-		url('fonts/gmarket/GmarketSansLight.ttf') format("truetype");
+/*     src: url('fonts/gmarket/GmarketSansLight.eot'); */
+    src: 
+/*     url('fonts/gmarket/GmarketSans-Light.eot?#iefix') format('embedded-opentype'), */
+/*         url('fonts/gmarket/GmarketSans-Light.woff2') format('woff2'), */
+		url('fonts/GmarketSans/GmarketSans-Light.woff') format('woff'),
+		url('fonts/GmarketSans/GmarketSans-Light.ttf') format("truetype");
     font-display: swap;
 } 
 @font-face {
     font-family: 'GmarketSans';
     font-weight: 500;
     font-style: normal;
-    src: url('fonts/gmarket/GmarketSansMedium.eot');
-    src: url('fonts/gmarket/GmarketSansMedium.eot?#iefix') format('embedded-opentype'),
-		url('fonts/gmarket/GmarketSansMedium.woff2') format('woff2'),
-		url('fonts/gmarket/GmarketSansMedium.woff') format('woff'),
-		url('fonts/gmarket/GmarketSansMedium.ttf') format("truetype");
+/*     src: url('fonts/gmarket/GmarketSansMedium.eot'); */
+    src: 
+/*     url('fonts/gmarket/GmarketSans-Medium.eot?#iefix') format('embedded-opentype'), */
+/* 		url('fonts/gmarket/GmarketSans-Medium.woff2') format('woff2'), */
+		url('fonts/GmarketSans/GmarketSans-Medium.woff') format('woff'),
+		url('fonts/GmarketSans/GmarketSans-Medium.ttf') format("truetype");
     font-display: swap;
 } 
 @font-face {
     font-family: 'GmarketSans';
     font-weight: 700;
     font-style: normal;
-    src: url('fonts/gmarket/GmarketSansBold.eot');
-    src: url('fonts/gmarket/GmarketSansBold.eot?#iefix') format('embedded-opentype'),
-		url('fonts/gmarket/GmarketSansBold.woff2') format('woff2'),
-		url('fonts/gmarket/GmarketSansBold.woff') format('woff'),
-		url('fonts/gmarket/GmarketSansBold.ttf') format("truetype");
+/*     src: url('fonts/gmarket/GmarketSansBold.eot'); */
+    src: 
+/*     url('fonts/gmarket/GmarketSans-Bold.eot?#iefix') format('embedded-opentype'), */
+/* 		url('fonts/gmarket/GmarketSans-Bold.woff2') format('woff2'), */
+		url('fonts/GmarketSans/GmarketSans-Bold.woff') format('woff'),
+		url('fonts/GmarketSans/GmarketSans-Bold.ttf') format("truetype");
     font-display: swap;
 } 
 
@@ -191,26 +194,26 @@ http://scripts.sil.org/OFL
 
 
 /* Gmarket Sans */
-@font-face {
-    font-family: 'GmarketSans';
-    src: local('GmarketSans Light'), url('fonts/GmarketSans/GmarketSans-Light.ttf') format('truetype'), url('fonts/GmarketSans/GmarketSans-Light.woff') format('woff');
-    font-weight: 300;
-    font-display: swap;
-    font-style: normal;
-}
+/* @font-face { */
+/*     font-family: 'GmarketSans'; */
+/*     src: local('GmarketSans Light'), url('fonts/GmarketSans/GmarketSans-Light.ttf') format('truetype'), url('fonts/GmarketSans/GmarketSans-Light.woff') format('woff'); */
+/*     font-weight: 300; */
+/*     font-display: swap; */
+/*     font-style: normal; */
+/* } */
 
-@font-face {
-    font-family: 'GmarketSans';
-    src: local('GmarketSans Medium'), url('fonts/GmarketSans/GmarketSans-Medium.ttf') format('truetype'), url('fonts/GmarketSans/GmarketSans-Light.Medium') format('woff');
-    font-weight: 500;
-    font-display: swap;
-    font-style: normal;
-}
+/* @font-face { */
+/*     font-family: 'GmarketSans'; */
+/*     src: local('GmarketSans Medium'), url('fonts/GmarketSans/GmarketSans-Medium.ttf') format('truetype'), url('fonts/GmarketSans/GmarketSans-Medium.woff') format('woff'); */
+/*     font-weight: 500; */
+/*     font-display: swap; */
+/*     font-style: normal; */
+/* } */
 
-@font-face {
-    font-family: 'GmarketSans';
-    src: local('GmarketSans Bold'), url('fonts/GmarketSans/GmarketSans-Bold.ttf') format('truetype'), url('fonts/GmarketSans/GmarketSans-Bold.woff') format('woff');
-    font-weight: 700;
-    font-display: swap;
-    font-style: normal;
-}
+/* @font-face { */
+/*     font-family: 'GmarketSans'; */
+/*     src: local('GmarketSans Bold'), url('fonts/GmarketSans/GmarketSans-Bold.ttf') format('truetype'), url('fonts/GmarketSans/GmarketSans-Bold.woff') format('woff'); */
+/*     font-weight: 700; */
+/*     font-display: swap; */
+/*     font-style: normal; */
+/* } */
