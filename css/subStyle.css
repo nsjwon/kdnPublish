@@ -73,13 +73,14 @@ Version : v2.0.1
 .brd-search .search-section:last-child {margin: 0;}
 .brd-search .search-section p {color: #222; font-weight: 500; font-size: 1.6rem; min-width: 90px; line-height: 4rem;}
 .brd-search .search-section p.wide {width: 116px;}
+.brd-search.flex-col>div {flex-grow: 1; flex-shrink: 1; flex-basis: auto;}
 .brd-search-form {flex: 1;}
 .brd-search input[type=text]:placeholder, .brd-search input[type=text]:-ms-input-placeholder {color: #a2a2a2 !important;}
 .brd-search select {width: 140px; padding: 0.8rem 3.8rem 0.8rem 1.3rem; margin: 0 0.6rem 0 0; background-color: #fff; font-size: 1.4rem; border: 1px solid #cfd7e4;}
 .search-section > div {width: 30%; margin-right: 3rem; display: flex; justify-content: flex-start; align-items: center;}
 .search-section > div:last-child {margin-right: 0;}
 /* .search-section > div.search-date.fit {width: fit-content;} */
-.search-date input[type=text] {background: #ffffff url(../images/board/ic_cal.svg) no-repeat right 0.8rem center; background-size: 22px; position: relative; width: 140px; padding: 1rem 4rem 1rem 1rem; margin: 0; font-size: 1.4rem; border: 1px solid #cfd7e4;}
+.search-date input[type=text] {background: #ffffff url(../images/board/ic_cal.svg) no-repeat right 0.8rem center; background-size: 22px; position: relative; width: 140px; padding: 1rem 4rem 1rem 1.3rem; margin: 0; font-size: 1.4rem; border: 1px solid #cfd7e4;}
 .search-date input[type=text]::placeholder, .search-date input[type=text]::-ms-input-placeholder {color: #a2a2a2 !important;}
 .brd-search input[type=text]:focus {outline: 2px solid #4e6bca; background: #fafbff;}
 .brd-search select:focus {outline: 2px solid #4e6bca; background: #fafbff url(../images/common/select-arrow.svg) no-repeat right 1.2rem 52%/12px auto;}
@@ -216,7 +217,7 @@ Version : v2.0.1
 
 /* 상세 테이블 */
 .board-table {width: 100%;}
-.board-table.borderT {border-top: 1px solid #4f4f4f;}
+.board-table.borderT tbody tr:first-child {border-top: 1px solid #4f4f4f;}
 .board-table th {background: #dae2f1; border-bottom: 1px solid #fff; padding: 2rem; color: #333; font-size: 1.5rem; line-height: 2rem; font-weight: 500; text-align: center; word-break: keep-all;}
 .board-table td {padding: 1rem 2rem; border-bottom: 1px solid #ddd;}
 .board-table td select {padding: 0 40px 0 14px; display: inline-block;}
@@ -324,11 +325,15 @@ Version : v2.0.1
 .in-body-btn input[type=button], .in-header-btn input[type=button] {width: 100px; height: 40px; border-radius: 4px;}
 
 /* 차트 영역 */
+.chart-wrapper>div:first-child {margin-right: 40px;}
 .chart-block {width: 100%; margin-top: 4rem;}
 .chart-title {width: 100%; padding: 0 0 2rem; display: flex; align-items: center; justify-content: space-between;}
 .chart-wrap {width: 100%; min-height: 36rem; padding: 4rem; border-radius: 6px; border: 1px solid #d9d9d9;}
 .apexcharts-text, .apexcharts-title-text, .apexcharts-legend-text, .apexcharts-xaxis-title, .apexcharts-yaxis-label {font-family: 'Pretendard','Noto Sans KR','Apple SD Gothic Neo','맑은 고딕','Malgun Gothic','돋움','Dotum','굴림','Gulim','AppleGothic','Sans-serif' !important;}
 .num-table-wrap {margin: 4rem 0;}
+.num-table-wrap.bordercol {border-top: 2px solid #3653B7;}
+.num-table-wrap .chart-title {border-bottom: 2px solid #3653B7;}
+.num-table-wrap .num-table {border-top: none;}
 .num-table {table-layout: fixed; box-sizing: border-box; border-collapse: collapse; width: 100%; margin: 0; font-size: 1.6rem; line-height: 1.2; border-spacing: 0; border-top: 2px solid #3653B7;}
 .num-table th {background: #f6f7ff; font-size: 1.6rem; vertical-align: middle; font-weight: 600; text-align: center; border-bottom: 1px solid #E3E9EF; border-right: 1px solid #E3E9EF; text-wrap: nowrap;}
 .num-table th, .num-table td {line-height: 2rem; padding: 0rem 1rem; height: 6rem; vertical-align: middle; text-align: center; border-bottom: 1px solid #E3E9EF; border-right: 1px solid #E3E9EF;}
@@ -355,7 +360,7 @@ Version : v2.0.1
 .num-table.process tr td:last-child {border-right: 1px solid #E3E9EF;}
 
 /* 제안실적 차트 영역 */
-.num-table-my {table-layout: fixed; box-sizing: border-box; border-collapse: collapse; width: 100%; margin: 0; font-size: 1.6rem; line-height: 1.2; border-spacing: 0; border-top: 2px solid #3653B7;}
+.num-table-my {table-layout: fixed; box-sizing: border-box; border-collapse: collapse; width: 100%; margin: 0; font-size: 1.6rem; line-height: 1.2; border-spacing: 0;}
 .num-table-my th, .num-table-my td {line-height: 1.5rem; padding: 2rem 1rem; vertical-align: middle; text-align: center; word-break: break-all; text-wrap: nowrap;}
 .num-table-my th {background: #e4e9f3; font-size: 1.6rem; font-weight: 600; border-bottom: 1px solid #fff; border-right: 1px solid #fff;}
 .num-table-my td {color: #333333; font-size: 1.5rem; border-bottom: 1px solid #E3E9EF; border-right: 1px solid #E3E9EF;}
@@ -597,6 +602,7 @@ a.btn-recheck:hover {background: #1F7C70 url(../images/button/ic_recheck-hover.s
 .search-section > div {margin-bottom: 10px;}
 .search-section > div:last-child {margin-bottom: 0;}
 .search-section > div.nearlast {margin-bottom: 0;}
+.search-section > div.nearlast.notlast {margin-bottom: 10px;}
 .search-section > div.w100 {width: 100% !important;}
 @media (max-width: 1984px) {
     .search-section > div.early {margin-top: 10px;}
@@ -605,6 +611,7 @@ a.btn-recheck:hover {background: #1F7C70 url(../images/button/ic_recheck-hover.s
     .search-section > div.nearlast {width: 100%; margin-bottom: 10px;}
     .brd-search.oneline .search-section > div {width: 100%; margin-bottom: 10px;}
     .brd-search.oneline .search-section > div.nearlast {margin-bottom: 10px;}
+    .brd-search.oneline .search-section > div:last-child {margin-bottom: 0;}
     .search-section > div:last-child {width: 100%;}
     .search-section > div.early {margin-top: 0;}
 }
@@ -614,6 +621,7 @@ a.btn-recheck:hover {background: #1F7C70 url(../images/button/ic_recheck-hover.s
 }
 @media (max-width: 1360px) {
     .search-section > div.nearlast {margin-bottom: 0;}
+    .search-section > div.nearlast.notlast {margin-bottom: 0;}
     .search-section > div:last-child {width: 100%; margin-top: 10px;}
 
 }

@@ -24,7 +24,7 @@ body {position: relative; background: #fff;}
 #header .header-left {display: flex; align-items: flex-start; justify-content: space-between; z-index: 260;}
 #header #logo {height: 80px;}
 #header #logo a {height: 100%; width: 100%; display: flex; align-items: center; justify-content: center;}
-#header .header-right {display: flex; align-items: center; justify-content: flex-end; height: 80px; z-index: 260;}
+#header .header-right {display: flex; align-items: center; justify-content: flex-end; height: 80px; z-index: 260; flex-grow: 1;}
 #header .header-right .user-wrap {display: flex; align-items: center; justify-content: space-between; margin-right: 20px;}
 #header .header-right .log-time {position: relative; font-size: 1.4rem; color: #43464c; line-height: 18px; margin-right: 20px;}
 #header .header-right .log-time:before {position: absolute; display: block; width: 18px; height: 18px; background: url(../images/main/ic_logtime.svg) no-repeat; content: ''; top: 0; left: -26px;}

@@ -4,8 +4,8 @@
 Author : jwshin
 Create date : 2024-01-19
 Version : v1.0
-Revision date : 2024-04-29
-Version : v2.0.1
+Revision date : 2024-04-24
+Version : v2.0
 -------------------------------------------------*/
 
 /* usual setting */
@@ -22,7 +22,7 @@ th {font-weight: inherit;}
 caption, legend {position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;}
 button, input, optgroup, select, textarea {font-weight: 400; appearance:none; padding: 0;}
 select, input {color: #383939; vertical-align: middle; font-family: 'Pretendard','Noto Sans KR','Apple SD Gothic Neo','맑은 고딕','Malgun Gothic','돋움','Dotum','굴림','Gulim','AppleGothic','Sans-serif'; font-weight: 400;}
-select::placeholder, input::placeholder {font-family: 'Pretendard','Noto Sans KR','Apple SD Gothic Neo','맑은 고딕','Malgun Gothic','돋움','Dotum','굴림','Gulim','AppleGothic','Sans-serif'; font-weight: 400; color: #D1D2D2;}
+select::placeholder, input::placeholder {font-family: 'Pretendard','Noto Sans KR','Apple SD Gothic Neo','맑은 고딕','Malgun Gothic','돋움','Dotum','굴림','Gulim','AppleGothic','Sans-serif'; font-weight: 400; color: #D1D2D2 !important;}
 select {-webkit-appearance:none; /* for chrome */-moz-appearance:none; /*for firefox*/appearance:none;}
 select::-ms-expand{display:none;/*for IE10,11*/}
 em {font-weight: 600;}
@@ -282,3 +282,12 @@ ul.circle-30 li:before {position: absolute; content: ''; display: block; width: 
 @media screen and (min-width:0\0){
     header, main, nav, section, footer {display: block;}
 } 
+
+
+::placeholder {color: #a2a2a2;} 
+:-ms-input-placeholder {color: #a2a2a2;} 
+::-ms-input-placeholder {color: #a2a2a2;} 
+::-moz-input-placeholder {color: #a2a2a2;} 
+::-webkit-input-placeholder {color: #a2a2a2;} 
+
+
