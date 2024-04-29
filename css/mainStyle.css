@@ -202,6 +202,9 @@ Version : v2.0
 .ck-result-wrap .ck-count .dot {width: 6px; height: 6px; background: #d9d9d9; border-radius: 3px;}
 .ck-result-wrap .ck-count strong {font-size: 1.7rem; line-height: 1.7rem; font-weight: 600; color: #1c1d1f;}
 
+@media (max-width: 1920px) {
+    .ck-result-wrap .ck-count li {margin-right: 4px;}
+}
 @media (max-width: 1720px) {
     .ck-result-wrap .ck-count {width: calc(100% - 110px);}
     .ck-result-wrap .ck-result {width: 110px;}
