@@ -259,7 +259,7 @@ Version : v2.0.1
 .board-table textarea.h15 {height: 15rem;}
 .board-table textarea.h10 {height: 10rem;}
 .board-table th.lh20 {line-height: 2rem; border-right: 1px solid #fff;}
-.att-file {margin: 0; display: flex; flex-direction: column; align-items: flex-start; gap: 1.6rem;}
+.att-file {margin: 0; display: flex; flex-direction: column; align-items: flex-start;}
 .att-file li {position: relative; padding-left: 27px; height: 18px; margin-top: 16px;}
 /* .att-file li:first-child {margin-top: 1rem;} */
 .att-file li:last-child {margin-bottom: 1rem;}
@@ -603,11 +603,12 @@ a.btn-recheck:hover {background: #1F7C70 url(../images/button/ic_recheck-hover.s
 }
 @media (max-width: 1920px) {
     .search-section > div.nearlast {width: 100%; margin-bottom: 10px;}
+    .brd-search.oneline .search-section > div {width: 100%; margin-bottom: 10px;}
     .brd-search.oneline .search-section > div.nearlast {margin-bottom: 10px;}
     .search-section > div:last-child {width: 100%;}
+    .search-section > div.early {margin-top: 0;}
 }
 @media (max-width: 1780px) {
-    .brd-search.oneline .search-section > div {width: 100%; margin-bottom: 10px;}
     .brd-search.oneline .search-section > div.nearlast {margin-bottom: 0;}
     .brd-search.oneline .search-section > div:last-child {margin-bottom: 0; margin-top: 10px;}
 }
