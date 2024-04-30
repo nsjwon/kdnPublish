@@ -432,9 +432,9 @@
                                     <caption class="hide">제안내용 리스트</caption>
                                     <colgroup>
                                         <col style="width: 157px;">
-                                        <col>
+                                        <col style="width: 15%;">
                                         <col style="width: 157px;">
-                                        <col>
+                                        <col style="width: 15%;">
                                         <col style="width: 157px;">
                                         <col>
                                     </colgroup>
@@ -452,7 +452,7 @@
                                             <td>전산</td>
                                             <th scope="row">검토부서</th>
                                             <td>
-                                                <input type="text" name="loadPart" id="loadPart" value="전력IT기술센터" readonly>
+                                                <input type="text" name="loadPart" id="loadPart" value="전력IT기술센터" readonly="readonly">
                                                 <input type="button" class="popup-button btn-searchpart" value="부서찾기" data-target="#findPart">
                                             </td>
                                         </tr>
@@ -463,7 +463,7 @@
                                             <td>홍길동(953341)</td>
                                             <th scope="row">검토자</th>
                                             <td>
-                                                <input type="text" name="loadPerson" id="loadPerson" value="장태경(9103245)" readonly>
+                                                <input type="text" name="loadPerson" id="loadPerson" value="장태경(9103245)" readonly="readonly">
                                                 <input type="button" class="popup-button btn-searchperson" value="조회" data-target="#findPerson">
                                             </td>
                                         </tr>
@@ -626,7 +626,7 @@
                                     </label>
                                 </td>
                                 <td>10</td>
-                                <td rowspan="4">10</td>
+                                <td rowspan="4" class="last-td">10</td>
                                 <!-- <td rowspan="4">10</td> -->
                             </tr>
                             <tr>
@@ -666,7 +666,7 @@
                                     </label>
                                 </td>
                                 <td>35</td>
-                                <td rowspan="4">35</td>
+                                <td rowspan="4" class="last-td">35</td>
                                 <!-- <td rowspan="4">35</td> -->
                             </tr>
                             <tr>
@@ -706,7 +706,7 @@
                                     </label>
                                 </td>
                                 <td>15</td>
-                                <td rowspan="4">12</td>
+                                <td rowspan="4" class="last-td">12</td>
                                 <!-- <td rowspan="4">15</td> -->
                             </tr>
                             <tr>
@@ -746,7 +746,7 @@
                                     </label>
                                 </td>
                                 <td>20</td>
-                                <td rowspan="4">20</td>
+                                <td rowspan="4" class="last-td">20</td>
                                 <!-- <td rowspan="4">20</td> -->
                             </tr>
                             <tr>
@@ -786,7 +786,7 @@
                                     </label>
                                 </td>
                                 <td>20</td>
-                                <td rowspan="4">20</td>
+                                <td rowspan="4" class="last-td">20</td>
                                 <!-- <td rowspan="4">20</td> -->
                             </tr>
                             <tr>
@@ -913,6 +913,7 @@
                     <div class="btn-wrap">
                         <!-- <input type="button" value="삭제" class="btn-delete"> -->
                         <input type="button" value="확인" class="btn-confirm">
+                        <input type="button" value="닫기" class="btn-confirm close-button">
                     </div>
                 </div>
             </div>
@@ -1017,6 +1018,7 @@
                     <div class="btn-wrap">
                         <!-- <input type="button" value="삭제" class="btn-delete"> -->
                         <input type="button" value="확인" class="btn-confirm">
+                        <input type="button" value="닫기" class="btn-confirm close-button">
                     </div>
                 </div>
             </div>

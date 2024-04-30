@@ -80,10 +80,11 @@ Version : v2.0.1
 .search-section > div {width: 30%; margin-right: 3rem; display: flex; justify-content: flex-start; align-items: center;}
 .search-section > div:last-child {margin-right: 0;}
 /* .search-section > div.search-date.fit {width: fit-content;} */
-.search-date input[type=text] {background: #ffffff url(../images/board/ic_cal.svg) no-repeat right 0.8rem center; background-size: 22px; position: relative; width: 140px; padding: 1rem 4rem 1rem 1.3rem; margin: 0; font-size: 1.4rem; border: 1px solid #cfd7e4;}
+.search-date input[type=text] {background: #ffffff url(../images/board/ic_cal.svg) no-repeat right 0.8rem center; background-size: 22px; position: relative; width: 140px; padding: 1rem 4rem 1rem 1.3rem; margin: 0; font-size: 1.4rem;}
 .search-date input[type=text]::placeholder, .search-date input[type=text]::-ms-input-placeholder {color: #a2a2a2 !important;}
 .brd-search input[type=text]:focus {outline: 2px solid #4e6bca; background: #fafbff;}
 .brd-search select:focus {outline: 2px solid #4e6bca; background: #fafbff url(../images/common/select-arrow.svg) no-repeat right 1.2rem 52%/12px auto;}
+.brd-search .search-date input[type=text] {border: 1px solid #cfd7e4;}
 .search-date input[type=text]:focus {outline: 2px solid #4e6bca; background: #fafbff url(../images/board/ic_cal.svg) no-repeat right 0.8rem 52%/14px auto; background-size: 22px;}
 .search-date > span {margin: 0 0.8rem; color: #333; font-size: 1.6rem; font-weight: 400;}
 .search-section > div.check-wrap {gap: 4rem; width: 100%; display: flex; align-items: flex-start;}
@@ -133,7 +134,7 @@ Version : v2.0.1
 .brd-list-01 thead tr {height: 6rem;}
 .brd-list-01 tbody tr {height: 6.2rem;}
 .brd-list-01 tbody tr.input-type td {padding: 1rem;}
-.brd-list-01 th {padding: 1.9rem 1rem; vertical-align: middle; font-weight: 600; text-align: center; position: relative; border-bottom: 1px solid #4f4f4f; text-wrap: nowrap;}
+.brd-list-01 th {padding: 1.9rem 1rem; vertical-align: middle; font-weight: 600; text-align: center; position: relative; border-bottom: 1px solid #4f4f4f; white-space: nowrap;}
 .brd-list-01 th:before {content: ''; display: block; height: 18px; width: 1px; background: #e4e4e4; position: absolute; left: 0; top: calc(50% - 9px);}
 .brd-list-01 th:first-child:before {display: none;}
 .brd-list-01 tr {position:relative;}
@@ -234,11 +235,16 @@ Version : v2.0.1
 .board-table td.check-type.readonly label {cursor: text;}
 .board-table td.check-type.readonly input[type="radio"] {cursor: default;}
 .board-table td input[type="text"]:read-only {background: #efeff2;}
+.board-table td input[type="text"][readonly="readonly"] {background: #efeff2;}
 .board-table td input[type="text"]:read-only:focus {outline: none;}
+.board-table td input[type="text"][readonly="readonly"]:focus {outline: none;}
 .board-table td input.small {width: 5.8rem; text-align: right;}
+.board-table td input#loadPerson, .board-table td input#loadPart, .board-table td input#loadThema {max-width: 60%;}
 /* .board-table td.file-download .att-file {margin-top: 1rem;} */
 .board-table td.file-upload input[type="text"]:read-only {background: #fff; min-width: 46rem;}
+.board-table td.file-upload input[type="text"][readonly="readonly"] {background: #fff; min-width: 46rem;}
 .board-table td.file-upload input[type="text"]:read-only:focus {outline: none;}
+.board-table td.file-upload input[type="text"][readonly="readonly"]:focus {outline: none;}
 .board-table td .num-type input[type="text"] {width: 6.8rem; text-align: center;}
 .board-table td .num-type input[type="text"]:first-child {width: 5.8rem;}
 .board-table tr.longtxt {height: 12rem;}
@@ -261,7 +267,7 @@ Version : v2.0.1
 .board-table textarea.h10 {height: 10rem;}
 .board-table th.lh20 {line-height: 2rem; border-right: 1px solid #fff;}
 .att-file {margin: 0; display: flex; flex-direction: column; align-items: flex-start;}
-.att-file li {position: relative; padding-left: 27px; height: 18px; margin-top: 16px;}
+.att-file li {position: relative; padding-left: 27px; height: 18px; margin-top: 10px;}
 /* .att-file li:first-child {margin-top: 1rem;} */
 .att-file li:last-child {margin-bottom: 1rem;}
 .att-file li:before {position: absolute; left: 3px; top: 0; width: 15px; height: 18px; background: url(../images/board/ic_attfile.svg) no-repeat; content: ''; display: block;}
@@ -282,13 +288,14 @@ Version : v2.0.1
 /* 코멘트 영역 스타일 */
 .comment-box {display: flex; flex-direction: column; padding: 3rem; margin-top: 1.8rem;}
 .comment-box>p {margin-top: 1rem; font-size: 1.4rem; color: #818999;}
-.comment-input {display: flex; gap: 0.8rem;}
-.cmt-input {flex: 1;}
+.comment-input {display: flex;}
+.cmt-input {flex: 1; margin-right: 8px;}
 .cmt-input input[type="text"] {width: 100%; border: 1px solid #cfd7e4;}
 .comment-history {display: flex; flex-direction: column; gap: 1.8rem; margin: 1.8rem 0;}
 .comment-item {border-top: 1px solid #e3e3e7; border-bottom: 1px solid #e3e3e7; padding: 3rem 3rem 2.4rem; display: flex; flex-direction: column;}
-.cmt-info {display: flex; align-items: center; gap: 1.3rem; padding-bottom: 1.6rem; border-bottom: 1px dashed #e9e9e9;}
-.cmt-person {display: flex; align-items: center; gap: 0.7rem;}
+.cmt-info {display: flex; align-items: center; padding-bottom: 1.6rem; border-bottom: 1px dashed #e9e9e9;}
+.cmt-person {display: flex; align-items: center; margin-right: 13px;}
+.cmt-person img {margin-right: 7px;}
 .cmt-person span {font-weight: 500; line-height: 1.5rem;}
 .cmt-time span {color: #b6b7b8; line-height: 1.5rem;}
 .cmt-text {padding-top: 1.6rem; font-size: 1.6rem; line-height: 2.5rem;}
@@ -297,7 +304,7 @@ Version : v2.0.1
 .board-btn-wrap.middle {margin: 2.4rem 0;}
 .board-btn-wrap .btn-wrap {justify-content: center;}
 .board-btn-wrap .btn-wrap.end {justify-content: flex-end;}
-.board-btn-wrap .btn-wrap input[type="button"] {margin-right: 10px; width: 10rem; height: 40px; border-radius: 4px; transition: all ease 0.2s 0s;}
+.board-btn-wrap .btn-wrap input[type="button"] {margin-right: 10px; min-width: 10rem; height: 40px; border-radius: 4px; transition: all ease 0.2s 0s;}
 
 .inner-btn-wrap {width: 100%; display: flex; align-items: center; justify-content: flex-end; gap: 8px;}
 
@@ -335,7 +342,7 @@ Version : v2.0.1
 .num-table-wrap .chart-title {border-bottom: 2px solid #3653B7;}
 .num-table-wrap .num-table {border-top: none;}
 .num-table {table-layout: fixed; box-sizing: border-box; border-collapse: collapse; width: 100%; margin: 0; font-size: 1.6rem; line-height: 1.2; border-spacing: 0; border-top: 2px solid #3653B7;}
-.num-table th {background: #f6f7ff; font-size: 1.6rem; vertical-align: middle; font-weight: 600; text-align: center; border-bottom: 1px solid #E3E9EF; border-right: 1px solid #E3E9EF; text-wrap: nowrap;}
+.num-table th {background: #f6f7ff; font-size: 1.6rem; vertical-align: middle; font-weight: 600; text-align: center; border-bottom: 1px solid #E3E9EF; border-right: 1px solid #E3E9EF; white-space: nowrap;}
 .num-table th, .num-table td {line-height: 2rem; padding: 0rem 1rem; height: 6rem; vertical-align: middle; text-align: center; border-bottom: 1px solid #E3E9EF; border-right: 1px solid #E3E9EF;}
 .num-table tr th:first-child {border-left: 1px solid #E3E9EF;}
 .num-table tr td:first-child {border-left: 1px solid #E3E9EF;}
@@ -361,7 +368,7 @@ Version : v2.0.1
 
 /* 제안실적 차트 영역 */
 .num-table-my {table-layout: fixed; box-sizing: border-box; border-collapse: collapse; width: 100%; margin: 0; font-size: 1.6rem; line-height: 1.2; border-spacing: 0;}
-.num-table-my th, .num-table-my td {line-height: 1.5rem; padding: 2rem 1rem; vertical-align: middle; text-align: center; word-break: break-all; text-wrap: nowrap;}
+.num-table-my th, .num-table-my td {line-height: 1.5rem; padding: 2rem 1rem; vertical-align: middle; text-align: center; word-break: break-all; white-space: nowrap;}
 .num-table-my th {background: #e4e9f3; font-size: 1.6rem; font-weight: 600; border-bottom: 1px solid #fff; border-right: 1px solid #fff;}
 .num-table-my td {color: #333333; font-size: 1.5rem; border-bottom: 1px solid #E3E9EF; border-right: 1px solid #E3E9EF;}
 .num-table-my tr {position:relative;}
@@ -371,7 +378,11 @@ Version : v2.0.1
 input, select, button {margin: 0; font-family: inherit; font-size: inherit; color: inherit; height: 4rem; -webkit-appearance: none; -moz-appearance: none; appearance: none;}
 input[type=submit], input[type=button] {cursor: pointer;}
 input[type="text"]:read-only {color: #aaa;}
-input[type="text"]:read-only::placeholder, input[type="text"]:read-only::-ms-input-placeholder {color: #aaa !important;}
+input[type="text"][readonly="readonly"] {color: #aaa;}
+input[type="text"]:read-only::placeholder {color: #aaa !important;}
+input[type="text"][readonly="readonly"]::placeholder {color: #aaa !important;}
+input[type="text"]:read-only::-ms-input-placeholder {color: #aaa !important;}
+input[type="text"][readonly="readonly"]::-ms-input-placeholder {color: #aaa !important;}
 input {padding: 0.8rem 1.3rem 0.8rem 1.3rem; margin: 0; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border: 1px solid #e9e9ec;}
 input[type="checkbox"], input[type="radio"] {cursor: pointer; vertical-align: middle; width: 2rem; height: 2rem; margin: 0; opacity: .5; -webkit-appearance: auto;}
 input[type="checkbox"]:checked, input[type="radio"]:checked {opacity: 1; accent-color: #242424;}
@@ -379,6 +390,7 @@ input[type="checkbox"]:disabled {cursor: default;}
 select {text-transform: none; display: block; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; background: url(../images/common/select-arrow.svg) no-repeat right 1.2rem center; border: 1px solid #e9e9ec;}
 button, input[type=button] {transition: all ease 0.2s 0s;}
 textarea {position: relative; resize: none; background-color: #ffffff; line-height: 2.4rem; width: 100%; display: inline-block; margin: 0; box-sizing: border-box; vertical-align: middle; border: 1px solid #e9e9ec; border-radius: 4px; font-size: 1.5rem;}
+textarea[readonly="readonly"] {color: #aaa;}
 textarea::-webkit-scrollbar {width: 1em;}
 textarea::-webkit-scrollbar-track {background: #ddd; border-radius: 1rem;}
 textarea::-webkit-scrollbar-thumb {background-color: #bababa; border-radius: 1rem;}
@@ -395,7 +407,7 @@ input[type=button].bw100 {min-width: 100px;}
 input[type=button].bw80 {min-width: 80px;}
 .btn-wrap input[type="button"] {height: 38px; border-radius: 4px; display: flex; align-items: center; justify-content: center; margin-right: 10px;}
 .btn-wrap input[type="button"]:last-child {margin-right: 0;}
-.search-text .btn-searchpart {background: #6c7282; color: #ffffff; border: none; padding: 1rem 2.8rem; font-size: 1.4rem; margin: 0 0.6rem;}
+.search-text .btn-searchpart {min-width: 104px; background: #6c7282; color: #ffffff; border: none; padding: 1rem 2.8rem; font-size: 1.4rem; margin: 0 0.6rem;}
 .search-text .btn-searchpart:hover {background: #4a5369; transition: all ease 0.2s 0s;}
 .btn-sorter {width: 8px; height: 16px; background: url(../images/button/btn_sorter.svg) no-repeat; margin-left: 8px; padding-bottom: 2px;}
 .btn-sorter.up {background: url(../images/button/btn_sorter-up.svg) no-repeat;}
@@ -448,9 +460,9 @@ input[type=button].bw80 {min-width: 80px;}
 .btn-delete:hover {background: #C32E2E;}
 .btn-transfer {background: #fff; color: #325bc4; border: 1px solid #325bc4; padding: 0 2rem; font-size: 1.4rem; font-weight: 500;}
 .btn-transfer:hover {background: #325bc4; color: #fff; border: 1px solid #325bc4;}
-.btn-confirm {background: #325bc4; color: #fff;}
+.btn-confirm {background: #325bc4; color: #fff; border: none;}
 .btn-confirm:hover {background: #1c44aa;}
-.btn-save {background: #325bc4; color: #fff;}
+.btn-save {background: #325bc4; color: #fff; border: none;}
 .btn-save:hover {background: #1c44aa;}
 a.btn-rewrite {height: 38px; border-radius: 4px; display: flex; align-items: center; justify-content: center; background: #fff url(../images/button/ic_rewrite.svg) no-repeat 21px 12px; color: #1F7C70; border: 1px solid #1F7C70; padding: 0 20px 0 41px; font-size: 1.4rem; font-weight: 500;}
 a.btn-rewrite:hover {background: #1F7C70 url(../images/button/ic_rewrite-hover.svg) no-repeat 21px 12px; color: #fff; border: 1px solid #1F7C70;}
@@ -533,7 +545,7 @@ a.btn-recheck:hover {background: #1F7C70 url(../images/button/ic_recheck-hover.s
 /* 이벤트관리 */
 .vtc-table-wrap {margin: 4rem 0;}
 .vtc-table {table-layout: fixed; box-sizing: border-box; border-collapse: collapse; width: 100%; margin: 0; font-size: 1.6rem; line-height: 1.2; border-spacing: 0; border-top: 2px solid #3653B7;}
-.vtc-table th {background: #dae2f1; font-size: 1.6rem; vertical-align: middle; font-weight: 500; text-align: center; border-bottom: 1px solid #E3E9EF; border-right: 1px solid #fff; text-wrap: nowrap;}
+.vtc-table th {background: #dae2f1; font-size: 1.6rem; vertical-align: middle; font-weight: 500; text-align: center; border-bottom: 1px solid #E3E9EF; border-right: 1px solid #fff; white-space: nowrap;}
 .vtc-table tr td {border: 1px solid #E3E9EF;}
 .vtc-table th, .vtc-table td {line-height: 1.5rem; padding: 2.25rem 1rem; vertical-align: middle; text-align: center;}
 .vtc-table tr th:first-child {border-left: 1px solid #E3E9EF;}

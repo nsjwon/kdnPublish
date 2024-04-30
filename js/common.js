@@ -241,3 +241,15 @@ $(document).ready(function() {
     // });
 });
 
+
+function flexibleWidth() {
+    var flexDiv = $('.popup-body');
+
+    flexDiv.each(function(i) {
+        console.log(flexDiv.eq(i).outerWidth());
+        var flexDiv3 = $(".popup-body").eq(i).outerWidth() + 7;
+        var blockDiv = $(".board-block").eq(i).outerWidth() + 7;
+        
+        blockDiv.css({'width' : 'calc(100% - '+ flexDiv3 + 'px'});
+    })
+}

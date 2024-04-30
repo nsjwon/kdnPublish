@@ -426,7 +426,7 @@
   color: #1c1d1f;
   position: relative;
   border-bottom: 1px solid #e8e8e8;
-  text-wrap: nowrap;
+  white-space: nowrap;
 
   border-width: 0 0 1px;
   border-color: #e8e8e8;
