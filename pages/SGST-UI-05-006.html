@@ -30,11 +30,13 @@
                 </div>
                 <div class="popup-body flex-col">
                     
+                    <div class="board-title mp0">
+                    </div>
                     <!-- 대회이력 테이블:s -->
-                    <table class="board-table popup">
+                    <table class="board-table">
                         <caption class="hide">대회이력 리스트</caption>
                         <colgroup>
-                            <col style="width: 20%;">
+                            <col style="width: 157px;">
                             <col style="width: 80%;">
                         </colgroup>
                         <tbody>
@@ -58,7 +60,7 @@
                             <tr>
                                 <th scope="row">대회명</th>
                                 <td>
-                                    <input type="text" name="cttName">
+                                    <input type="text" name="cttName" class="w100">
                                 </td>
                             </tr>
                             <tr>
@@ -75,6 +77,7 @@
                                 <th scope="row">지역명</th>
                                 <td>
                                     <select name="areaName" id="areaName">
+                                        <option>선택</option>
                                         <option>서울</option>
                                         <option>부산</option>
                                         <option>광주</option>
@@ -99,14 +102,14 @@
                             <tr>
                                 <th scope="row">수상이력</th>
                                 <td>
-                                    <input type="text" name="gpHist">
+                                    <input type="text" name="gpHist" class="w100">
                                 </td>
                             </tr>
                             <tr>
                                 <th scope="row">파일첨부</th>
                                 <td class="file-upload">
                                     <div class="flex-col">
-                                        <div class="flex-bt">
+                                        <div class="flex-center">
                                             <input type="text" name="loadFile" id="loadFile" value="첨부파일 예시.hwp" class="overtext" readonly="readonly">
                                             <input type="button" class="btn-searchfile" value="파일찾기" id="searchFileBtn">
                                         </div>

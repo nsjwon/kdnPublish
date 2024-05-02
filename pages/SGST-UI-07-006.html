@@ -252,11 +252,9 @@
                                     <caption class="hide">제안내용 리스트</caption>
                                     <colgroup>
                                         <col style="width: 157px;">
-                                        <col style="width: 25%;">
+                                        <col>
                                         <col style="width: 157px;">
-                                        <col style="width: 25%;">
-                                        <col style="width: 157px;">
-                                        <col style="width: 25%;">
+                                        <col>
                                     </colgroup>
                                     <tbody>
                                         <tr>
@@ -269,7 +267,7 @@
                                             <th scope="row"><span class="rq-mark">*</span>업무분류</th>
                                             <td>
                                                 <label for="inputSort" class="hide">업무분류</label>
-                                                <select name="inputSort" id="inputSort" class="l-select">
+                                                <select name="inputSort" id="inputSort" class="m-select">
                                                     <option>사무</option>
                                                     <option>전산</option>
                                                     <option>통신</option>
@@ -279,27 +277,29 @@
                                                     <option>대국민서비스</option>
                                                 </select>
                                             </td>
+                                        </tr>
+                                        <tr>
                                             <th scope="row"><span class="rq-mark">*</span>검토부서</th>
-                                            <td>
+                                            <td colspan="3">
                                                 <input type="text" name="loadPart" id="loadPart" value="품질경영부" readonly="readonly">
                                                 <input type="button" class="popup-button btn-searchpart" value="부서찾기" data-target="#findPart">
                                             </td>
                                         </tr>
                                         <tr>
                                             <th scope="row"><span class="rq-mark">*</span>제안명</th>
-                                            <td colspan="5">
+                                            <td colspan="3">
                                                 <input type="text" name="ofTitle" id="ofTitle" class="w100" value="">
                                             </td>
                                         </tr>
                                         <tr>
                                             <th scope="row"><span class="rq-mark">*</span>개선내용</th>
-                                            <td colspan="5">
+                                            <td colspan="3">
                                                 <textarea name="improveWay" id="improveWay" cols="30" rows="10" class="h20">#  우리회사에서 자주 사용하는 아이콘을 일괄 제작하여 KDN 지적재산권화&#10;전력계통, 전력설비, 통신설비, 컴퓨터, 네트워크 아이콘 등&#10;필요한 아이콘을 설문조사 등을 통해 수집&#10;</textarea>
                                             </td>
                                         </tr>
                                         <tr>
                                             <th scope="row">파일첨부</th>
-                                            <td colspan="5" class="file-upload">
+                                            <td colspan="3" class="file-upload">
                                                 <div class="flex-col">
                                                     <div>
                                                         <input type="text" name="loadFile" id="loadFile" value="타 기관 아이콘 예시.jpeg" class="overtext" readonly="readonly">
@@ -406,7 +406,7 @@
                     <div class="btn-wrap">
                         <input type="button" value="삭제" class="btn-delete">
                         <input type="button" value="확인" class="btn-confirm">
-                        <input type="button" value="닫기" class="btn-confirm close-button">
+                        <input type="button" value="닫기" class="btn-gray close-button">
                     </div>
                 </div>
             </div>
@@ -492,7 +492,7 @@
                     <div class="btn-wrap">
                         <!-- <input type="button" value="삭제" class="btn-delete"> -->
                         <input type="button" value="확인" class="btn-confirm">
-                        <input type="button" value="닫기" class="btn-confirm close-button">
+                        <input type="button" value="닫기" class="btn-gray close-button">
                     </div>
                 </div>
             </div>

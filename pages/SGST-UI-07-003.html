@@ -257,11 +257,8 @@
                                     <colgroup>
                                         <col style="width: 53px;">
                                         <col style="width: 103px;">
-                                        <col style="width: 25%;">
+                                        <col>
                                         <col style="width: 157px;">
-                                        <col style="width: 25%;">
-                                        <col style="width: 157px;">
-                                        <col style="width: 25%;">
                                         <col>
                                     </colgroup>
                                     <tbody>
@@ -269,7 +266,7 @@
                                             <th scope="row" colspan="2">제안자</th>
                                             <td>
                                                 <div class="flex-bt w100">
-                                                    <span>장태경</span>
+                                                    <span class="mr10">장태경</span>
                                                     <label for="anon">
                                                         <input type="checkbox" name="anon" id="anon">
                                                         익명제안
@@ -289,46 +286,48 @@
                                                     <option>대국민서비스</option>
                                                 </select>
                                             </td>
-                                            <th scope="row"><span class="rq-mark">*</span>검토부서</th>
-                                            <td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" colspan="2"><span class="rq-mark">*</span>검토부서</th>
+                                            <td colspan="3">
                                                 <input type="text" name="loadPart" id="loadPart" value="전력IT기술센터" readonly="readonly">
                                                 <input type="button" class="popup-button btn-searchpart" value="부서찾기" data-target="#findPart">
                                             </td>
                                         </tr>
                                         <tr>
                                             <th scope="row" colspan="2"><span class="rq-mark">*</span>제안명</th>
-                                            <td colspan="5">
+                                            <td colspan="3">
                                                 <input type="text" name="ofTitle" id="ofTitle" class="w100" value="KDN 전용 문서 탬플릿(PPT, HWP) 및 아이콘 제작">
                                             </td>
                                         </tr>
                                         <tr>
                                             <th scope="row" colspan="2"><span class="rq-mark">*</span>현재방법</th>
-                                            <td colspan="5">
+                                            <td colspan="3">
                                                 <textarea name="currentWay" id="currentWay" cols="30" rows="10" class="h20"># 각종 문서 작성시, 적절한 아이콘을 활용하면 이해도가 높아지는 이점이 있음&#10;현재는 적절한 아이콘을 찾기 위해 오랜 시간 소요, 찾았다 해도 저작권 등에 저촉될 우려 있음&#10;# PPT, 한글파일 작성시 ,작성자마다 제각기 다른 탬플릿 사용으로 통일성, 가독성이 낮음</textarea>
                                             </td>
                                         </tr>
                                         <tr>
                                             <th scope="row" colspan="2"><span class="rq-mark">*</span>개선방법</th>
-                                            <td colspan="5">
+                                            <td colspan="3">
                                                 <textarea name="improveWay" id="improveWay" cols="30" rows="10" class="h20">#  우리회사에서 자주 사용하는 아이콘을 일괄 제작하여 KDN 지적재산권화&#10;전력계통, 전력설비, 통신설비, 컴퓨터, 네트워크 아이콘 등&#10;필요한 아이콘을 설문조사 등을 통해 수집&#10;</textarea>
                                             </td>
                                         </tr>
                                         <tr>
                                             <th rowspan="3" class="lh20">예<br>상<br>효<br>과</th>
                                             <th>유형효과</th>
-                                            <td colspan="5">
+                                            <td colspan="3">
                                                 <textarea name="formEffect" id="formEffect" cols="30" rows="10" class="h10"># 저작권 무단사용에 따른 문제발생 여지를 미연에 방지</textarea>
                                             </td>
                                         </tr>
                                         <tr>
                                             <th>무형효과</th>
-                                            <td colspan="5">
+                                            <td colspan="3">
                                                 <textarea name="formlessEffect" id="formlessEffect" cols="30" rows="10" class="h10"># 문서 작성에 소요되는 시간 단축으로 업무효율성 증대&#10;# 당사 제안서, 보고서 등에 표준화된 탬플릿, 아이콘 사용으로 통일성 부여</textarea>
                                             </td>
                                         </tr>
                                         <tr>
                                             <th>효과금액</th>
-                                            <td colspan="5">
+                                            <td colspan="3">
                                                 <label for="timeBase" class="hide">시간기준</label>
                                                 <select name="timeBase" id="timeBase" class="s-select">
                                                     <option>년</option>
@@ -340,7 +339,7 @@
                                         </tr>
                                         <tr>
                                             <th scope="row" colspan="2">파일첨부</th>
-                                            <td colspan="5" class="file-upload">
+                                            <td colspan="3" class="file-upload">
                                                 <div class="flex-col">
                                                     <div>
                                                         <input type="text" name="loadFile" id="loadFile" value="타 기관 아이콘 예시.jpeg" class="overtext" readonly="readonly">
@@ -453,7 +452,7 @@
                     <div class="btn-wrap">
                         <input type="button" value="삭제" class="btn-delete">
                         <input type="button" value="확인" class="btn-confirm">
-                        <input type="button" value="닫기" class="btn-confirm close-button">
+                        <input type="button" value="닫기" class="btn-gray close-button">
                     </div>
                 </div>
             </div>
@@ -539,7 +538,7 @@
                     <div class="btn-wrap">
                         <!-- <input type="button" value="삭제" class="btn-delete"> -->
                         <input type="button" value="확인" class="btn-confirm">
-                        <input type="button" value="닫기" class="btn-confirm close-button">
+                        <input type="button" value="닫기" class="btn-gray close-button">
                     </div>
                 </div>
             </div>

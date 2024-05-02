@@ -246,17 +246,15 @@
                                 <h4 class="h4-tit">2단계 - 프로세스 제안등록</h4>
                                 <p><span class="rq-mark">*</span>표시는 필수 입력사항으로 반드시 입력 바랍니다.</p>
                             </div>
-                            <div class="board-list">
+                            <div class="board-list scroll">
                                 <!-- 제안등록 테이블:s -->
                                 <table class="board-table">
                                     <caption class="hide">제안내용 리스트</caption>
                                     <colgroup>
                                         <col style="width: 157px;">
-                                        <col style="width: 25%;">
+                                        <col>
                                         <col style="width: 157px;">
-                                        <col style="width: 25%;">
-                                        <col style="width: 157px;">
-                                        <col style="width: 25%;">
+                                        <col>
                                     </colgroup>
                                     <tbody>
                                         <tr>
@@ -269,7 +267,7 @@
                                             <th scope="row"><span class="rq-mark">*</span>업무분류</th>
                                             <td>
                                                 <label for="inputSort" class="hide">업무분류</label>
-                                                <select name="inputSort" id="inputSort" class="l-select">
+                                                <select name="inputSort" id="inputSort" class="m-select">
                                                     <option>사무</option>
                                                     <option>전산</option>
                                                     <option>통신</option>
@@ -279,8 +277,10 @@
                                                     <option>대국민서비스</option>
                                                 </select>
                                             </td>
+                                        </tr>
+                                        <tr>
                                             <th scope="row"><span class="rq-mark">*</span>검토부서</th>
-                                            <td>
+                                            <td colspan="3">
                                                 <label for="loadPart" class="hide">검토부서</label>
                                                 <input type="text" name="loadPart" id="loadPart" value="전력IT기술센터" readonly="readonly">
                                                 <input type="button" class="popup-button btn-searchpart" value="부서찾기" data-target="#findPart">
@@ -288,56 +288,56 @@
                                         </tr>
                                         <tr>
                                             <th scope="row"><span class="rq-mark">*</span>제안명</th>
-                                            <td colspan="5">
+                                            <td colspan="3">
                                                 <label for="ofTitle" class="hide">제안명</label>
                                                 <input type="text" name="ofTitle" id="ofTitle" class="w100" value="KDN 전용 문서 탬플릿(PPT, HWP) 및 아이콘 제작">
                                             </td>
                                         </tr>
                                         <tr>
                                             <th scope="row"><span class="rq-mark">*</span>품질표준명</th>
-                                            <td colspan="5">
+                                            <td colspan="3">
                                                 <label for="standardName" class="hide">품질표준명</label>
                                                 <input type="text" name="standardName" id="standardName" value="" readonly="readonly">
                                                 <label for="searchRulesBtn" class="hide">사규찾기</label>
-                                                <input type="button" class="btn-searchrule" value="사규찾기" id="searchRulesBtn">
+                                                <input type="button" class="popup-button btn-searchrule" value="사규찾기" id="searchRulesBtn" data-target="#findRules">
                                             </td>
                                         </tr>
                                         <tr>
                                             <th scope="row"><span class="rq-mark">*</span>개선부분</th>
-                                            <td colspan="5" class="radio-type">
+                                            <td colspan="3" class="radio-type">
                                                 <label for="reText">
-                                                    <input type="radio" name="rePart" id="reText">
+                                                    <input type="radio" name="rePart1" id="reText" checked>
                                                     본문
                                                 </label>
                                                 <label for="reForm">
-                                                    <input type="radio" name="rePart" id="reForm">
+                                                    <input type="radio" name="rePart1" id="reForm">
                                                     양식
                                                 </label>
                                                 <label for="reAttech">
-                                                    <input type="radio" name="rePart" id="reAttech">
+                                                    <input type="radio" name="rePart1" id="reAttech">
                                                     붙임
                                                 </label>
                                             </td>
                                         </tr>
                                         <tr>
                                             <th scope="row"><span class="rq-mark">*</span>문제점</th>
-                                            <td colspan="5">
+                                            <td colspan="3">
                                                 <label for="ofProblem" class="hide">문제점</label>
                                                 <input type="text" name="ofProblem" id="ofProblem" class="w100" value="">
                                             </td>
                                         </tr>
                                         <tr>
                                             <th scope="row"><span class="rq-mark">*</span>기대효과</th>
-                                            <td colspan="5">
+                                            <td colspan="3">
                                                 <label for="epEffect" class="hide">기대효과</label>
                                                 <input type="text" name="epEffect" id="epEffect" class="w100" value="">
                                             </td>
                                         </tr>
                                         <tr>
                                             <th scope="row"><span class="rq-mark">*</span>개선사항</th>
-                                            <td colspan="5" class="add-type">
+                                            <td colspan="3" class="add-type">
                                                 <div class="add-tr">
-                                                    <div class="in-tr">
+                                                    <div class="in-tr flex-bt">
                                                         <div class="in-header">
                                                             <div class="in-header-th">조항번호</div>
                                                             <div class="in-header-th">현재내용(문구)</div>
@@ -347,7 +347,7 @@
                                                             <input type="button" value="추가" class="btn-add-tr">
                                                         </div>
                                                     </div>
-                                                    <div class="in-tr">
+                                                    <div class="in-tr flex-bt">
                                                         <div class="in-body">
                                                             <div class="in-body-td">
                                                                 <textarea name="clauseNum1" id="clauseNum1" cols="30" rows="10" class="h10"></textarea>
@@ -388,7 +388,7 @@
                                         </tr>
                                         <tr>
                                             <th scope="row">파일첨부</th>
-                                            <td colspan="5" class="file-upload">
+                                            <td colspan="3" class="file-upload">
                                                 <div class="flex-col">
                                                     <div>
                                                         <input type="text" name="loadFile" id="loadFile" value="타 기관 아이콘 예시.jpeg" class="overtext" readonly="readonly">
@@ -495,7 +495,7 @@
                     <div class="btn-wrap">
                         <input type="button" value="삭제" class="btn-delete">
                         <input type="button" value="확인" class="btn-confirm">
-                        <input type="button" value="닫기" class="btn-confirm close-button">
+                        <input type="button" value="닫기" class="btn-gray close-button">
                     </div>
                 </div>
             </div>
@@ -581,13 +581,133 @@
                     <div class="btn-wrap">
                         <!-- <input type="button" value="삭제" class="btn-delete"> -->
                         <input type="button" value="확인" class="btn-confirm">
-                        <input type="button" value="닫기" class="btn-confirm close-button">
+                        <input type="button" value="닫기" class="btn-gray close-button">
                     </div>
                 </div>
             </div>
         </div>
         <!-- 부서찾기 팝업 끝 -->
 
+        <!-- 사규찾기 팝업 시작 -->
+        <div id="findRules" class="popup-panel">
+            <div class="popup-bg"></div>
+            <div class="popup-content popup-content-06">
+                <div class="popup-header">
+                    <h2>사규찾기</h2>
+                    <a class="close-button" href="#none"></a>
+                </div>
+                <div class="popup-body">
+                    <!-- board search :s -->
+                    <div class="brd-search">    
+                        <div class="brd-search-form">
+                            <div class="search-section">
+                                <div class="search-select">
+                                    <p>사규명</p>
+                                    <label for="searchState" class="hide">사규명</label>
+                                    <select name="searchState" id="searchState">
+                                        <option>전체</option>
+                                        <option>규정</option>
+                                        <option>공통관리절차서</option>
+                                        <option>업무별절차서</option>
+                                        <option>지침서</option>
+                                        <option>K-AIMM</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="brd-search-btn">
+                            <input type="button" class="btn-search" value="조회">
+                        </div>
+                    </div>                
+
+                    <!-- board table :s -->
+                    <div class="table-wrap">
+                        <table class="brd-list-01">
+                            <caption>나의제안 리스트</caption>
+                            <colgroup>
+                                <col style="width: 10%;">
+                                <col style="width: 20%;">
+                                <col style="width: 50%;">
+                                <col style="width: 20%;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">No</th>
+                                    <th scope="col">그룹</th>
+                                    <th scope="col">사규명</th>
+                                    <th scope="col">사규번호</th>                                    
+                                </tr>
+                            </thead>
+                            <tbody>	
+                                <tr>
+                                    <td>1</td>
+                                    <td>규정</td>
+                                    <td class="align-left pl20"><a href="#none"><p class="over2lines">목차</p></a></td> 
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>규정</td>
+                                    <td class="align-left pl20"><a href="#none"><p class="over2lines">정관</p></a></td> 
+                                    <td>KDN-L-101</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>규정</td>
+                                    <td class="align-left pl20"><a href="#none"><p class="over2lines">이사회</p></a></td> 
+                                    <td>KDN-L-101</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>규정</td>
+                                    <td class="align-left pl20"><a href="#none"><p class="over2lines">임원 직무 청렴계약 운영</p></a></td> 
+                                    <td>KDN-L-101</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>규정</td>
+                                    <td class="align-left pl20"><a href="#none"><p class="over2lines">품질경영</p></a></td> 
+                                    <td>KDN-L-101</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>규정</td>
+                                    <td class="align-left pl20"><a href="#none"><p class="over2lines">규정관리</p></a></td> 
+                                    <td>KDN-L-101</td>
+                                </tr>
+
+                                <!-- 게시글이 없을때  -->
+                                <!-- <tr> 
+                                    <td colspan="5" class="center brd-no-cont">등록된 게시글이 없습니다.</td>
+                                </tr> -->
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- board table :e -->
+    
+                    <!-- page:s -->
+                    <div class="pagination">       
+                        <span class="prev-group">
+                            <a class="page-first" href="#none" onclick="" onkeypress=""><span class="hide">처음 페이지로 이동</span></a>
+                            <a class="page-prev" href="#none" onclick="" onkeypress=""><span class="hide">이전 페이지로 이동</span></a>
+                        </span>
+                        <a class="on" href="#none" onclick="" onkeypress="">1</a><a href="=" onclick="" onkeypress="">2</a><a href="=" onclick="" onkeypress="">3</a><a href="=" onclick="" onkeypress="">4</a><a href="=" onclick="" onkeypress="">5</a>
+                        <span class="next-group">
+                            <a class="page-next" href="#none" onclick="" onkeypress=""><span class="hide">다음 페이지로 이동</span></a>
+                            <a class="page-end" href="#none" onclick="" onkeypress=""><span class="hide">마지막 페이지로 이동</span></a>
+                        </span>                
+                    </div>                  
+                    <!-- page:e -->      
+                </div>
+                <div class="popup-btn-wrap">
+                    <div class="btn-wrap">
+                        <input type="button" value="닫기" class="btn-gray close-button">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 사규찾기 팝업 끝 -->
 
     </div>
     <!-- wrap layout:e -->

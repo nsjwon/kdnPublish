@@ -31,11 +31,13 @@
                 </div>
                 <div class="popup-body flex-col">
                     
+                    <div class="board-title mp0">
+                    </div>
                     <!-- 활동이력 테이블:s -->
-                    <table class="board-table popup">
+                    <table class="board-table">
                         <caption class="hide">활동이력 리스트</caption>
                         <colgroup>
-                            <col style="width: 20%;">
+                            <col style="width: 157px;">
                             <col style="width: 80%;">
                         </colgroup>
                         <tbody>
@@ -43,19 +45,19 @@
                                 <th scope="row">활동유형</th>
                                 <td class="radio-type">
                                     <label>
-                                        <input type="radio" name="actType" checked>
+                                        <input type="radio" name="actType1" checked>
                                         자문
                                     </label>
                                     <label>
-                                        <input type="radio" name="actType">
+                                        <input type="radio" name="actType1">
                                         교육
                                     </label>
                                     <label>
-                                        <input type="radio" name="actType">
+                                        <input type="radio" name="actType1">
                                         세미나
                                     </label>
                                     <label>
-                                        <input type="radio" name="actType">
+                                        <input type="radio" name="actType1">
                                         기타
                                     </label>
                                 </td>
@@ -124,8 +126,8 @@
                                 <td class="file-upload">
                                     <div class="flex-col">
                                         <div class="flex-bt">
-                                            <input type="text" name="loadFile1" id="loadFile1" value="첨부파일 예시.hwp" class="overtext" readonly="readonly">
-                                            <input type="button" class="btn-searchfile" value="파일찾기" id="searchFileBtn1">
+                                            <input type="text" name="loadFile" id="loadFile" value="첨부파일 예시.hwp" class="overtext" readonly="readonly">
+                                            <input type="button" class="btn-searchfile" value="파일찾기" id="searchFileBtn">
                                         </div>
                                         <ul class="att-file">
                                             <li>첨부파일 예시.hwp<span>(283.52KB)</span><a href="#none" class="ml8"><img src="../images/board/ic_del-file.svg" alt=""></a></li>
@@ -140,6 +142,7 @@
                 <div class="popup-btn-wrap">
                     <div class="btn-wrap">
                         <input type="button" value="등록" class="btn-confirm">
+                        <!-- <input type="button" value="삭제" class="btn-delete"> -->
                         <input type="button" value="닫기" class="btn-lightgray close-button">
                     </div>
                 </div>

@@ -207,9 +207,9 @@
                                     <caption class="hide">상세이력 리스트</caption>
                                     <colgroup>
                                         <col style="width: 157px;">
-                                        <col>
+                                        <col style="width: 40%;">
                                         <col style="width: 157px;">
-                                        <col>
+                                        <col style="width: 40%;">
                                     </colgroup>
                                     <tbody>
                                         <tr>
@@ -337,9 +337,11 @@
                                             <td>하반기 품질혁신대회 워크샵</td>
                                             <td>세미나일정.hwp </td>
                                             <td>2022. 01. 05 ~ 2022. 01. 08</td>
-                                            <td class="btn-wrap">
-                                                <input type="button" value="수정" class="popup-button btn-navy" data-target="#acthistoryAdd">
-                                                <input type="button" value="삭제" class="btn-lightgray">
+                                            <td>
+                                                <div class="btn-wrap">
+                                                    <input type="button" value="수정" class="popup-button btn-navy" data-target="#acthistoryAdd">
+                                                    <input type="button" value="삭제" class="btn-lightgray">
+                                                </div>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -388,9 +390,11 @@
                                             <td>KDN혁신 아이디어 공모</td>
                                             <td>수상명단.pdf</td>
                                             <td>금상</td>
-                                            <td class="btn-wrap">
-                                                <input type="button" value="수정" class="popup-button btn-navy" data-target="#ctsHistoryEdit">
-                                                <input type="button" value="삭제" class="btn-lightgray">
+                                            <td>
+                                                <div class="btn-wrap">
+                                                    <input type="button" value="수정" class="popup-button btn-navy" data-target="#acthistoryAdd">
+                                                    <input type="button" value="삭제" class="btn-lightgray">
+                                                </div>
                                             </td>
                                         </tr>
                                         <tr>
@@ -401,9 +405,11 @@
                                             <td>KDN혁신 아이디어 공모</td>
                                             <td>수상명단.pdf</td>
                                             <td>금상</td>
-                                            <td class="btn-wrap">
-                                                <input type="button" value="수정" class="popup-button btn-navy" data-target="#ctsHistoryEdit">
-                                                <input type="button" value="삭제" class="btn-lightgray">
+                                            <td>
+                                                <div class="btn-wrap">
+                                                    <input type="button" value="수정" class="popup-button btn-navy" data-target="#acthistoryAdd">
+                                                    <input type="button" value="삭제" class="btn-lightgray">
+                                                </div>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -446,11 +452,13 @@
                 </div>
                 <div class="popup-body flex-col">
                     
+                    <div class="board-title mp0">
+                    </div>
                     <!-- 활동이력 테이블:s -->
-                    <table class="board-table popup">
+                    <table class="board-table">
                         <caption class="hide">활동이력 리스트</caption>
                         <colgroup>
-                            <col style="width: 20%;">
+                            <col style="width: 157px;">
                             <col style="width: 80%;">
                         </colgroup>
                         <tbody>
@@ -458,19 +466,19 @@
                                 <th scope="row">활동유형</th>
                                 <td class="radio-type">
                                     <label>
-                                        <input type="radio" name="actType" checked>
+                                        <input type="radio" name="actType1" checked>
                                         자문
                                     </label>
                                     <label>
-                                        <input type="radio" name="actType">
+                                        <input type="radio" name="actType1">
                                         교육
                                     </label>
                                     <label>
-                                        <input type="radio" name="actType">
+                                        <input type="radio" name="actType1">
                                         세미나
                                     </label>
                                     <label>
-                                        <input type="radio" name="actType">
+                                        <input type="radio" name="actType1">
                                         기타
                                     </label>
                                 </td>
@@ -479,12 +487,55 @@
                                 <th scope="row">활동일시</th>
                                 <td>
                                     <div class="search-date">
-                                        <input type="text" name="searchDate" id="startDate1" value="" placeholder="시작일" class="hasDatepicker"> 
+                                        <input type="text" name="searchDate" id="startDate" value="" placeholder="시작일" class="hasDatepicker"> 
                                         <span>-</span>
-                                        <input type="text" name="searchDate" id="endDate1" value="" placeholder="종료일" class="hasDatepicker"> 
+                                        <input type="text" name="searchDate" id="endDate" value="" placeholder="종료일" class="hasDatepicker"> 
                                     </div>
                                 </td>
                             </tr>
+                            <!-- 활동유형이 '자문'일 때 나타나는 항목 시작 -->
+                            <tr>
+                                <th scope="row">자문위원</th>
+                                <td>
+                                    <input type="text" name="gpHist">
+                                </td>
+                            </tr>
+                            <!-- 활동유형이 '자문'일 때 나타나는 항목 끝 -->
+                            <!-- 활동유형이 '교육, 세미나, 기타'일 때 나타나는 항목 시작 -->
+                            <!-- <tr>
+                                <th scope="row" rowspan="4">참석자</th>
+                                <td class="check-type">
+                                    <label>
+                                        <input type="checkbox" name="gpHist" checked>
+                                        <span><em>품질혁신부</em> - 임시완(123456)</span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="check-type">
+                                    <label>
+                                        <input type="checkbox" name="gpHist" checked>
+                                        <em>품질혁신부</em> - 박형식(654231)
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="check-type">
+                                    <label>
+                                        <input type="checkbox" name="gpHist">
+                                        <em>품질혁신부</em> - 홍길동(123456)
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="check-type">
+                                    <label>
+                                        <input type="checkbox" name="gpHist">
+                                        <em>전력지능화 안전본부</em> - 김희선(123456)
+                                    </label>
+                                </td>
+                            </tr> -->
+                            <!-- 활동유형이 '교육, 세미나, 기타'일 때 나타나는 항목 끝 -->
                             <tr>
                                 <th scope="row">활동내용</th>
                                 <td>
@@ -496,8 +547,8 @@
                                 <td class="file-upload">
                                     <div class="flex-col">
                                         <div class="flex-bt">
-                                            <input type="text" name="loadFile1" id="loadFile1" value="첨부파일 예시.hwp" class="overtext" readonly="readonly">
-                                            <input type="button" class="btn-searchfile" value="파일찾기" id="searchFileBtn1">
+                                            <input type="text" name="loadFile" id="loadFile" value="첨부파일 예시.hwp" class="overtext" readonly="readonly">
+                                            <input type="button" class="btn-searchfile" value="파일찾기" id="searchFileBtn">
                                         </div>
                                         <ul class="att-file">
                                             <li>첨부파일 예시.hwp<span>(283.52KB)</span><a href="#none" class="ml8"><img src="../images/board/ic_del-file.svg" alt=""></a></li>
@@ -532,11 +583,13 @@
                 </div>
                 <div class="popup-body flex-col">
                     
+                    <div class="board-title mp0">
+                    </div>
                     <!-- 대회이력 테이블:s -->
-                    <table class="board-table popup">
+                    <table class="board-table">
                         <caption class="hide">대회이력 리스트</caption>
                         <colgroup>
-                            <col style="width: 20%;">
+                            <col style="width: 157px;">
                             <col style="width: 80%;">
                         </colgroup>
                         <tbody>
@@ -560,7 +613,7 @@
                             <tr>
                                 <th scope="row">대회명</th>
                                 <td>
-                                    <input type="text" name="cttName">
+                                    <input type="text" name="cttName" class="w100">
                                 </td>
                             </tr>
                             <tr>
@@ -577,6 +630,7 @@
                                 <th scope="row">지역명</th>
                                 <td>
                                     <select name="areaName" id="areaName">
+                                        <option>선택</option>
                                         <option>서울</option>
                                         <option>부산</option>
                                         <option>광주</option>
@@ -601,14 +655,14 @@
                             <tr>
                                 <th scope="row">수상이력</th>
                                 <td>
-                                    <input type="text" name="gpHist">
+                                    <input type="text" name="gpHist" class="w100">
                                 </td>
                             </tr>
                             <tr>
                                 <th scope="row">파일첨부</th>
                                 <td class="file-upload">
                                     <div class="flex-col">
-                                        <div class="flex-bt">
+                                        <div class="flex-center">
                                             <input type="text" name="loadFile" id="loadFile" value="첨부파일 예시.hwp" class="overtext" readonly="readonly">
                                             <input type="button" class="btn-searchfile" value="파일찾기" id="searchFileBtn">
                                         </div>

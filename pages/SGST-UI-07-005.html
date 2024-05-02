@@ -252,11 +252,9 @@
                                     <caption class="hide">제안내용 리스트</caption>
                                     <colgroup>
                                         <col style="width: 157px;">
-                                        <col style="width: 25%;">
+                                        <col>
                                         <col style="width: 157px;">
-                                        <col style="width: 25%;">
-                                        <col style="width: 157px;">
-                                        <col style="width: 25%;">
+                                        <col>
                                     </colgroup>
                                     <tbody>
                                         <tr>
@@ -269,7 +267,7 @@
                                             <th scope="row"><span class="rq-mark">*</span>업무분류</th>
                                             <td>
                                                 <label for="inputSort" class="hide">업무분류</label>
-                                                <select name="inputSort" id="inputSort" class="l-select">
+                                                <select name="inputSort" id="inputSort" class="m-select">
                                                     <option>사무</option>
                                                     <option>전산</option>
                                                     <option>통신</option>
@@ -279,12 +277,18 @@
                                                     <option>대국민서비스</option>
                                                 </select>
                                             </td>
-                                            <th scope="row">검토부서</th>
-                                            <td>품질경영부</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><span class="rq-mark">*</span>검토부서</th>
+                                            <td colspan="3">
+                                                <label for="loadPart" class="hide">검토부서</label>
+                                                <input type="text" name="loadPart" id="loadPart" value="전력IT기술센터" readonly="readonly">
+                                                <input type="button" class="popup-button btn-searchpart" value="부서찾기" data-target="#findPart">
+                                            </td>
                                         </tr>
                                         <tr>
                                             <th scope="row"><span class="rq-mark">*</span>제안명</th>
-                                            <td colspan="5">
+                                            <td colspan="3">
                                                 <input type="text" name="ofTitle" id="ofTitle" class="w100" value="">
                                             </td>
                                         </tr>
@@ -292,23 +296,25 @@
                                             <th scope="row"><span class="rq-mark">*</span>개선활동유형</th>
                                             <td>
                                                 <label for="actType" class="hide">개선활동유형</label>
-                                                <select name="actType" id="actType" class="l-select">
+                                                <select name="actType" id="actType" class="m-select">
                                                     <option>전체</option>
                                                 </select>
                                             </td>
                                             <th scope="row">공동제안자</th>
                                             <td colspan="3">
-                                                <input type="button" class="popup-button btn-searchrule" value="사원등록" data-target="#findPartner">
-                                                <ul class="partner-list">
-                                                    <li><span>손흥민</span><a href="#none"><img src="../images/board/ic_del-partner.svg" alt=""></a></a></li>
-                                                    <li><span>조현우</span><a href="#none"><img src="../images/board/ic_del-partner.svg" alt=""></a></a></li>
-                                                    <li><span>이재성</span><a href="#none"><img src="../images/board/ic_del-partner.svg" alt=""></a></a></li>
-                                                </ul>
+                                                <div class="flex-al">
+                                                    <input type="button" class="popup-button btn-searchrule" value="사원등록" data-target="#findPartner">
+                                                    <ul class="partner-list">
+                                                        <li><span>손흥민</span><a href="#none"><img src="../images/board/ic_del-partner.svg" alt=""></a></a></li>
+                                                        <li><span>조현우</span><a href="#none"><img src="../images/board/ic_del-partner.svg" alt=""></a></a></li>
+                                                        <li><span>이재성</span><a href="#none"><img src="../images/board/ic_del-partner.svg" alt=""></a></a></li>
+                                                    </ul>
+                                                </div>
                                             </td>
                                         </tr>
                                         <tr>
                                             <th scope="row">전환 제안번호</th>
-                                            <td colspan="5">
+                                            <td colspan="3">
                                                 <div class="num-type">
                                                     <input type="text" name="Numfirst" id="Numfirst" value=""><span class="mr8 ml8">-</span>
                                                     <input type="text" name="Numlast" id="Numlast" value="">
@@ -318,7 +324,7 @@
                                         </tr>
                                         <tr>
                                             <th scope="row">파일첨부</th>
-                                            <td colspan="5" class="file-upload">
+                                            <td colspan="3" class="file-upload">
                                                 <div class="flex-col">
                                                     <div>
                                                         <input type="text" name="loadFile" id="loadFile" value="타 기관 아이콘 예시.jpeg" class="overtext" readonly="readonly">
@@ -425,7 +431,7 @@
                     <div class="btn-wrap">
                         <input type="button" value="삭제" class="btn-delete">
                         <input type="button" value="확인" class="btn-confirm">
-                        <input type="button" value="닫기" class="btn-confirm close-button">
+                        <input type="button" value="닫기" class="btn-gray close-button">
                     </div>
                 </div>
             </div>
@@ -634,7 +640,7 @@
                     <div class="btn-wrap">
                         <!-- <input type="button" value="삭제" class="btn-delete"> -->
                         <input type="button" value="저장" class="btn-save">
-                        <input type="button" value="닫기" class="btn-confirm close-button">
+                        <input type="button" value="닫기" class="btn-gray close-button">
                     </div>
                 </div>
             </div>
