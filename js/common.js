@@ -240,3 +240,13 @@ $(document).ready(function() {
     //     fn_overlap('popup2');
     // });
 });
+
+// 추첨하기버튼 클릭이벤트(애니메이션 생성)
+// $(window).ready(function () {
+//     $(".btn-roulette").click(function () {
+//         $("#loading-box").css("display", "flex");
+//         setTimeout(function(){
+//             $("#loading-box").css("display", "none");
+//         }, 1800); 
+//     });
+// });

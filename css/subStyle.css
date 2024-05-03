@@ -479,9 +479,9 @@ a.btn-recheck:hover {background: #1F7C70 url(../images/button/ic_recheck-hover.s
 /* 추첨하기 버튼 */
 .roulette-box {display: flex; justify-content: center; height: 48px; align-items: center;}
 .btn-roulette {position: relative; border-radius: 4px; background: #325bc4; color: #fff; padding: 0 3rem;}
-.btn-roulette:after {position: absolute; content: ''; scale: 0; width: 20px; height: 20px; top: 13px; left: 34px; display: block; background: url(../images/button/btn_star.svg) no-repeat; transition: all .3s;}
+.btn-roulette:after {position: absolute; display: none; content: ''; width: 20px; height: 20px; top: 13px; left: 34px; background: url(../images/button/btn_star.svg) no-repeat; transition: all .3s;}
 .btn-roulette:hover {height: 48px; border: none; border-radius: 30px; padding: 0 4rem 0 6rem; background: var(--gradient-color2); border: none; color: #fff; box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);}
-.btn-roulette:hover:after {scale: 1;}
+.btn-roulette:hover:after { display: block;}
 
 
 .btn-gray {background: #6c7282; color: #fff; padding: 0 2rem; border: none;}
@@ -562,8 +562,8 @@ a.btn-recheck:hover {background: #1F7C70 url(../images/button/ic_recheck-hover.s
 .vtc-table tbody tr.picked td:last-child {border-right-color: #E3E9EF;}
 
 @media (max-width: 2480px) {
-    .search-section > div {width: 46%;}
-    .search-section.multiple > div {width: 46%;}
+    .search-section > div {width: 42%;}
+    .search-section.multiple > div {width: 42%;}
     .search-section.multiple > div.check-wrap {width: 100%;}
     .search-section > div:nth-child(2n) {margin-right: 0;}
     .search-section .search-check, .check-wrap .search-text {width: 100%; flex-wrap: nowrap;}
@@ -585,6 +585,12 @@ a.btn-recheck:hover {background: #1F7C70 url(../images/button/ic_recheck-hover.s
     .gt-regist {padding-right: 5rem; word-break: auto-phrase;}
     .gt-regist span:before {display: none;}
     .search-section > div.search-text.fit {width: fit-content;}
+    .brd-half-type {flex-direction: column;}
+    .brd-half-type>div {flex-grow: 1; flex-shrink: 1; flex-basis: auto;}
+    .brd-half-type :first-child.brd-half-block {margin-right: 0; margin-bottom: 40px;}
+    .helf-table-wrap {height: 48rem;}
+    .brd-search-btn {margin-top: 0;}
+    .brd-half-block {width: 100%;}
 }
 
 @media (max-width: 1440px) {
@@ -606,12 +612,6 @@ a.btn-recheck:hover {background: #1F7C70 url(../images/button/ic_recheck-hover.s
 @media (max-width: 1280px) {
     .sub-content-wrap {width: 1080px; margin: 26px 34px 34px;}
     .search-text .btn-searchpart {margin: 0 0 0 0.6rem;}
-    .helf-table-wrap {height: 48rem;}
-    .brd-half-type {flex-direction: column;}
-    .brd-half-type>div {flex-grow: 1; flex-shrink: 1; flex-basis: auto;}
-    .brd-half-type :first-child.brd-half-block {margin-right: 0; margin-bottom: 40px;}
-    .brd-search-btn {margin-top: 0;}
-    .brd-half-block {width: 100%;}
 }
 
 /* 검색필터 layout */
@@ -625,17 +625,21 @@ a.btn-recheck:hover {background: #1F7C70 url(../images/button/ic_recheck-hover.s
 }
 @media (max-width: 1920px) {
     .search-section > div.nearlast {width: 100%; margin-bottom: 10px;}
-    .brd-search.oneline .search-section > div {width: 100%; margin-bottom: 10px;}
-    .brd-search.oneline .search-section > div.nearlast {margin-bottom: 10px;}
-    .brd-search.oneline .search-section > div:last-child {margin-bottom: 0;}
     .search-section > div:last-child {width: 100%;}
     .search-section > div.early {margin-top: 0;}
+    .brd-search.oneline .search-section > div:last-child {margin-bottom: 0;}
 }
-@media (max-width: 1780px) {
-    .brd-search.oneline .search-section > div.nearlast {margin-bottom: 0;}
-    .brd-search.oneline .search-section > div:last-child {margin-bottom: 0; margin-top: 10px;}
+@media (max-width: 1860px) {
+}
+@media (max-width: 1660px) {
+    .brd-search.oneline .search-section > div.nearlast {margin-bottom: 10px;}
 }
 @media (max-width: 1360px) {
+    .brd-search.oneline .search-section > div {width: 100%; margin-bottom: 10px;}
+    .brd-search.oneline .search-section > div.nearlast {margin-bottom: 0;}
+    .brd-search.oneline .search-section > div:last-child {margin-bottom: 0;}
+    .search-section > div.thefirst {margin-bottom: 0; margin-top: 0;}
+    .search-section > div:last-child.thefirst {margin-bottom: 0; margin-top: 0;}
     .search-section > div.nearlast {margin-bottom: 0;}
     .search-section > div.nearlast.notlast {margin-bottom: 0;}
     .search-section > div:last-child {width: 100%; margin-top: 10px;}

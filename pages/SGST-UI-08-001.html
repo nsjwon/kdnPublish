@@ -372,36 +372,40 @@
         <!-- 그룹코드 등록/수정 팝업 시작 -->
         <div id="editCode" class="popup-panel">
             <div class="popup-bg"></div>
-            <div class="popup-content popup-content-04">
+            <div class="popup-content popup-content-codeEdit">
                 <div class="popup-header">
                     <h2>그룹코드 등록/수정</h2>
                     <a class="close-button" href="#none"></a>
                 </div>
                 <div class="popup-body flex-col">
                     
+                    <div class="board-title mp0">
+                    </div>
                     <!-- 제안등록 테이블:s -->
-                    <table class="board-table popup">
+                    <table class="board-table">
                         <caption class="hide">제안내용 리스트</caption>
                         <colgroup>
-                            <col style="width: 20%;">
-                            <col style="width: 400px;">
-                            <col style="width: 20%;">
-                            <col style="width: 400px;">
+                            <col style="width: 157px;">
+                            <col>
+                            <!-- <col style="width: 157px;">
+                            <col> -->
                         </colgroup>
                         <tbody>
                             <tr>
                                 <th scope="row">시스템코드</th>
-                                <td><input type="text" name="sysCk"></td>
+                                <td><input type="text" name="sysCk" class="w100"></td>
+                            </tr>
+                            <tr>
                                 <th scope="row">그룹코드</th>
-                                <td><input type="text" name="grCk"></td>
+                                <td><input type="text" name="grCk" class="w100"></td>
                             </tr>
                             <tr>
                                 <th scope="row">그룹코드 설명</th>
-                                <td colspan="3"><input type="text" name="grCkinfo"></td>
+                                <td><input type="text" name="grCkinfo" class="w100"></td>
                             </tr>
                             <tr>
                                 <th scope="row">사용여부</th>
-                                <td colspan="3">
+                                <td>
                                     <select name="editUse" id="editUse">
                                         <option value="Y">Y</option>
                                         <option value="N">N</option>
