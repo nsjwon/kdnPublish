@@ -48,7 +48,7 @@
 .popup-header {margin-bottom: 4rem; display: flex; align-items: center; justify-content: space-between;}
 .popup-header h2 {font-size: 2.8rem; line-height: 3.2rem; font-weight: 600;}
 .popup-header .close-button {display: block; width: 30px; height: 30px; background: url(../images/common/pop-close.svg) no-repeat; background-size: contain;}
-.popup-body {height: calc(100% - 142px); overflow-y: auto;}
+.popup-body {height: calc(100% - 142px); overflow-y: auto; overflow-x: hidden;}
 .popup-body .board-block:first-child {margin-top: 0;}
 .popup-content-05 .popup-body {height: calc(100% - 72px);}
 .popup-body::-webkit-scrollbar {width: 1em;}
@@ -142,6 +142,8 @@
 .findperson-wrap .f3>a>span:after {left: -28px; top: -1px;}
 .findperson-wrap .f4 a {padding-left: 124px;}
 .findperson-wrap .f4>a>span:after {left: -28px; top: 0px;}
+.findperson-wrap .f5 a {padding-left: 152px;}
+.findperson-wrap .f5>a>span:after {left: -28px; top: 0px;}
 .findperson-wrap li.choose>a {background: #EBF2FF;}
 .findperson-wrap li.choose>a:hover {background: #EBF2FF;}
 
