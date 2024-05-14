@@ -619,8 +619,10 @@ a.btn-recheck:hover {background: #1F7C70 url(../images/button/ic_recheck-hover.s
 .search-section > div {margin-bottom: 10px;}
 .search-section > div:last-child {margin-bottom: 0;}
 .search-section > div.nearlast {margin-bottom: 0;}
-.search-section > div.nearlast.notlast {margin-bottom: 10px;}
 .search-section > div.w100 {width: 100% !important;}
+@media (max-width: 2400px) {
+    .search-section > div.nearlast.notlast {margin-bottom: 10px;}
+}
 @media (max-width: 1984px) {
     .search-section > div.early {margin-top: 10px;}
 }
@@ -644,5 +646,4 @@ a.btn-recheck:hover {background: #1F7C70 url(../images/button/ic_recheck-hover.s
     .search-section > div.nearlast {margin-bottom: 0;}
     .search-section > div.nearlast.notlast {margin-bottom: 0;}
     .search-section > div:last-child {width: 100%; margin-top: 10px;}
-
 }
