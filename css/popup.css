@@ -3,47 +3,47 @@
 .popup-panel {position: fixed; top: 0; display: none; width: 100%; height: 100%; z-index: 9250;}
 .popup-panel.is-active {display: block;}
 .popup-bg {position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #000; opacity: .65; filter: alpha(opacity=65); z-index: 9998;}
-.popup-content {overflow: hidden; display: block; padding: 5rem; position: absolute; border-radius: 10px; background-color: #fff; z-index: 10; box-shadow: 0px 4px 30px 10px rgba(0, 0, 0, 0.1); z-index: 9999;}
-.popup-content-01 {top: calc((100vh - 80rem) / 2); left: calc((100% - 120rem) / 2); width: 120rem; height: 80rem;}
-.popup-content-02 {top: 6vh; left: 18vw; width: 64vw; height: 88vh;}
-.popup-content-03 {top: calc((100vh - 800px) / 2); left: calc((100% - 60rem) / 2); width: 60rem; height: 800px;}
-.popup-content-04 {top: calc((100vh - 60rem) / 2); left: calc((100% - 85rem) / 2); width: 85rem; height: 60rem;}
-.popup-content-05, .popup-content-06 {top: 10vh; left: 18vw; width: 64vw; height: 80vh;}
+.popup-content {overflow: hidden; display: block; padding: 5rem; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius: 10px; background-color: #fff; z-index: 10; box-shadow: 0px 4px 30px 10px rgba(0, 0, 0, 0.1); z-index: 9999;}
+.popup-content-01 {width: 120rem; height: 80rem;}
+.popup-content-02 {width: 64vw; height: 88vh;}
+.popup-content-03 {width: 60rem; height: 800px;}
+.popup-content-04 {width: 85rem; height: 60rem;}
+.popup-content-05, .popup-content-06 {width: 64vw; height: 80vh;}
 /* 공지사항 목록 */
 .popup-content-05 .brd-search {flex-direction: column; gap: 10px;}
 /* 조원관리 */
-.popup-content-setMember {top: calc((100vh - 82rem) / 2); left: calc((100% - 120rem) / 2); width: 120rem; height: 82rem;} 
+.popup-content-setMember {width: 120rem; height: 82rem;} 
 /* 활동이력 등록/수정 */
-.popup-content-ctsHistory {top: calc((100vh - 66rem) / 2); left: calc((100% - 85rem) / 2); width: 85rem; height: 66rem;}
-.popup-content-acthistoryAdd {top: calc((100vh - 66rem) / 2); left: calc((100% - 85rem) / 2); width: 85rem; height: 66rem;}
-.popup-content-acthistoryEdit {top: calc((100vh - 83rem) / 2); left: calc((100% - 85rem) / 2); width: 85rem; height: 83rem;}
+.popup-content-ctsHistory {width: 85rem; height: 66rem;}
+.popup-content-acthistoryAdd {width: 85rem; height: 66rem;}
+.popup-content-acthistoryEdit {width: 85rem; height: 83rem;}
 /* 분임조원 상세이력 */
-.popup-content-memberView {top: 6vh; left: 18vw; width: 64vw; height: 88vh;}
+.popup-content-memberView {width: 64vw; height: 88vh;}
 /* 이벤트 대상자 추첨 */
-.popup-content-eventDraw {top: 10vh; left: 10vw; width: 80vw; height: 80vh;}
+.popup-content-eventDraw {width: 80vw; height: 80vh;}
 /* 테마제안 수정 */
-.popup-content-tmofEdit {top: calc((100vh - 80rem) / 2); left: calc((100% - 120rem) / 2); width: 120rem; height: 80rem;}
-.popup-content-tmofAdd {top: 8vh; left: 18vw; width: 64vw; height: 84vh;}
-.popup-content-tmofDetail {top: 8vh; left: 18vw; width: 64vw; height: 84vh;}
+.popup-content-tmofEdit { width: 120rem; height: 80rem;}
+.popup-content-tmofAdd {width: 64vw; height: 84vh;}
+.popup-content-tmofDetail {width: 64vw; height: 84vh;}
 /* 검토요청 */
-.popup-content-rqApprv {top: calc((100vh - 44rem) / 2); left: calc((100% - 66rem) / 2); width: 66rem; height: 44rem;}
+.popup-content-rqApprv {width: 66rem; height: 44rem;}
 /* 경진대회 */
-.popup-content-ctsEdit {top: 10vh; left: calc((100% - 120rem) / 2); width: 120rem; height: 80vh;}
-.popup-content-ctsofEdit {top: 16vh; left: calc((100% - 120rem) / 2); width: 120rem; height: 68vh;}
-.popup-content-ctsofDetail {top: calc((100vh - 76rem) / 2); left: calc((100% - 120rem) / 2); width: 120rem; height: 76rem;}
+.popup-content-ctsEdit {width: 120rem; height: 80vh;}
+.popup-content-ctsofEdit {width: 120rem; height: 68vh;}
+.popup-content-ctsofDetail {width: 120rem; height: 76rem;}
 /* 경진대회 수상결과 */
-.popup-content-rwdRegist {top: calc((100vh - 54rem) / 2); left: calc((100% - 66rem) / 2); width: 66rem; height: 54rem;}
+.popup-content-rwdRegist {width: 66rem; height: 54rem;}
 /* 그룹코드 등록/수정 */
-.popup-content-codeEdit {top: calc((100vh - 50rem) / 2); left: calc((100% - 66rem) / 2); width: 66rem; height: 50rem;}
+.popup-content-codeEdit {width: 66rem; height: 50rem;}
 
 @media (max-width: 1420px) {
-    .popup-content-05, .popup-content-06 {top: 10vh; left: 12vw; width: 78vw; height: 80vh;}
+    .popup-content-05, .popup-content-06 {width: 78vw; height: 80vh;}
     .popup-content-05 .brd-search-btn {margin-top: 0;}
-    .popup-content-setMember {top: 18vh; left: 10vw; width: 80vw; height: 64vh;} 
-    .popup-content-eventDraw {top: 10vh; left: 5vw; width: 90vw; height: 80vh;}
+    .popup-content-setMember {width: 80vw; height: 64vh;} 
+    .popup-content-eventDraw {width: 90vw; height: 80vh;}
 }
 @media (max-width: 1280px) {
-    .popup-content-setMember {top: 18vh; left: 8vw; width: 84vw; height: 64vh;} 
+    .popup-content-setMember {width: 84vw; height: 64vh;} 
 }
 .popup-header {margin-bottom: 4rem; display: flex; align-items: center; justify-content: space-between;}
 .popup-header h2 {font-size: 2.8rem; line-height: 3.2rem; font-weight: 600;}
@@ -144,6 +144,8 @@
 .findperson-wrap .f4>a>span:after {left: -28px; top: 0px;}
 .findperson-wrap .f5 a {padding-left: 152px;}
 .findperson-wrap .f5>a>span:after {left: -28px; top: 0px;}
+.findperson-wrap .f6 a {padding-left: 180px;}
+.findperson-wrap .f6>a>span:after {left: -28px; top: 0px;}
 .findperson-wrap li.choose>a {background: #EBF2FF;}
 .findperson-wrap li.choose>a:hover {background: #EBF2FF;}
 
@@ -163,6 +165,7 @@
 .btn-deltable {font-size: 0; width: 24px; height: 24px; padding: 0; background: url(../images/button/btn_del-table.svg) no-repeat; border: none; background-size: cover; vertical-align: middle;}
 .btn-wrap input[type="button"].btn-addmb {height: 40px;}
 .popup-content-setMember #searchTxt {width: calc(100% - 116px); min-width: 140px; max-width: 200px !important;}
+.popup-content-setMember .searchTxt {width: calc(100% - 116px); min-width: 140px; max-width: 200px !important;}
 .popup-content-setMember .search-section > div.search-text {margin-top: 0 !important; width: 100% !important;}
 .popup-content-setMember .popup-body>.flex-bt {gap: 20px; align-items: flex-start;}
 .popup-content-setMember .popup-body>.flex-bt>.flex-col {width: 360px;}

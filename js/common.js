@@ -139,7 +139,7 @@ $(document).ready(function() {
 });
 
 //부서 찾기 팝업 조직도 클릭이벤트
-$(document).ready(function() {
+/*$(document).ready(function() {
     $(".p2 > ul").hide();
 
     $(".p1 > a, .p2 > a, .p3 > a, .parttree-wrap .p4 > a").click(function(e) {
@@ -163,7 +163,7 @@ $(document).ready(function() {
             childUl.toggle();
         }
     });
-});
+});*/
 
                     
 //검토자 조회 팝업 조직도 클릭이벤트
@@ -171,7 +171,7 @@ $(document).ready(function() {
 $(document).ready(function() {
     $(".f2 > ul").hide();
 
-    $(".f1 > a, .f2 > a, .f3 > a, .findperson-wrap .f4 > a").click(function(e) {
+    $(".f1 > a, .f2 > a, .f3 > a, .findperson-wrap .f4 > a, .f5 > a, .f6 > a").click(function(e) {
         e.preventDefault();
 
         var parentP = $(this).parent();
@@ -241,12 +241,89 @@ $(document).ready(function() {
     // });
 });
 
-// 추첨하기버튼 클릭이벤트(애니메이션 생성)
-// $(window).ready(function () {
-//     $(".btn-roulette").click(function () {
-//         $("#loading-box").css("display", "flex");
-//         setTimeout(function(){
-//             $("#loading-box").css("display", "none");
-//         }, 1800); 
-//     });
-// });
+
+/**
+ * 현재 창의 위치에서 경로명을 추출하여 반환합니다.
+ *
+ * 만약 `isMove` 파라미터가 참이라면, 'go_'를 포함하는 경우에 해당 부분을 제거하고,
+ * 'go_'가 포함되지 않은 문자열을 반환합니다. 'go_' 뒤의 문자열이 두 부분('_'로 구분)으로
+ * 나뉠 경우 첫 두 부분만 반환합니다. 'isMove'가 거짓이면, 경로명에서 'go_' 다음에 오는
+ * 부분을 반환합니다.
+ *
+ * @param {boolean} isMove - 경로명에서 'go_'를 제거할지 여부를 결정하는 부울 변수입니다.
+ *                           이 값이 참이면 'go_' 제거 또는 앞의 두 세그먼트만 반환하고,
+ *                           거짓이면 원래의 경로명을 그대로 반환합니다.
+ * @returns {string} 'isMove'의 값에 따라 처리된 경로명을 문자열로 반환합니다.
+ */
+function getPathName(isMove) {
+	
+	
+    //var path = window.location.pathname.split('/');
+    //var pathName = path[path.length-1];
+  /*  if ( isMove ) {
+      const arr = pathName.split("_");
+      if ( arr.length < 3 ) return pathName;       // go_xxx 형태의 문자열을 반환합니다.
+      else return arr[0] + "_" + arr[1];           // 'go_' 제거 후 첫 두 세그먼트 반환합니다.
+    }*/
+    // 'isMove'가 false일 경우, 'go_'를 제외한 나머지 부분을 반환합니다.
+	let path = window.location.pathname;
+	if(isMove){
+		var segments = path.split('/'); // Split the path into segments
+	    segments.pop(); // Remove the last segment
+	    return segments.join('/'); // Rejoin the remaining segments
+	}else{
+		return path;
+	}
+    
+}
+
+// controller 별로 requestMapping이 부여되어 contextPath 필요
+function getContextPath() {
+    return window.location.pathname.substring(0, window.location.pathname.indexOf('/',1));
+}
+
+// Input, TextArea 작성 시 체크
+function validateForm() {
+    var isEmptyElement = null;
+	var message = '필수입력 값을 확인하세요.';
+	var returnValue = new Object();
+
+    const elList = $.merge($('input:not([type="hidden"])'), $('textarea'));
+    if ( elList.length > 0 ) {
+      for ( var i=0; i<elList.length; i++ ) {
+        const el = elList[i];  
+        var isTxtPoint = $(el).closest('.brd-w-item').find('.txt-point').length > 0 ? true : false;
+        if ( isTxtPoint && ($.trim($(el).val()) < 1) ) {
+            isEmptyElement = $(el);
+            break;
+        }
+      }
+    }
+	
+	returnValue.el = isEmptyElement;
+	returnValue.msg = message;
+    return returnValue;
+}
+
+/**
+ * jQuery 객체의 폼 데이터를 JSON 객체로 직렬화합니다.
+ * 이 함수는 폼의 각 input 요소의 이름과 값을 객체의 속성과 값으로 매핑합니다.
+ * 같은 이름을 가진 여러 값은 배열로 직렬화합니다.
+ * @returns {Object} 폼 데이터의 JSON 객체 표현
+ */
+$.fn.serializeObject = function () {
+    var o = {};
+    var a = this.serializeArray(); // 폼 데이터를 이름-값 쌍의 배열로 변환
+    $.each(a, function () {
+        if (o[this.name] !== undefined) {
+            if (!o[this.name].push) {
+                o[this.name] = [o[this.name]]; // 단일 값이 있는 경우, 배열로 변환
+            }
+            o[this.name].push(this.value || ''); // 값이 undefined인 경우 빈 문자열로 대체
+        } else {
+            o[this.name] = this.value || ''; // 처음 나타난 이름은 바로 객체에 추가
+        }
+    });
+    return o; // 직렬화된 객체 반환
+};
+

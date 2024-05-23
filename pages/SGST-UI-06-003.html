@@ -200,10 +200,10 @@
                     <!-- board wrap :s-->
                     <div class="brd-wrap">
                         <!-- board search :s -->
-                        <div class="brd-search flex-col"> 
+                        <div class="brd-search"> 
                             <div class="brd-search-form">
-                                <div class="search-section multiple">
-                                    <div class="search-date">
+                                <div class="search-section">
+                                    <div class="search-date withsel">
                                         <p>검색기준일</p>
                                         <label for="dateOption" class="hide">검색기준일</label>
                                         <select name="dateOption" id="dateOption">
@@ -232,7 +232,7 @@
                                             <option>경진대회</option>
                                         </select>
                                     </div> -->
-                                    <div class="search-select">
+                                    <div class="search-select withsel">
                                         <p>업무분류</p>
                                         <label for="inputSort" class="hide">업무분류</label>
                                         <select name="inputSort" id="inputSort" class="m-select">
@@ -246,11 +246,11 @@
                                             <option>대국민서비스</option>
                                         </select>
                                     </div> 
-                                    <div class="search-text short">
+                                    <div class="search-text short withsel">
                                         <p>제안자</p>
                                         <input type="text" name="searchField" id="searchField" placeholder="">
                                     </div>
-                                    <div class="search-text medium w100">
+                                    <div class="search-text search-part medium">
                                         <p>부서</p>
                                         <label for="searchPart" class="hide">구분</label>
                                         <select name="searchPart" id="searchPart">
@@ -263,7 +263,7 @@
                                         <input type="button" class="popup-button btn-searchpart" value="부서찾기" data-target="#findPart">
                                     </div>
                                     <!-- <div class="check-wrap"> -->
-                                        <div class="search-text medium nearlast notlast">
+                                        <div class="search-text with100 medium">
                                             <p>검색어</p>
                                             <label for="searchWord" class="hide">구분</label>
                                             <select name="searchWord" id="searchWord">
@@ -287,7 +287,7 @@
                                     <!-- </div> -->
                                 </div>
                             </div>
-                            <div class="brd-search-btn mt10">
+                            <div class="brd-search-btn float">
                                 <input type="button" class="btn-search" value="조회">
                                 <input type="button" class="btn-reset" value="초기화">
                             </div>
