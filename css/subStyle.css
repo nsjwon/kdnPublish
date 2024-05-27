@@ -371,13 +371,44 @@ Version : v2.0.2
 .num-table.process tr td.yet:after {display: block; content: ''; z-index: -1; position: absolute; top: 26px; right: 60px; width: 100%; height: 5px; background: #EAEFF5;}
 .num-table.process tr td:last-child {border-right: 1px solid #E3E9EF;}
 
-/* 제안실적 차트 영역 */
+/* 제안실적 차트 */
 .num-table-my {table-layout: fixed; box-sizing: border-box; border-collapse: collapse; width: 100%; margin: 0; font-size: 1.6rem; line-height: 1.2; border-spacing: 0;}
 .num-table-my th, .num-table-my td {line-height: 1.5rem; padding: 2rem 1rem; vertical-align: middle; text-align: center; word-break: break-all; white-space: nowrap;}
 .num-table-my th {background: #e4e9f3; font-size: 1.6rem; font-weight: 600; border-bottom: 1px solid #fff; border-right: 1px solid #fff;}
 .num-table-my td {color: #333333; font-size: 1.5rem; border-bottom: 1px solid #E3E9EF; border-right: 1px solid #E3E9EF;}
 .num-table-my tr {position:relative;}
 .num-table-my tr th:last-child {border-right: 1px solid #E3E9EF;}
+
+/* 제안통계 차트 */
+.stats-table-wrap {margin: 6rem 0 4rem; overflow-x: auto; overflow-y: hidden;}
+.stats-table-wrap .stats-table {width: 100%; min-width: 1800px;}
+.stats-table tr.onedepth {background: #f3f8ff;}
+.stats-table tr.onedepth:hover {background: #ecf6ff; cursor: pointer;}
+.stats-table tr.onedepth.nofolder:hover {background: #f3f8ff; cursor: default;}
+.stats-table tr.twodepth {background: #f9fcff;}
+.stats-table tr.twodepth:hover {background: #ecf6ff; cursor: pointer;}
+.stats-table tr.twodepth td:first-child {padding-left: 38px;}
+.stats-table tr.twodepth.nofolder {background: #fff;}
+.stats-table tr.twodepth.nofolder:hover {cursor: default; background: #fff;}
+.stats-table tr.twodepth.nofolder td:first-child {font-weight: 400; padding-left: 38px;}
+/* .stats-table tr.threedepth td {background: #fbfdff;} */
+.stats-table tr.threedepth td:first-child {font-weight: 400; padding-left: 58px;}
+.stats-table tr.threedepth.nofolder td:first-child {padding-left: 38px;}
+.stats-table span.fold-icon {width: 12px; height: 12px; display: inline-block; background: url(../images/board/ic_stat-fold.svg) no-repeat; background-position: center center; margin-right: 6px; transform: rotate(90deg);}
+.stats-table span.fold-icon.fold {background: url(../images/board/ic_stat-fold.svg) no-repeat; background-position: center center; transform: rotate(0deg);}
+.stats-table span.last-icon {width: 12px; height: 12px; display: inline-block; background: url(../images/board/ic_lastdepth.svg) no-repeat; background-position: center center; margin-right: 6px;}
+.stats-table {table-layout: fixed; box-sizing: border-box; border-collapse: collapse; width: 100%; margin: 0; font-size: 1.6rem; line-height: 1.2; border-spacing: 0; border-top: 2px solid #3653B7;}
+.stats-table tr {position:relative;}
+.stats-table tr.total td {background: #cddeff; border-right: 1px solid #fff;}
+/* .stats-table tr.partline {border-bottom: 1px solid #aaa;} */
+.stats-table tr th:first-child {border-left: 1px solid #E3E9EF;}
+.stats-table tr td:first-child {font-weight: 600; border-left: 1px solid #E3E9EF;}
+.stats-table th, .stats-table td {line-height: 2rem; padding: 0rem 1rem; vertical-align: middle; text-align: center; border-bottom: 1px solid #E3E9EF; border-right: 1px solid #E3E9EF;}
+.stats-table th {background: #fff; height: 6rem; font-size: 1.6rem; vertical-align: middle; font-weight: 600; text-align: center; border-bottom: 1px solid #E3E9EF; border-right: 1px solid #E3E9EF; white-space: nowrap;}
+.stats-table td {word-break: break-all; height: 4rem; color: #333333; font-size: 1.4rem;}
+.stats-table tr td:first-child {font-size: 14px; text-align: left; padding: 0 2rem;}
+.stats-table tbody tr:first-child th, .stats-table tbody tr:first-child td {border-top:none;}
+
 
 /* input */
 input, select, button {margin: 0; font-family: inherit; font-size: inherit; color: inherit; height: 4rem; -webkit-appearance: none; -moz-appearance: none; appearance: none;}

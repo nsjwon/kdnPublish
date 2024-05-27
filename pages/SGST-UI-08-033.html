@@ -1,0 +1,1406 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/subStyle.css">
+    <script src="../js/jquery-3.6.3.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/html5shiv.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.36.0/apexcharts.min.js"></script>
+    <title>제안관리시스템 - 제안통계정보</title>
+</head>
+<body class="scroll">
+    <!-- 반복영역 건너뛰기 -->
+    <div id="skipNav">
+        <a href="#main">본문 바로가기</a>
+        <a href="#footer-sub">하단 바로가기</a>
+    </div>
+    <!-- //반복영역 건너뛰기 -->
+    <div id="wrap">
+        <header id="header" class="open">
+            <div class="header-layout sub-page">
+                <div class="header-left">
+                    <h1 id="logo"><a href="./SGST-UI-01-001.html"><img src="../images/main/kdn_logo.svg" alt="kdn 제안관리시스템"></a></h1>
+                    <nav id="gnb">
+                        <ul>
+                            <li>
+                                <a href="#none"><span>제안검토</span></a>
+                                <ul class="depth2">
+                                    <li><a href="./SGST-UI-02-001.html">사전검토</a></li>
+                                    <li><a href="./SGST-UI-02-005.html">검토접수</a></li>
+                                    <li><a href="./SGST-UI-02-007.html">검토결과</a></li>
+                                    <li><a href="./SGST-UI-02-009.html">부서장승인</a></li>
+                                    <li><a href="./SGST-UI-02-011.html">개선활동</a></li>
+                                    <li><a href="./SGST-UI-02-014.html">심의결과</a></li>
+                                    <li><a href="./SGST-UI-02-017.html">사후관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none"><span>테마제안</span></a>
+                                <ul class="depth2">
+                                    <li><a href="./SGST-UI-03-001.html">테마제안</a></li>
+                                    <li><a href="./SGST-UI-08-022.html">테마이벤트</a></li>
+                                    <li><a href="./SGST-UI-03-007.html">포상금지급관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none"><span>경진대회</span></a>
+                                <ul class="depth2">
+                                    <li><a href="./SGST-UI-04-001.html">경진대회</a></li>
+                                    <li><a href="./SGST-UI-04-010.html">포상금지급관리</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none"><span>분임조</span></a>
+                                <ul class="depth2">
+                                    <li><a href="./SGST-UI-05-001.html">분임조관리</a></li>
+                                    <li><a href="./SGST-UI-05-010.html">과제선정평가</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none"><span>제안검색</span></a>
+                                <ul class="depth2">
+                                    <li><a href="./SGST-UI-06-001.html">통합검색</a></li>
+                                    <li><a href="./SGST-UI-06-003.html">우수과제</a></li>
+                                    <li><a href="./SGST-UI-06-005.html">부서실적</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#none"><span>나의활동</span></a>
+                                <ul class="depth2">
+                                    <li><a href="./SGST-UI-07-001.html">제안실적</a></li>
+                                    <li><a href="./SGST-UI-04-008.html">경진대회실적</a></li>
+                                    <li><a href="./SGST-UI-05-009.html">분임조실적</a></li>
+                                </ul>
+                            </li>
+                            <li class="focus">
+                                <a href="#none"><span>관리</span></a>
+                                <ul class="depth2">
+                                    <li><a href="./SGST-UI-08-001.html">코드관리</a></li>
+                                    <li><a href="./SGST-UI-08-005.html">권한관리</a></li>
+                                    <li><a href="./SGST-UI-08-009.html">포상금지급관리</a></li>
+                                    <li><a href="./SGST-UI-08-011.html">공지사항관리</a></li>
+                                    <li><a href="./SGST-UI-08-014.html">검토기준표관리</a></li>
+                                    <li><a href="./SGST-UI-08-015.html">사전검토 메시지관리</a></li>
+                                    <li><a href="./SGST-UI-08-017.html">사후관리</a></li>
+                                    <li><a href="./SGST-UI-08-032.html">이벤트관리</a></li>
+                                    <li><a href="./SGST-UI-08-028.html">검토요청</a></li>
+                                    <li><a href="./SGST-UI-08-029.html">분임조목록</a></li>
+                                    <li><a href="./SGST-UI-08-033.html">제안통계정보</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header-right">
+                    <div class="user-wrap">
+                        <div class="log-time">
+                            <span>2024-01-05 10:04</span>
+                        </div>
+                        <span><em>윤지완 [기획관리본부]</em>님, 안녕하세요.</span>
+                    </div>
+                    <a href="#none" class="btn-login">로그아웃</a>
+                </div>
+                <div class="gnb-bg"></div>
+                <div class="dim"></div>
+            </div>
+        </header>
+        <main id="sub-container">
+            <div id="sub-gnb-wrap">
+                <ul class="one-depth">
+                    <li class="d1">
+                        <a href="#none">제안검토</a>
+                        <ul class="two-depth">
+                            <li><a href="./SGST-UI-02-001.html">사전검토</a></li>
+                            <li><a href="./SGST-UI-02-005.html">검토접수</a></li>
+                            <li><a href="./SGST-UI-02-007.html">검토결과</a></li>
+                            <li><a href="./SGST-UI-02-009.html">부서장승인</a></li>
+                            <li><a href="./SGST-UI-02-011.html">개선활동</a></li>
+                            <li><a href="./SGST-UI-02-014.html">심의결과</a></li>
+                            <li><a href="./SGST-UI-02-017.html">사후관리</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="d1">
+                        <a href="#none">테마제안</a>
+                        <ul class="two-depth">
+                            <li><a href="./SGST-UI-03-001.html">테마제안</a></li>
+                            <li><a href="./SGST-UI-08-022.html">테마이벤트</a></li>
+                            <li><a href="./SGST-UI-03-007.html">포상금지급관리</a></li>
+                        </ul>
+                    </li>
+                    <li class="d1">
+                        <a href="#none">경진대회</a>
+                        <ul class="two-depth">
+                            <li><a href="./SGST-UI-04-001.html">경진대회</a></li>
+                            <li><a href="./SGST-UI-04-010.html">포상금지급관리</a></li>
+                        </ul>
+                    </li>
+                    <li class="d1">
+                        <a href="#none">분임조</a>
+                        <ul class="two-depth">
+                            <li><a href="./SGST-UI-05-001.html">분임조관리</a></li>
+                            <li><a href="./SGST-UI-05-010.html">과제선정평가</a></li>
+                        </ul>
+                    </li>
+                    <li class="d1">
+                        <a href="#none">제안검색</a>
+                        <ul class="two-depth">
+                            <li><a href="./SGST-UI-06-001.html">통합검색</a></li>
+                            <li><a href="./SGST-UI-06-003.html">우수과제</a></li>
+                            <li><a href="./SGST-UI-06-005.html">부서실적</a></li>
+                        </ul>
+                    </li>
+                    <li class="d1">
+                        <a href="#none">나의활동</a>
+                        <ul class="two-depth">
+                            <li><a href="./SGST-UI-07-001.html">제안실적</a></li>
+                            <li><a href="./SGST-UI-04-008.html">경진대회실적</a></li>
+                            <li><a href="./SGST-UI-05-009.html">분임조실적</a></li>
+                        </ul>
+                    </li>
+                    <li class="d1 active">
+                        <a href="#none">관리</a>
+                        <ul class="two-depth">
+                            <li><a href="./SGST-UI-08-001.html">코드관리</a></li>
+                            <li><a href="./SGST-UI-08-005.html">권한관리</a></li>
+                            <li><a href="./SGST-UI-08-009.html">포상금지급관리</a></li>
+                            <li><a href="./SGST-UI-08-011.html">공지사항관리</a></li>
+                            <li><a href="./SGST-UI-08-014.html">검토기준표관리</a></li>
+                            <li><a href="./SGST-UI-08-015.html">사전검토 메시지관리</a></li>
+                            <li><a href="./SGST-UI-08-017.html">사후관리</a></li>
+                            <li><a href="./SGST-UI-08-032.html">이벤트관리</a></li>
+                            <li><a href="./SGST-UI-08-028.html">검토요청</a></li>
+                            <li><a href="./SGST-UI-08-029.html">분임조목록</a></li>
+                            <li class="focus"><a href="./SGST-UI-08-033.html">제안통계정보</a></li>
+                        </ul>
+                    </li>
+                    <li class="d1 one-menu">
+                        <a href="./SGST-UI-01-003.html">공지사항</a>
+                    </li>
+                    <li class="regist-card">
+                        <a href="./SGST-UI-07-003.html" class="gt-regist"><span>제안등록 바로가기</span></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sub-content-wrap">
+                <div class="sub-content">
+                    <ul class="menu-nav">
+                        <li><img src="../images/board/ic_home.svg" alt="home"></li>
+                        <li><img src="../images/board/ic_depth.svg" alt="depth"></li>
+                        <li>관리</li>
+                        <li><img src="../images/board/ic_depth.svg" alt="depth"></li>
+                        <li>제안통계정보</li>
+                    </ul>
+                    <h2 class="h2-tit">제안통계정보</h2>
+                    <!-- board wrap :s-->
+                    <div class="brd-wrap">
+                        <!-- board search :s -->
+                        <div class="brd-search oneline"> 
+                            <div class="brd-search-form">
+                                <div class="search-section">
+                                    <div class="search-select">
+                                        <p>조회연도</p>
+                                        <label for="searchYear" class="hide">조회연도</label>
+                                        <select name="searchYear" id="searchYear">
+                                            <option>2024</option>
+                                            <option>2023</option>
+                                            <option>2022</option>
+                                            <option>2021</option>
+                                            <option>2020</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="brd-search-btn">
+                                <input type="button" class="btn-search" value="조회">
+                                <input type="button" class="btn-reset" value="초기화">
+                            </div>
+                        </div>                
+                        <!-- board search :e -->
+
+                        <!-- board note:s -->
+                        <!-- <div class="board-note-wrap">
+                            <p>※ 월말인원 산정 시 제외대상: 1직급 이상, 장기위탁교육자, 휴직자, 대외기관 파견자, 기사, 비서업무 수행자, 장기휴가자 등</p>
+                        </div> -->
+                        <!-- board note:e -->
+                        
+                        <div class="flex-bt chart-wrapper">
+                            <!-- 제안등록 상위 10개 부서 chart:s -->
+                            <div class="chart-block mt20">
+                                <div class="chart-title">
+                                    <h4 class="h4-tit">제안등록 상위 부서</h4>
+                                </div>
+                                <div class="chart-wrap" id="ResultChart"></div>
+                            </div>
+                            <!-- 제안등록 상위 10개 부서 chart:e -->
+    
+                            <!-- 제안검토 상위 10개 부서 chart:s -->
+                            <div class="chart-block mt20">
+                                <div class="chart-title">
+                                    <h4 class="h4-tit">제안검토 상위 부서</h4>
+                                </div>
+                                <div class="chart-wrap" id="NumberChart"></div>
+                            </div>
+                            <!-- 제안검토 상위 10개 부서 chart:e -->
+                        </div>
+                        
+                        <!-- 부서별 통계 chart:s -->
+                        <div class="stats-table-wrap">
+                            <div class="chart-title">
+                                <h4 class="h4-tit">부서별 통계</h4>
+                            </div>
+                            <table class="stats-table">
+                                <caption>부서 통계 리스트</caption>
+                                <colgroup>
+                                    <col style="width: 15%;">
+                                    <col style="width: 5%;">
+                                    <col style="width: 5%;">
+                                    <col style="width: 5%;">
+                                    <col style="width: 5%;">
+                                    <col style="width: 6%;">
+                                    <col style="width: 5%;">
+                                    <col style="width: 6%;">
+                                    <col style="width: 6%;">
+                                    <col style="width: 6%;">
+
+                                    <col style="width: 5%;">
+                                    <col style="width: 5%;">
+                                    <col style="width: 5%;">
+                                    <col style="width: 5%;">
+                                    <col style="width: 5%;">
+                                    <col style="width: 6%;">
+                                    <col style="width: 5%;">
+                                    <col style="width: 6%;">
+                                    <col style="width: 6%;">
+                                    <col style="width: 6%;">
+
+                                    <col style="width: 5%;">
+                                    <col style="width: 5%;">
+                                    <col style="width: 8%;">
+                                </colgroup>
+                                
+                                <tbody>	
+                                    <tr>
+                                        <th scope="col" rowspan="2">대상부서</th>
+                                        <th scope="col" colspan="5">등록 제안</th>
+                                        <th scope="col" colspan="5">등록 제안유형</th>
+                                        <th scope="col" colspan="5">검토 제안</th>
+                                        <th scope="col" colspan="6">검토 제안유형</th>
+                                        <th scope="col" rowspan="2">수령포상금액<br>(원)</th>
+                                    </tr>
+                                    <tr>
+                                        <th>등록</th>
+                                        <th>채택</th>
+                                        <th>불채택</th>
+                                        <th>채택율</th>
+                                        <th>개선활동<br>전환</th>
+
+                                        <th>단순</th>
+                                        <th>아이디어</th>
+                                        <th>프로세스</th>
+                                        <th>개선활동</th>
+                                        <th>테마</th>
+
+                                        <th>검토</th>
+                                        <th>채택</th>
+                                        <th>불채택</th>
+                                        <th>채택율</th>
+                                        <th>개선활동<br>전환</th>
+
+                                        <th>단순</th>
+                                        <th>아이디어</th>
+                                        <th>프로세스</th>
+                                        <th>개선활동</th>
+                                        <th>테마</th>
+                                        <th>국민</th>
+                                    </tr>
+                                    <!-- 전체값 tr에는 total 클래스 추가 -->
+                                    <tr class="total">
+                                        <td>전체</td>
+                                        <td>11,054</td>
+                                        <td>3,857</td>
+                                        <td>7,197</td>
+                                        <td>34.89</td>
+                                        <td>195</td>
+
+                                        <td>5,861</td>
+                                        <td>1,950</td>
+                                        <td>854</td>
+                                        <td>1,032</td>
+                                        <td>1,357</td>
+
+                                        <td>6,347</td>
+                                        <td>2,539</td>
+                                        <td>3,808</td>
+                                        <td>40.00</td>
+                                        <td>92</td>
+
+                                        <td>3,115</td>
+                                        <td>1,782</td>
+                                        <td>439</td>
+                                        <td>407</td>
+                                        <td>162</td>
+                                        <td>442</td>
+
+                                        <td>8,250,000</td>
+                                    </tr>
+                                    <!-- 최상위 부서 tr에는 onedepth클래스 추가 -->
+                                    <!-- 최상위 부서가 동일한 경우 data-part값을 넣어서 구분 -->
+                                    <tr class="onedepth" data-part="part1">
+                                        <!-- 최상위부서 또는 중간단위 부서에는 폴딩 상태를 표현하기 위해 fold-icon클래스의 span 추가 -->
+                                        <td><span class="fold-icon"></span>지속성장전략실</td>
+                                        <td>12</td>
+                                        <td>2</td>
+                                        <td>9</td>
+                                        <td>16.66</td>
+                                        <td>0</td>
+
+                                        <td>6</td>
+                                        <td>3</td>
+                                        <td>1</td>
+                                        <td>3</td>
+                                        <td>0</td>
+
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>100.00</td>
+                                        <td>0</td>
+
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+
+                                        <td>10,000</td>
+                                    </tr>
+                                    <!-- twodepth클래스가 접히지 않도록 nofolder클래스 추가 -->
+                                    <tr class="twodepth nofolder" data-part="part1">
+                                        <!-- 부서명 앞에는 last-icon클래스의 span 추가 -->
+                                        <td><span class="last-icon"></span>전략기획부</td>
+                                        <td>9</td>
+                                        <td>2</td>
+                                        <td>6</td>
+                                        <td>25</td>
+                                        <td>0</td>
+
+                                        <td>4</td>
+                                        <td>2</td>
+                                        <td>1</td>
+                                        <td>3</td>
+                                        <td>0</td>
+
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>100.00</td>
+                                        <td>0</td>
+
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+
+                                        <td>10,000</td>
+                                    </tr>
+                                    <tr class="twodepth nofolder" data-part="part1">
+                                        <!-- 부서명 앞에는 last-icon클래스의 span 추가 -->
+                                        <td><span class="last-icon"></span>플랫폼사업전략부</td>
+                                        <td>3</td>
+                                        <td>0</td>
+                                        <td>3</td>
+                                        <td>0</td>
+                                        <td>0</td>
+
+                                        <td>2</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td></td>
+                                    </tr>
+                                    <tr class="onedepth" data-part="part2">
+                                        <td><span class="fold-icon"></span>커뮤니케이션실</td>
+                                        <td>7</td>
+                                        <td>1</td>
+                                        <td>6</td>
+                                        <td>28.57</td>
+                                        <td>0</td>
+
+                                        <td>5</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>0</td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td>5,000</td>
+                                    </tr>
+                                    <tr class="twodepth nofolder" data-part="part2">
+                                        <!-- 부서명 앞에는 last-icon클래스의 span 추가 -->
+                                        <td><span class="last-icon"></span>국민소통팀</td>
+                                        <td>7</td>
+                                        <td>1</td>
+                                        <td>6</td>
+                                        <td>28.57</td>
+                                        <td>0</td>
+
+                                        <td>5</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>0</td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td>5,000</td>
+                                    </tr>
+                                    <tr class="onedepth" data-part="part3">
+                                        <td><span class="fold-icon fold"></span>감사실</td>
+                                        <td>211</td>
+                                        <td>79</td>
+                                        <td>132</td>
+                                        <td>37.44</td>
+                                        <td>16</td>
+
+                                        <td>65</td>
+                                        <td>42</td>
+                                        <td>37</td>
+                                        <td>51</td>
+                                        <td>16</td>
+
+                                        <td>548</td>
+                                        <td>207</td>
+                                        <td>341</td>
+                                        <td>37.77</td>
+                                        <td>46</td>
+
+                                        <td>416</td>
+                                        <td>76</td>
+                                        <td>32</td>
+                                        <td>19</td>
+                                        <td>5</td>
+                                        <td>0</td>
+
+                                        <td></td>
+                                    </tr>
+                                    <tr class="twodepth nofolder" data-part="part3">
+                                        <td><span class="last-icon fold"></span>감사총괄부</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td></td>
+                                    </tr>
+                                    <tr class="twodepth nofolder" data-part="part3">
+                                        <td><span class="last-icon fold"></span>일상감사부</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td></td>
+                                    </tr>
+                                    <tr class="twodepth nofolder" data-part="part3">
+                                        <td><span class="last-icon fold"></span>종합감사부</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td></td>
+                                    </tr>
+                                    <tr class="onedepth" data-part="part4">
+                                        <td><span class="fold-icon fold"></span>전력ICT기술원</td>
+                                        <td>34</td>
+                                        <td>15</td>
+                                        <td>19</td>
+                                        <td>44.11</td>
+                                        <td>0</td>
+
+                                        <td>25</td>
+                                        <td>2</td>
+                                        <td>5</td>
+                                        <td>2</td>
+                                        <td>0</td>
+
+                                        <td>11</td>
+                                        <td>6</td>
+                                        <td>5</td>
+                                        <td>54.54</td>
+                                        <td>0</td>
+
+                                        <td>4</td>
+                                        <td>0</td>
+                                        <td>2</td>
+                                        <td>1</td>
+                                        <td>3</td>
+                                        <td>1</td>
+
+                                        <td></td>
+                                    </tr>
+                                    <tr class="onedepth" data-part="part5">
+                                        <td><span class="fold-icon"></span>기획관리본부</td>
+                                        <td>42</td>
+                                        <td>17</td>
+                                        <td>35</td>
+                                        <td>40.47</td>
+                                        <td>2</td>
+
+                                        <td>22</td>
+                                        <td>7</td>
+                                        <td>6</td>
+                                        <td>2</td>
+                                        <td>5</td>
+
+                                        <td>195</td>
+                                        <td>63</td>
+                                        <td>132</td>
+                                        <td>32.30</td>
+                                        <td>21</td>
+
+                                        <td>114</td>
+                                        <td>31</td>
+                                        <td>19</td>
+                                        <td>24</td>
+                                        <td>3</td>
+                                        <td>4</td>
+
+                                        <td>310,000</td>
+                                    </tr>
+                                    <tr class="twodepth" data-part="part5">
+                                        <td><span class="fold-icon"></span>기획처</td>
+                                        <td>29</td>
+                                        <td>9</td>
+                                        <td>20</td>
+                                        <td>31.03</td>
+                                        <td>2</td>
+
+                                        <td>21</td>
+                                        <td>5</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+
+                                        <td>161</td>
+                                        <td>52</td>
+                                        <td>109</td>
+                                        <td>32.29</td>
+                                        <td>17</td>
+
+                                        <td>96</td>
+                                        <td>23</td>
+                                        <td>11</td>
+                                        <td>7</td>
+                                        <td>16</td>
+                                        <td>8</td>
+
+                                        <td>280,000</td>
+                                    </tr>
+                                    <tr class="threedepth" data-part="part5">
+                                        <td><span class="last-icon"></span>경영기획부</td>
+                                        <td>5</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>40.00</td>
+                                        <td>0</td>
+
+                                        <td>3</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>1</td>
+
+                                        <td>29</td>
+                                        <td>3</td>
+                                        <td>26</td>
+                                        <td>10.34</td>
+                                        <td>0</td>
+
+                                        <td>18</td>
+                                        <td>11</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+
+                                        <td>20,000</td>
+                                    </tr>
+                                    <tr class="threedepth" data-part="part5">
+                                        <td><span class="last-icon"></span>경영평가부</td>
+                                        <td>4</td>
+                                        <td>0</td>
+                                        <td>4</td>
+                                        <td>0</td>
+                                        <td>0</td>
+
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>0</td>
+                                        <td>0</td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td></td>
+                                    </tr>
+                                    <tr class="threedepth" data-part="part5">
+                                        <td><span class="last-icon"></span>내부통제부</td>
+                                        <td>3</td>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>33.33</td>
+                                        <td>0</td>
+
+                                        <td>3</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td>20,000</td>
+                                    </tr>
+                                    <tr class="threedepth" data-part="part5">
+                                        <td><span class="last-icon"></span>품질혁신부</td>
+                                        <td>17</td>
+                                        <td>5</td>
+                                        <td>12</td>
+                                        <td>29.41</td>
+                                        <td>1</td>
+
+                                        <td>12</td>
+                                        <td>1</td>
+                                        <td>4</td>
+                                        <td>0</td>
+                                        <td>0</td>
+
+                                        <td>132</td>
+                                        <td>49</td>
+                                        <td>83</td>
+                                        <td>37.12</td>
+                                        <td>12</td>
+
+                                        <td>78</td>
+                                        <td>12</td>
+                                        <td>11</td>
+                                        <td>7</td>
+                                        <td>16</td>
+                                        <td>8</td>
+
+                                        <td>190,000</td>
+                                    </tr>
+                                    <tr class="twodepth" data-part="part5">
+                                        <td><span class="fold-icon"></span>인사노무처</td>
+                                        <td>13</td>
+                                        <td>8</td>
+                                        <td>5</td>
+                                        <td>61.53</td>
+                                        <td>0</td>
+
+                                        <td>2</td>
+                                        <td>2</td>
+                                        <td>5</td>
+                                        <td>1</td>
+                                        <td>4</td>
+
+                                        <td>34</td>
+                                        <td>9</td>
+                                        <td>25</td>
+                                        <td>26.47</td>
+                                        <td>4</td>
+                                        
+                                        <td>15</td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                        <td>6</td>
+                                        <td>1</td>
+                                        <td>1</td>
+
+                                        <td>60,000</td>
+                                    </tr>
+                                    <tr class="threedepth" data-part="part5">
+                                        <td><span class="last-icon"></span>인사부</td>
+                                        <td>2</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>50.00</td>
+                                        <td>0</td>
+
+                                        <td>2</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+
+                                        <td>21</td>
+                                        <td>7</td>
+                                        <td>14</td>
+                                        <td>33.33</td>
+                                        <td>3</td>
+
+                                        <td>10</td>
+                                        <td>5</td>
+                                        <td>0</td>
+                                        <td>4</td>
+                                        <td>1</td>
+                                        <td>0</td>
+
+                                        <td>5,000</td>
+                                    </tr>
+                                    <tr class="threedepth" data-part="part5">
+                                        <td><span class="last-icon"></span>노사복지부</td>
+                                        <td>7</td>
+                                        <td>5</td>
+                                        <td>2</td>
+                                        <td>71.42</td>
+                                        <td>0</td>
+
+                                        <td>2</td>
+                                        <td>1</td>
+                                        <td>3</td>
+                                        <td>1</td>
+                                        <td>0</td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td>35,000</td>
+                                    </tr>
+                                    <tr class="threedepth" data-part="part5">
+                                        <td><span class="last-icon"></span>급여부</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td></td>
+                                    </tr>
+                                    <tr class="threedepth" data-part="part5">
+                                        <td><span class="last-icon"></span>인재개발부</td>
+                                        <td>4</td>
+                                        <td>2</td>
+                                        <td>2</td>
+                                        <td>50.00</td>
+                                        <td>0</td>
+
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>1</td>
+                                        <td>0</td>
+
+                                        <td>13</td>
+                                        <td>2</td>
+                                        <td>11</td>
+                                        <td>15.38</td>
+                                        <td>1</td>
+
+                                        <td>4</td>
+                                        <td>0</td>
+                                        <td>6</td>
+                                        <td>2</td>
+                                        <td>0</td>
+                                        <td>1</td>
+
+                                        <td>20,000</td>
+                                    </tr>
+                                    <tr class="onedepth" data-part="part6">
+                                        <td><span class="fold-icon fold"></span>ICT본부</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td></td>
+                                    </tr>
+                                    <tr class="onedepth" data-part="part7">
+                                        <td><span class="fold-icon fold"></span>전력지능화안전본부</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td></td>
+                                    </tr>
+                                    <tr class="onedepth" data-part="part8">
+                                        <td><span class="fold-icon fold"></span>미래사업개발본부</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td></td>
+                                    </tr>
+                                    <tr class="onedepth" data-part="part9">
+                                        <td><span class="fold-icon fold"></span>지역본부</td>
+                                        <td>128</td>
+                                        <td>32</td>
+                                        <td>96</td>
+                                        <td>25</td>
+                                        <td>17</td>
+
+                                        <td>67</td>
+                                        <td>19</td>
+                                        <td>18</td>
+                                        <td>10</td>
+                                        <td>14</td>
+
+                                        <td>93</td>
+                                        <td>36</td>
+                                        <td>57</td>
+                                        <td>38.71</td>
+                                        <td>11</td>
+
+                                        <td>41</td>
+                                        <td>22</td>
+                                        <td>17</td>
+                                        <td>5</td>
+                                        <td>2</td>
+                                        <td>6</td>
+
+                                        <td>550,000</td>
+                                    </tr>
+                                    <tr class="twodepth" data-part="part9">
+                                        <td><span class="fold-icon fold"></span>서울인천지역본부</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td></td>
+                                    </tr>
+                                    <tr class="twodepth" data-part="part9">
+                                        <td><span class="fold-icon fold"></span>경기강원지역본부</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td></td>
+                                    </tr>
+                                    <tr class="twodepth" data-part="part9">
+                                        <td><span class="fold-icon fold"></span>대전충청지역본부</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td></td>
+                                    </tr>
+                                    <tr class="twodepth" data-part="part9">
+                                        <td><span class="fold-icon fold"></span>대구경북지역본부</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td></td>
+                                    </tr>
+                                    <tr class="twodepth" data-part="part9">
+                                        <td><span class="fold-icon fold"></span>부산울산경남지역본부</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td></td>
+                                    </tr>
+                                    <tr class="twodepth" data-part="part9">
+                                        <td><span class="fold-icon fold"></span>광주전라제주지역본부</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>                    
+                    <!-- 부서별 통계 chart:e -->
+
+                </div>
+                <footer id="footer-sub">
+                    <p>(58322)전라남도 나주시 빛가람로 661 (BITGARAM-RO 661)</p>
+                    <p>© 한전KDN(주). All right reserved.</p>
+                </footer>
+            </div>
+        </main>
+    </div>
+    <script>
+        $(document).ready(function () {     
+            
+            //등록상위 차트 Start
+            new ApexCharts($("#ResultChart")[0], {
+                series: [{
+                    name: '제안등록',
+                    data: [47, 45, 42, 40, 39, 36, 31, 30, 30, 24]
+                }],
+                chart: {
+                    type: 'bar',
+                    height: 360
+                },
+                plotOptions: {
+                    bar: {
+                        horizontal: false,
+                        columnWidth: '55%',
+                        endingShape: 'rounded'
+                    },
+                },
+                dataLabels: {
+                    enabled: false
+                },
+                stroke: {
+                    show: true,
+                    width: 2,
+                    colors: ['transparent']
+                },
+                xaxis: {
+                    categories: ['감사총괄부', '경영기획부', '경영평가부', '내부통제부', '품질혁신부', '인사부', '노사복지부', '급여부', '인재개발부', '전략기획부']
+                },
+                fill: {
+                    opacity: 1
+                },
+                tooltip: {
+                    y: {
+                        formatter: function (val) {
+                            return val + " 건"
+                        }
+                    }
+                }
+            }).render();
+            //등록상위 차트 End
+            
+            //검토상위 차트 Start
+            new ApexCharts($("#NumberChart")[0], {
+                series: [{
+                    name: '제안검토',
+                    data: [55, 45, 42, 40, 40, 32, 30, 24, 24, 19]
+                }],
+                chart: {
+                    type: 'bar',
+                    height: 360
+                },
+                plotOptions: {
+                    bar: {
+                        horizontal: false,
+                        columnWidth: '55%',
+                        endingShape: 'rounded'
+                    },
+                },
+                dataLabels: {
+                    enabled: false
+                },
+                stroke: {
+                    show: true,
+                    width: 2,
+                    colors: ['transparent']
+                },
+                xaxis: {
+                    categories: ['감사총괄부', '경영기획부', '경영평가부', '내부통제부', '품질혁신부', '인사부', '노사복지부', '급여부', '인재개발부', '전략기획부']
+                },
+                fill: {
+                    opacity: 1,
+                    colors: ['#5DCFA5']
+                },
+                tooltip: {
+                    y: {
+                        formatter: function (val) {
+                            return val + " 건"
+                        }
+                    }
+                }
+            }).render();
+            //검토상위 차트 End
+        });
+
+        // 부서별 통계 토글
+        $(document).ready(function() {
+            $("tr[data-part='part3'].twodepth").hide();
+            $("tr[data-part='part9'].twodepth").hide();
+            $(".onedepth").click(function() {
+                var part = $(this).data("part");
+
+                var icon = $(this).find('.fold-icon');
+                var twodepth = $("tr[data-part='" + part + "'].twodepth");
+
+                if (icon.hasClass('fold')) {
+                    twodepth.show().each(function() {
+                        if ($(this).find('.fold-icon').hasClass('fold')) {
+                            $(this).nextUntil('.twodepth, .onedepth').hide();
+                        } else {
+                            $(this).nextUntil('.twodepth, .onedepth').show();
+                        }
+                    });
+                    icon.removeClass('fold');
+                } else {
+                    twodepth.hide();
+                    $("tr[data-part='" + part + "'].threedepth").hide();
+                    icon.addClass('fold');
+                }
+            });
+
+            $(".twodepth").click(function() {
+                var part = $(this).data("part");
+                
+                var icon = $(this).find('.fold-icon');
+                var threedepth = $(this).nextUntil('.twodepth, .onedepth');
+
+                if ($(this).hasClass('nofolder')) {
+                    threedepth.show();
+                } else {
+                    if (icon.hasClass('fold')) {
+                        threedepth.show();
+                        icon.removeClass('fold');
+                    } else {
+                        threedepth.hide();
+                        icon.addClass('fold');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
