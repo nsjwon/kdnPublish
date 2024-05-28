@@ -380,7 +380,7 @@ Version : v2.0.2
 .num-table-my tr th:last-child {border-right: 1px solid #E3E9EF;}
 
 /* 제안통계 차트 */
-.stats-table-wrap {margin: 6rem 0 4rem; overflow-x: auto; overflow-y: hidden;}
+.stats-table-wrap {margin: 6rem 0 4rem; overflow-x: auto; overflow-y: hidden; min-height: 80rem;}
 .stats-table-wrap .stats-table {width: 100%; min-width: 1800px;}
 .stats-table tr.onedepth {background: #f3f8ff;}
 .stats-table tr.onedepth:hover {background: #ecf6ff; cursor: pointer;}
