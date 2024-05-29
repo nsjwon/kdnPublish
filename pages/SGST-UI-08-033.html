@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/layout.css">
     <link rel="stylesheet" href="../css/subStyle.css">
+    <link rel="stylesheet" href="../css/popup.css">
     <script src="../js/jquery-3.6.3.min.js"></script>
     <script src="../js/common.js"></script>
     <script src="../js/html5shiv.js"></script>
@@ -346,7 +347,7 @@
                                     <!-- 최상위 부서가 동일한 경우 data-part값을 넣어서 구분 -->
                                     <tr class="onedepth" data-part="part1">
                                         <!-- 최상위부서 또는 중간단위 부서에는 폴딩 상태를 표현하기 위해 fold-icon클래스의 span 추가 -->
-                                        <td><span class="fold-icon"></span>지속성장전략실</td>
+                                        <td><span class="fold-icon fold"></span>지속성장전략실</td>
                                         <td>12</td>
                                         <td>2</td>
                                         <td>9</td>
@@ -436,7 +437,7 @@
                                         <td></td>
                                     </tr>
                                     <tr class="onedepth" data-part="part2">
-                                        <td><span class="fold-icon"></span>커뮤니케이션실</td>
+                                        <td><span class="fold-icon fold"></span>커뮤니케이션실</td>
                                         <td>7</td>
                                         <td>1</td>
                                         <td>6</td>
@@ -872,7 +873,7 @@
                                         <td></td>
                                     </tr>
                                     <tr class="onedepth" data-part="part5">
-                                        <td><span class="fold-icon"></span>기획관리본부</td>
+                                        <td><span class="fold-icon fold"></span>기획관리본부</td>
                                         <td>42</td>
                                         <td>17</td>
                                         <td>35</td>
@@ -3728,18 +3729,6 @@
 
         // 부서별 통계 토글
         $(document).ready(function() {
-            // 일부부서만 숨기기 (시연용이라 나중에 전체 숨기기랑 바꿀것)
-            // $("tr[data-part='part3'].twodepth").hide();
-            // $("tr[data-part='part4'].twodepth").hide();
-            // $("tr[data-part='part5'].twodepth").hide();
-            // $("tr[data-part='part5'].threedepth").hide();
-            // $("tr[data-part='part6'].twodepth").hide();
-            // $("tr[data-part='part6'].threedepth").hide();
-            // $("tr[data-part='part7'].twodepth").hide();
-            // $("tr[data-part='part8'].twodepth").hide();
-            // $("tr[data-part='part9'].twodepth").hide();
-            // $("tr[data-part='part9'].threedepth").hide();
-
             // 2depth, 3depth 전체 숨기기
             $("tr.twodepth").hide();
             $("tr.threedepth").hide();
