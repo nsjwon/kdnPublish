@@ -3729,20 +3729,20 @@
         // 부서별 통계 토글
         $(document).ready(function() {
             // 일부부서만 숨기기 (시연용이라 나중에 전체 숨기기랑 바꿀것)
-            $("tr[data-part='part3'].twodepth").hide();
-            $("tr[data-part='part4'].twodepth").hide();
-            $("tr[data-part='part5'].twodepth").hide();
-            $("tr[data-part='part5'].threedepth").hide();
-            $("tr[data-part='part6'].twodepth").hide();
-            $("tr[data-part='part6'].threedepth").hide();
-            $("tr[data-part='part7'].twodepth").hide();
-            $("tr[data-part='part8'].twodepth").hide();
-            $("tr[data-part='part9'].twodepth").hide();
-            $("tr[data-part='part9'].threedepth").hide();
+            // $("tr[data-part='part3'].twodepth").hide();
+            // $("tr[data-part='part4'].twodepth").hide();
+            // $("tr[data-part='part5'].twodepth").hide();
+            // $("tr[data-part='part5'].threedepth").hide();
+            // $("tr[data-part='part6'].twodepth").hide();
+            // $("tr[data-part='part6'].threedepth").hide();
+            // $("tr[data-part='part7'].twodepth").hide();
+            // $("tr[data-part='part8'].twodepth").hide();
+            // $("tr[data-part='part9'].twodepth").hide();
+            // $("tr[data-part='part9'].threedepth").hide();
 
             // 2depth, 3depth 전체 숨기기
-            // $("tr.twodepth").hide();
-            // $("tr.threedepth").hide();
+            $("tr.twodepth").hide();
+            $("tr.threedepth").hide();
 
             $(".onedepth").click(function() {
                 var part = $(this).data("part");
