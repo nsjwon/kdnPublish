@@ -1,24 +1,24 @@
 
 /* 팝업 스타일 */
-.popup-panel {position: fixed; top: 0; display: none; width: 100%; height: 100%; z-index: 9250;}
+.popup-panel {position: fixed; top: 0; left: 0; display: none; width: 100%; height: 100%; z-index: 9250;}
 .popup-panel.is-active {display: block;}
 .popup-bg {position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #000; opacity: .65; filter: alpha(opacity=65); z-index: 9998;}
 .popup-content {overflow: hidden; display: block; padding: 5rem; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius: 10px; background-color: #fff; z-index: 10; box-shadow: 0px 4px 30px 10px rgba(0, 0, 0, 0.1); z-index: 9999;}
 .popup-content-01 {width: 120rem; height: 80rem;}
 .popup-content-02 {width: 64vw; height: 88vh;}
-.popup-content-03 {width: 60rem; height: 800px;}
-.popup-content-04 {width: 85rem; height: 60rem;}
-.popup-content-05, .popup-content-06 {width: 64vw; height: 80vh;}
+.popup-content-03 {width: 60rem;}
+.popup-content-04 {width: 85rem;}
+.popup-content-05, .popup-content-06 {width: 64vw;}
 /* 공지사항 목록 */
 .popup-content-05 .brd-search {flex-direction: column; gap: 10px;}
 /* 조원관리 */
-.popup-content-setMember {width: 120rem; height: 82rem;} 
+.popup-content-setMember {width: 120rem;} 
 /* 활동이력 등록/수정 */
-.popup-content-ctsHistory {width: 85rem; height: 66rem;}
-.popup-content-acthistoryAdd {width: 85rem; height: 66rem;}
-.popup-content-acthistoryEdit {width: 85rem; height: 83rem;}
+.popup-content-ctsHistory {width: 85rem;}
+.popup-content-acthistoryAdd {width: 85rem;}
+.popup-content-acthistoryEdit {width: 85rem;}
 /* 분임조원 상세이력 */
-.popup-content-memberView {width: 64vw; height: 88vh;}
+.popup-content-memberView {width: 64vw;}
 /* 이벤트 대상자 추첨 */
 .popup-content-eventDraw {width: 80vw; height: 80vh;}
 /* 테마제안 수정 */
@@ -34,7 +34,7 @@
 /* 경진대회 수상결과 */
 .popup-content-rwdRegist {width: 66rem; height: 54rem;}
 /* 그룹코드 등록/수정 */
-.popup-content-codeEdit {width: 66rem; height: 50rem;}
+.popup-content-codeEdit {width: 66rem;}
 
 @media (max-width: 1420px) {
     .popup-content-05, .popup-content-06 {width: 78vw; height: 80vh;}
@@ -48,17 +48,17 @@
 .popup-header {margin-bottom: 4rem; display: flex; align-items: center; justify-content: space-between;}
 .popup-header h2 {font-size: 2.8rem; line-height: 3.2rem; font-weight: 600;}
 .popup-header .close-button {display: block; width: 30px; height: 30px; background: url(../images/common/pop-close.svg) no-repeat; background-size: contain;}
-.popup-body {height: calc(100% - 142px); overflow-y: auto; overflow-x: hidden;}
+.popup-body {height: calc(100% - 142px); max-height: calc(80vh - 142px); overflow-y: auto; overflow-x: hidden;}
 .popup-body .board-block:first-child {margin-top: 0;}
 .popup-content-05 .popup-body {height: calc(100% - 72px);}
 .popup-body::-webkit-scrollbar {width: 1em;}
 .popup-body::-webkit-scrollbar-track {background: #ddd; border-radius: 1rem;}
 .popup-body::-webkit-scrollbar-thumb {background-color: #bababa; border-radius: 1rem;}
-.popup-body.flex-col {width: 100%; height: auto; max-height: calc(100% - 142px);}
+.popup-body.flex-col {width: 100%; height: auto; max-height: calc(80vh - 142px);}
 .popup-body.flex-col>div {width: auto; display: block; flex-grow: 1; flex-shrink: 1; flex-basis: auto;}
 .popup-body.flex-col .board-title {width: auto; display: flex; flex-grow: 1; flex-shrink: 1; flex-basis: auto;}
 .popup-body.flex-col .board-list {width: 100%; flex-grow: 1; flex-shrink: 1; flex-basis: auto;}
-.popup-btn-wrap .btn-wrap {justify-content: center; margin: 4rem 0;}
+.popup-btn-wrap .btn-wrap {justify-content: center; margin: 4rem 0 0;}
 .popup-btn-wrap .btn-wrap input[type="button"] {width: 12rem; height: 40px; border-radius: 4px; transition: all ease 0.2s 0s;}
 
 .pop-list {table-layout: fixed; box-sizing: border-box; border-collapse: collapse; width: 99%; margin: 0; font-size: 1.6rem; line-height: 1.2; border-spacing: 0; border-top: 2px solid #4f4f4f;}
@@ -164,8 +164,7 @@
 .btn-addmb.active:hover {background: #3653B7 url(../images/button/btn_addmember-hover.svg) no-repeat 59px 15px; color: #fff;}
 .btn-deltable {font-size: 0; width: 24px; height: 24px; padding: 0; background: url(../images/button/btn_del-table.svg) no-repeat; border: none; background-size: cover; vertical-align: middle;}
 .btn-wrap input[type="button"].btn-addmb {height: 40px;}
-.popup-content-setMember #searchTxt {width: calc(100% - 116px); min-width: 140px; max-width: 200px !important;}
-.popup-content-setMember .searchTxt {width: calc(100% - 116px); min-width: 140px; max-width: 200px !important;}
+.popup-content-setMember #searchTxt, .popup-content-setMember .searchTxt, .popup-content-setMember .msSearchPersonTxt {width: calc(100% - 116px); min-width: 140px; max-width: 194px !important;}
 .popup-content-setMember .search-section > div.search-text {margin-top: 0 !important; width: 100% !important;}
 .popup-content-setMember .popup-body>.flex-bt {gap: 20px; align-items: flex-start;}
 .popup-content-setMember .popup-body>.flex-bt>.flex-col {width: 360px;}
@@ -175,7 +174,7 @@
 .popup-content-setMember .inner-table-wrap.popup {flex: 1; border: none; border-radius: none; border-bottom: 1px solid #E3E9EF; align-self: stretch;}
 .popup-content-setMember .inner-table-wrap.popup table {border-top: 2px solid #3653B7;}
 .popup-content-setMember .inner-table-wrap.popup tr th {background: #f6f8ff; font-size: 1.6rem; vertical-align: middle; font-weight: 600; text-align: center; border-bottom: 1px solid #E3E9EF; border-right: 1px solid #E3E9EF; white-space: nowrap;}
-.popup-content-setMember .inner-table-wrap.popup tr th, .popup-content-setMember .inner-table-wrap.popup tr td {line-height: 1.5rem; padding: 2rem 1rem; vertical-align: middle; text-align: center; border-bottom: 1px solid #E3E9EF; border-right: 1px solid #E3E9EF;}
+.popup-content-setMember .inner-table-wrap.popup tr th, .popup-content-setMember .inner-table-wrap.popup tr td {line-height: 2rem; padding: 2rem 1rem; vertical-align: middle; text-align: center; border-bottom: 1px solid #E3E9EF; border-right: 1px solid #E3E9EF;}
 .popup-content-setMember .inner-table-wrap.popup tr th:first-child {border-left: none;}
 .popup-content-setMember .inner-table-wrap.popup tr td:first-child {border-left: none;}
 .popup-content-setMember .inner-table-wrap.popup tr th:last-child {border-right: none;}

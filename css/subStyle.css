@@ -270,7 +270,7 @@ Version : v2.0.2
 .board-table textarea.h10 {height: 10rem;}
 .board-table th.lh20 {line-height: 2rem; border-right: 1px solid #fff;}
 .att-file {margin: 0; display: flex; flex-direction: column; align-items: flex-start;}
-.att-file li {position: relative; padding-left: 27px; height: 18px; margin-top: 10px;}
+.att-file li {position: relative; padding-left: 27px; height: 18px; margin-top: 16px;}
 /* .att-file li:first-child {margin-top: 1rem;} */
 .att-file li:last-child {margin-bottom: 1rem;}
 .att-file li:before {position: absolute; left: 3px; top: 0; width: 15px; height: 18px; background: url(../images/board/ic_attfile.svg) no-repeat; content: ''; display: block;}
@@ -381,7 +381,7 @@ Version : v2.0.2
 
 /* 제안통계 차트 */
 .stats-table-wrap {margin: 6rem 0 4rem; overflow-x: auto; overflow-y: hidden;}
-.stats-table {table-layout: fixed; box-sizing: border-box; border-collapse: collapse; width: 100%; min-width: 1820px; margin: 0; font-size: 1.6rem; line-height: 1.2; border-spacing: 0; border-top: 2px solid #3653B7;}
+.stats-table {table-layout: fixed; box-sizing: border-box; border-collapse: collapse; width: 100%; min-width: 1820px; margin: 0; font-size: 1.6rem; line-height: 1.2; border-spacing: 0; border-top: none;}
 .stats-table tr.onedepth {background: #f3f8ff;}
 .stats-table tr.onedepth:hover {background: #ecf6ff; cursor: pointer;}
 .stats-table tr.onedepth.nofolder:hover {background: #f3f8ff; cursor: default;}
@@ -404,7 +404,7 @@ Version : v2.0.2
 .stats-table tr td:first-child {font-weight: 600; border-left: 1px solid #E3E9EF; font-size: 14px; text-align: left; padding: 0 1rem 0 2rem;}
 .stats-table tr td:last-child {text-align: right;}
 .stats-table tr.total td {background: #cddeff; border-right: 1px solid #fff;}
-.stats-table tbody tr:first-child th, .stats-table tbody tr:first-child td {border-top:none;}
+.stats-table tbody tr:first-child th, .stats-table tbody tr:first-child td {border-top: 2px solid #3653B7;}
 
 /* input */
 input, select, button {margin: 0; font-family: inherit; font-size: inherit; color: inherit; height: 4rem; -webkit-appearance: none; -moz-appearance: none; appearance: none;}
@@ -659,7 +659,26 @@ a.btn-recheck:hover {background: #1F7C70 url(../images/button/ic_recheck-hover.s
     .search-text.search-part input[type=text] {width: 214px;}
     .search-text.search-part.medium input[type=text] {width: 214px;}
 }
-@media (max-width: 1600px) {
-}
-@media (max-width: 1440px) {
-}
+
+
+/* Datepicker Style */
+.flatpickr-calendar .flatpickr-months, .flatpickr-calendar .flatpickr-months .flatpickr-month {height: 44px;}
+.flatpickr-calendar .flatpickr-months .flatpickr-prev-month, .flatpickr-calendar .flatpickr-months .flatpickr-next-month {padding: 12px;}
+.flatpickr-calendar .flatpickr-current-month {padding: 18px 0 0 25px; font-size: 15px; font-family: 'Pretendard','Noto Sans KR','Apple SD Gothic Neo','맑은 고딕','Malgun Gothic','돋움','Dotum','굴림','Gulim','AppleGothic','Sans-serif';}
+.flatpickr-calendar .numInputWrapper:hover {background: none;}
+.flatpickr-calendar .flatpickr-current-month .flatpickr-monthDropdown-months:hover {background: none;}
+.flatpickr-calendar .flatpickr-current-month {display: flex; justify-content: center; flex-direction: row-reverse;}
+
+.flatpickr-calendar .flatpickr-months .flatpickr-prev-month, .flatpickr-calendar .flatpickr-months .flatpickr-next-month {top: 6px;}
+.flatpickr-calendar .flatpickr-weekdays {width: calc(100% - 20px);}
+.flatpickr-calendar .flatpickr-rContainer {padding: 10px;}
+.flatpickr-calendar .dayContainer {min-width: 287.875px; width: 287.875px; max-width: 287.875px;}
+.flatpickr-calendar .flatpickr-months .flatpickr-prev-month.flatpickr-next-month, .flatpickr-calendar .flatpickr-months .flatpickr-next-month.flatpickr-next-month {right: 44px;}
+.flatpickr-calendar .flatpickr-months .flatpickr-prev-month.flatpickr-prev-month, .flatpickr-calendar .flatpickr-months .flatpickr-next-month.flatpickr-prev-month {left: 44px;}
+.flatpickr-calendar .flatpickr-current-month .flatpickr-monthDropdown-months {height: 22px; width: 58px; display: flex; align-items: center;}
+.flatpickr-calendar .flatpickr-current-month input.cur-year {height: 22px; width: 58px; display: flex; align-items: center; padding-bottom: 2px; font-weight: 500;}
+.flatpickr-calendar .flatpickr-current-month .flatpickr-monthDropdown-months {-webkit-appearance: none; -moz-appearance: none; font-weight: 500;}
+.flatpickr-calendar .flatpickr-current-month .numInputWrapper {height: 22px; width: 58px; display: flex; align-items: center;}
+
+
+
