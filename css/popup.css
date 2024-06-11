@@ -22,9 +22,9 @@
 /* 이벤트 대상자 추첨 */
 .popup-content-eventDraw {width: 80vw; height: 80vh;}
 /* 테마제안 수정 */
-.popup-content-tmofEdit { width: 120rem; height: 80rem;}
-.popup-content-tmofAdd {width: 64vw; height: 84vh;}
-.popup-content-tmofDetail {width: 64vw; height: 84vh;}
+.popup-content-tmofEdit { width: 120rem;}
+.popup-content-tmofAdd {width: 64vw;}
+.popup-content-tmofDetail {width: 64vw;}
 /* 검토요청 */
 .popup-content-rqApprv {width: 66rem; height: 44rem;}
 /* 경진대회 */

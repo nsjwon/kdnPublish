@@ -23,23 +23,22 @@ input.loginid:focus + label {color: #4763c2;}
 .login-button:hover {background: #325BC4;}
 
 /* 상단 배너 */
-.main-banner {width: 100%; height: 68px; display: flex; justify-content: center; align-items: center; flex-direction: column; background: url(../images/main/bg_banner.png) no-repeat; background-size: cover;}
-.main-banner .banner-content-wrap {height: 28px; overflow: hidden; display: flex; flex-direction: column; margin-bottom: 6px;}
-.main-banner .banner-content-track.swiper-wrapper {transition: all .5s ease-out; margin-top: 28px; flex-direction: column;}
-.main-banner .banner-content {display: flex; align-items: center; justify-content: center;}
-.main-banner .banner-tag {margin-right: 12px; display: flex; align-items: center; justify-content: center; height: 28px; padding: 0 16px; font-size: 1.4rem; line-height: 1.4rem; border: 1px solid #111827; color: #111827; border-radius: 150px;}
-.main-banner .banner-title {font-weight: 500; font-size: 1.5rem;}
+.main-banner {position: relative; width: 100%; height: 68px; display: flex; justify-content: center; align-items: center; flex-direction: column; background: url(../images/main/bg_banner.png) no-repeat; background-size: cover;}
+.main-banner .banner-content-wrap {height: 28px; overflow: hidden; display: flex; margin-bottom: 6px; max-width: 800px;}
+.main-banner .banner-content-track.swiper-wrapper {transition: all .5s ease-out;}
+.main-banner .banner-content {display: flex; align-items: center; justify-content: center; width: 800px;}
+.main-banner .banner-tag {margin-right: 12px; display: flex; align-items: center; justify-content: center; height: 28px; padding: 0 16px; font-size: 1.4rem; line-height: 1.4rem; border: 1px solid #111827; color: #111827; border-radius: 150px; white-space: nowrap;}
+.main-banner .banner-title {font-weight: 500; font-size: 1.5rem; max-width: calc(100% - 220px);}
 .main-banner .banner-link {position: relative; font-size: 1.5rem; color: #2141B0; line-height: 24px; margin-left: 12px;}
-.main-banner .banner-link>a {display: flex; height: 25px;}
-.main-banner .banner-link>a>img {width: 24px; height: 24px;}
+.main-banner .banner-link>span {display: flex; height: 25px;}
+.main-banner .banner-link>span>img {width: 24px; height: 24px;}
 .main-banner .banner-item {display: flex; align-items: center;}
 .main-banner .banner-item li {margin-right: 6px;}
 .main-banner .banner-item li:last-child {margin-right: 0;}
 .main-banner .banner-item li>a {display: block; width: 8px; height: 8px; background: #c5cada; border-radius: 4px; transition: all .5s;}
 .main-banner .banner-item li.on>a {width: 40px; background: #52639b;}
 .main-banner .banner-paging {display: flex; align-items: center; z-index: 1;}
-.main-banner .banner-paging>span {cursor: pointer;}
-.banner-paging .swiper-pagination-bullet {display: block; width: 8px; height: 8px; background: #C5CADA; border-radius: 4px; transition: all .5s; margin-right: 6px;}
+.banner-paging .swiper-pagination-bullet {display: block; width: 8px; height: 8px; background: #C5CADA; border-radius: 6px; transition: all .5s; margin-right: 6px;}
 .banner-paging .swiper-pagination-bullet:last-child {margin-right: 0;}
 .banner-paging .swiper-pagination-bullet-active {background: #52639B; width: 40px;}
 
@@ -65,10 +64,11 @@ input.loginid:focus + label {color: #4763c2;}
 .ts-right {margin: 26px 50px; padding: 36px 44px; background: #fff; border-radius: 14px;}
 .ts-right-title {display: flex; align-items: center; justify-content: space-between; font-size: 2.4rem; line-height: 2.4rem; font-family: 'GmarketSans', 'Pretendard', "NotoSansKR", sans-serif; margin-bottom: 8px;}
 .ts-right-title span {font-weight: 500; line-height: 2.4rem;}
-.ts-right-title span strong {font-weight: 700; color: #4662c1; line-height: 2.4rem;}
+.ts-right-title span strong {font-weight: 700; color: #4662c1; line-height: 2.4rem; margin: 0 6px;}
 .ts-right-title a {width: 26px; height: 26px; background: url(../images/main/ic_plus.svg) no-repeat; margin-bottom: 4px;}
 .ts-right-result {background: #f3f4fb; border-radius: 8px; height: 60px; display: flex; align-items: center;}
 .ts-right-result .offer-result {background: #3653b7; border-radius: 8px; color: #fff; font-size: 1.8rem; font-weight: 700; display: flex; align-items: center; justify-content: center; height: 100%; width: 160px; font-family: 'GmarketSans', 'Pretendard', "NotoSansKR", sans-serif;}
+.ts-right-result .offer-result em {margin-right: 8px;}
 .ts-right-result .offer-result span {font-weight: 500;}
 .ts-right-result .offer-count {font-size: 1.6rem; color: #48494b; display: flex; align-items: center; justify-content: center; width: calc(100% - 160px);}
 .ts-right-result .offer-count li {display: flex; align-items: center; justify-content: center; margin-right: 34px;}
@@ -77,7 +77,7 @@ input.loginid:focus + label {color: #4763c2;}
 .ts-right-result .offer-count .dot {width: 6px; height: 6px; background: #d9d9d9; border-radius: 3px;}
 .ts-right-result .offer-count strong {font-size: 1.8rem; font-weight: 600; color: #1c1d1f; margin-left: 1rem;}
 .ts-right .offer-item {display: flex; align-items: center; justify-content: space-between; font-size: 1.6rem; line-height: 1.5rem; padding: 16px 0; border-bottom: 1px solid #edeff4;}
-.ts-right .offer-item.no-item {display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 1.5rem; line-height: 1.5rem; padding: 28.5px 0; border-top: 1px solid #edeff4; border-bottom: 1px solid #edeff4;}
+.ts-right .offer-item.no-item {display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 1.5rem; line-height: 1.5rem; padding: 28.5px 0; border-top: 1px solid #edeff4; border-bottom: none; margin-bottom: 8px;}
 .ts-right .offer-item.no-item a {display: flex; align-items: center; justify-content: center; height: 44px; padding: 0 52px 0 34px; border-radius: 30px; background: #3b3b45; color: #fff; margin-top: 12px;}
 .ts-right .offer-item.no-item a>span {position: relative; display: block; line-height: 15px;}
 .ts-right .offer-item.no-item a>span:after {position: absolute; display: block; width: 20px; height: 20px; content: ''; top: -2.5px; right: -20px; background: url(../images/main/ic_arrow-right.svg) no-repeat; background-size: contain;}
@@ -176,7 +176,7 @@ input.loginid:focus + label {color: #4763c2;}
 .card-best-track.swiper-wrapper {width: 1235px; height: 100%;}
 .card-best-wrap .swiper-pagination {position: absolute; bottom: 45px; left: 34px; display: flex; align-items: center; z-index: 1;}
 .card-best-wrap .swiper-pagination>span {cursor: pointer;}
-.swiper-pagination .swiper-pagination-bullet {display: block; width: 8px; height: 8px; background: #dae2fc; border-radius: 4px; transition: all .5s; margin-right: 6px;}
+.swiper-pagination .swiper-pagination-bullet {display: block; width: 12px; height: 12px; background: #dae2fc; border-radius: 6px; transition: all .5s; margin-right: 8px;}
 .swiper-pagination .swiper-pagination-bullet:last-child {margin-right: 0;}
 .swiper-pagination .swiper-pagination-bullet-active {background: #8cabeb; width: 26px;}
 .card-best.swiper-slide {display: flex; flex-direction: column; color: #e5e5e6; justify-content: flex-start; padding: 45px 34px; border-radius: 12px; width: 247px; height: 100%; background: #000 url(../images/main/bg_best.png) no-repeat; background-position: bottom right;}
@@ -267,21 +267,21 @@ input.loginid:focus + label {color: #4763c2;}
 
 .bs-notice {display: flex; align-items: center; justify-content: space-between; padding: 20px 0; border-bottom: 1px solid #edeff4; font-size: 1.6rem; font-weight: 400; line-height: 18px;}
 .bs-notice:hover .notice-title {text-decoration: underline;}
-.notice-title img {margin-right: 5px;}
+.notice-title img {margin-right: 8px;}
 .notice-date {color: #878787;}
 .bs-more a {display: flex; width: 26px; height: 26px; background: url(../images/main/ic_plus.svg) no-repeat;}
 .bs-controller li {height: 2.2rem;}
 .bs-controller li:first-child a {display: block; width: 30px; height: 22px; background: url(../images/main/ic_slider-pre.svg) no-repeat; background-size: contain;}
 .bs-controller li:last-child a {display: block; width: 30px; height: 22px; background: url(../images/main/ic_slider-next.svg) no-repeat; background-size: contain;}
 .bs-controller li span {color: #474a4d;}
-.bs-confirm-wrap {display: flex; flex-direction: column; justify-content: flex-start; flex: 1;}
+.bs-confirm-wrap {display: flex; flex-direction: column; justify-content: flex-start; flex: 1; flex-basis: auto;}
 .bs-confirm {margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; padding: 22px 32px; background: #f3f4fb; border-radius: 12px; border: 2px solid #fff; box-sizing: border-box;}
 .bs-confirm:last-child {margin-bottom: 0;}
 .bs-confirm:hover {background: #fff; border: 2px solid #3b52a6; box-shadow: 0px 12px 32px 0px rgba(0, 0, 0, 0.08);}
-.bs-confirm:hover .confirm-title h5 {text-decoration: underline;}
+.bs-confirm:hover .confirm-title h5 {text-decoration: underline; max-height: 42px;}
 .bs-confirm:hover .confirm-state {background: linear-gradient(135deg, #0A48C2 0%, #4DA9FF 100%);}
 .bs-confirm:hover .confirm-state.notyet {background: linear-gradient(135deg, #0A48C2 0%, #4DA9FF 100%); color: #fff;}
-.confirm-title {display: flex; flex-direction: column; flex: 1;}
+.confirm-title {display: flex; flex-direction: column; flex: 1; margin-right: 16px;}
 .confirm-title>div {display: flex; align-items: center; margin-bottom: 12px;}
 .confirm-title .deadline {display: flex; align-items: center; justify-content: center; padding: 0 16px; height: 25px; color: #f83131; border: 1px solid #ef6161; border-radius: 15px; box-sizing: border-box; background: #fff6f6; font-size: 1.4rem; font-weight: 500; text-align: center; word-break: break-word; margin-right: 10px;}
 .confirm-title h5 {font-size: 1.8rem; font-weight: 600; line-height: 21px;}

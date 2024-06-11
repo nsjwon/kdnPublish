@@ -75,15 +75,15 @@ Version : v2.0.2
 .brd-search .search-section p.fit {width: 64px; min-width: 0;}
 .brd-search.flex-col>div {flex-grow: 1; flex-shrink: 1; flex-basis: auto;}
 .brd-search-form {flex: 1;}
-.brd-search input[type=text]:placeholder, .brd-search input[type=text]:-ms-input-placeholder {color: #a2a2a2 !important;}
+.brd-search input[type=text]:placeholder, .brd-search input[type=text]:-ms-input-placeholder {color: #d1d2d2 !important;}
 .brd-search select {width: 140px; padding: 0.8rem 2.6rem 0.8rem 1.3rem; margin: 0 0.6rem 0 0; background-color: #fff; font-size: 1.4rem; border: 1px solid #cfd7e4;}
 .search-section > div {width: 30%; margin-right: 3rem; display: flex; justify-content: flex-start; align-items: center;}
 .search-section > div:last-child {margin-right: 0;}
 .search-date .date-wrap {width: calc(100% - 236px); display: flex; align-items: center; flex-wrap: nowrap;}
 .search-date input[type=text] {background: #ffffff url(../images/board/ic_cal.svg) no-repeat right 0.8rem center; background-size: 22px; position: relative; width: 140px; padding: 1rem 3rem 1rem 1.3rem; margin: 0; font-size: 1.4rem;}
-.search-date input[type=text]::placeholder, .search-date input[type=text]::-ms-input-placeholder {color: #a2a2a2 !important;}
+.search-date input[type=text]::placeholder, .search-date input[type=text]::-ms-input-placeholder {color: #d1d2d2 !important;}
 .search-date input[type=date] {background: #ffffff url(../images/board/ic_cal.svg) no-repeat right 0.8rem center; background-size: 22px; position: relative; width: 140px; padding: 1rem 3rem 1rem 1.3rem; margin: 0; font-size: 1.4rem;}
-.search-date input[type=date]::placeholder, .search-date input[type=date]::-ms-input-placeholder {color: #a2a2a2 !important;}
+.search-date input[type=date]::placeholder, .search-date input[type=date]::-ms-input-placeholder {color: #d1d2d2 !important;}
 .brd-search input[type=text]:focus {outline: 2px solid #4e6bca; background: #fafbff;}
 .brd-search select:focus {outline: 2px solid #4e6bca; background: #fafbff url(../images/common/select-arrow.svg) no-repeat right 1.2rem 52%/12px auto;}
 .brd-search .search-date input[type=text], .brd-search .search-date input[type=date] {border: 1px solid #cfd7e4; width: calc((100% - 9px) / 2); min-width: 128px; max-width: 140px;}
@@ -150,7 +150,7 @@ Version : v2.0.2
 .brd-list-01 tbody tr:first-child th,
 .brd-list-01 tbody tr:first-child td {border-top:none;}
 .brd-list-01 tbody tr:hover {background: #fcfcfc;}
-.brd-list-01 tbody tr:hover p {text-decoration: underline; font-weight: 500;}
+.brd-list-01 tbody tr:hover p {text-decoration: underline; font-weight: 400;}
 .brd-list-01 tbody tr.nolink:hover p {text-decoration: unset; font-weight: 400;}
 .brd-list-01 tbody tr.nolink:hover td {cursor: default;}
 .brd-list-01 tbody tr.nolink:hover td a {cursor: default;}
@@ -171,8 +171,9 @@ Version : v2.0.2
 
 .brd-footnote {margin: 2.2rem 0 0;}
 .brd-footnote ul {width: 100%; display: flex; justify-content: flex-end; gap: 20px;}
-.brd-footnote ul li {color: #777989; font-size: 1.2rem; display: flex; align-items: center; justify-content: flex-start; gap: 6px;}
-.brd-footnote ul li .fn-num {width: 1.6rem; height: 1.6rem; line-height: 1.6rem; font-weight: 500; color: #fff; background: #afb2be; display: flex; align-items: center; justify-content: center; text-align: center; border-radius: 8px;}
+.brd-footnote ul li {color: #777989; font-size: 1.2rem; display: flex; align-items: center; justify-content: flex-start; gap: 6px; margin-right: 20px;}
+.brd-footnote ul li:last-child {margin-right: 0;}
+.brd-footnote ul li .fn-num {width: 1.6rem; height: 1.6rem; line-height: 1.6rem; font-weight: 500; color: #fff; background: #afb2be; display: flex; align-items: center; justify-content: center; text-align: center; border-radius: 8px; margin-right: 6px;}
 
 /* 페이지네이션 */
 .pagination {margin: 2.2rem 0 0 0; text-align: center; clear:both; }
@@ -238,7 +239,7 @@ Version : v2.0.2
 .board-table td.check-type.readonly label {cursor: text;}
 .board-table td.check-type.readonly input[type="radio"] {cursor: default;}
 .board-table td input[type="text"]:read-only {background: #efeff2;}
-.board-table td input[type="text"][readonly="readonly"] {background: #efeff2;}
+.board-table td input[type="text"][readonly="readonly"] {background: #efeff2; color: #a2a2a2;}
 .board-table td input[type="text"]:read-only:focus {outline: none;}
 .board-table td input[type="text"][readonly="readonly"]:focus {outline: none;}
 .board-table td input.small {width: 5.8rem; text-align: right;}
@@ -281,7 +282,7 @@ Version : v2.0.2
 .note-list {display: flex; flex-direction: column; background: #dae2f1; border-radius: 0.6rem; padding: 2rem 4.5rem; margin-top: 1.6rem;}
 .note-list li {height: 2.8rem; line-height: 2.8rem; list-style-type: disc;}
 .bg-box {background: #dae2f1; border-radius: 0.6rem; margin-top: 1.6rem;}
-.partner-list {max-width: 400px; flex-wrap: wrap; display: inline-flex; align-items: center; justify-content: flex-start; padding: 0 6px;}
+.partner-list {flex-wrap: wrap; display: inline-flex; align-items: center; justify-content: flex-start; padding: 0 6px;}
 .partner-list li {display: flex; align-items: center; padding: 6px 10px; background: #f1f4fc; border: 1px solid #dbe4f0; border-radius: 4px; margin: 5px 10px 5px 0;}
 .partner-list li:last-child {margin-right: 0;}
 .partner-list li>span {line-height: 18px; padding: 0 4px; font-size: 14px; color: #193975;}
@@ -315,7 +316,7 @@ Version : v2.0.2
 
 /* 상세 테이블 내부 테이블 */
 .board-table td.add-type {padding: 0;}
-.board-table td.add-type .add-tr {max-width: 120rem; width: auto; padding: 1rem 2rem; border-top: 1px solid #e8e8e8;}
+.board-table td.add-type .add-tr {width: auto; padding: 1rem 2rem; border-top: 1px solid #e8e8e8;}
 .board-table td.add-type .add-tr:first-child {padding: 1rem 2rem; border-top: none;}
 .board-table .in-tr {display: flex; align-items: center;}
 .board-table .in-tr.readonly {grid-template-columns: 1fr;}
@@ -381,7 +382,7 @@ Version : v2.0.2
 
 /* 제안통계 차트 */
 .stats-table-wrap {margin: 6rem 0 4rem; overflow-x: auto; overflow-y: hidden;}
-.stats-table {table-layout: fixed; box-sizing: border-box; border-collapse: collapse; width: 100%; min-width: 1820px; margin: 0; font-size: 1.6rem; line-height: 1.2; border-spacing: 0; border-top: none;}
+.stats-table {table-layout: fixed; box-sizing: border-box; border-collapse: collapse; width: 100%; min-width: 1820px; margin: 0; font-size: 1.6rem; line-height: 1.2; border-spacing: 0; border-top: 2px solid #3653B7;}
 .stats-table tr.onedepth {background: #f3f8ff;}
 .stats-table tr.onedepth:hover {background: #ecf6ff; cursor: pointer;}
 .stats-table tr.onedepth.nofolder:hover {background: #f3f8ff; cursor: default;}
@@ -404,17 +405,17 @@ Version : v2.0.2
 .stats-table tr td:first-child {font-weight: 600; border-left: 1px solid #E3E9EF; font-size: 14px; text-align: left; padding: 0 1rem 0 2rem;}
 .stats-table tr td:last-child {text-align: right;}
 .stats-table tr.total td {background: #cddeff; border-right: 1px solid #fff;}
-.stats-table tbody tr:first-child th, .stats-table tbody tr:first-child td {border-top: 2px solid #3653B7;}
+.stats-table tbody tr:first-child th, .stats-table tbody tr:first-child td {border-top:none;}
 
 /* input */
 input, select, button {margin: 0; font-family: inherit; font-size: inherit; color: inherit; height: 4rem; -webkit-appearance: none; -moz-appearance: none; appearance: none;}
 input[type=submit], input[type=button] {cursor: pointer;}
-input[type="text"]:read-only {color: #aaa;}
-input[type="text"][readonly="readonly"] {color: #aaa;}
-input[type="text"]:read-only::placeholder {color: #aaa !important;}
-input[type="text"][readonly="readonly"]::placeholder {color: #aaa !important;}
-input[type="text"]:read-only::-ms-input-placeholder {color: #aaa !important;}
-input[type="text"][readonly="readonly"]::-ms-input-placeholder {color: #aaa !important;}
+input[type="text"]:read-only {color: #d1d2d2;}
+input[type="text"][readonly="readonly"] {color: #d1d2d2;}
+input[type="text"]:read-only::placeholder {color: #a2a2a2 !important;}
+input[type="text"][readonly="readonly"]::placeholder {color: #a2a2a2 !important;}
+input[type="text"]:read-only::-ms-input-placeholder {color: #a2a2a2 !important;}
+input[type="text"][readonly="readonly"]::-ms-input-placeholder {color: #a2a2a2 !important;}
 input {padding: 0.8rem 1.3rem 0.8rem 1.3rem; margin: 0; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border: 1px solid #e9e9ec;}
 input[type="checkbox"], input[type="radio"] {cursor: pointer; vertical-align: middle; width: 2rem; height: 2rem; margin: 0; opacity: .5; -webkit-appearance: auto;}
 input[type="checkbox"]:checked, input[type="radio"]:checked {opacity: 1; accent-color: #242424;}

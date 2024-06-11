@@ -15,6 +15,29 @@
     <script src="../js/html5shiv.js"></script>
     <script src="../js/plugins/swiper.js"></script>
     <title>제안관리시스템</title>
+
+    <style>
+        .main-banner-wrap {position: relative; width: 100%; height: 68px; display: flex; justify-content: center; align-items: center;}
+        .main-banner .banner-content-wrap {max-width: calc(100% - 165px); margin-bottom: 0; margin-right: 20px;}
+        .main-banner .banner-content {width: 50% !important;}
+        .main-banner .banner-paging {position: absolute; right: 42px; top: 25px; color: #49546C;}
+        .main-banner .banner-paging .swiper-pagination-current {color: #c60008; font-weight: 500;}
+        .main-banner .swiper-button-next {position: absolute; cursor: pointer; right: 0; top: 27px; width: 20px; height: 13px; content: ''; display: block; background: url(../images/main/btn_next.svg) no-repeat;}
+        .main-banner .swiper-button-prev {position: absolute; cursor: pointer; left: 0; top: 27px; width: 20px; height: 13px; content: ''; display: block; background: url(../images/main/btn_prev.svg) no-repeat;}
+        @media (min-width: 2020px) {
+            .main-banner-wrap {max-width: 1920px; justify-content: center; margin: 0 auto; position: relative;}
+        }
+        @media (max-width: 2020px) {
+            .main-banner-wrap {max-width: calc(100% - 150px);}
+            .main-banner .banner-content-wrap {max-width: calc(100% - 150px); margin-right: 32px;}
+            .main-banner .banner-title {max-width: calc(100% - 260px);}
+        }
+            @media (max-width: 1440px) {
+            .main-banner-wrap {max-width: 1360px;}
+            .main-banner .banner-content-wrap {max-width: calc(100% - 122px); margin-right: 48px;}
+            .main-banner .banner-title {max-width: calc(100% - 240px);}
+        }
+    </style>
 </head>
 <body class="scroll">
     <!-- 반복영역 건너뛰기 -->
@@ -117,28 +140,29 @@
         <main id="main">
             <!-- 상단 롤링배너:s -->
             <div class="main-banner">
-                <div class="banner-content-wrap swiper-container swiper2">
-                    <div class="banner-content-track swiper-wrapper">
-                        <a href="#none" class="banner-content swiper-slide">
-                            <div class="banner-tag">경진대회</div>
-                            <div class="banner-title"><p class="overtext">2024 한전KDN의 효율적인 업무개선을 위한 우수제안 경진대회</p></div>
-                            <div class="banner-link"><span>제안하러가기<img src="../images/main/ic_arrowright.svg" alt="제안하러가기"></span></div>
-                        </a>
-                        <a href="#none" class="banner-content swiper-slide">
-                            <div class="banner-tag">테마제안</div>
-                            <div class="banner-title"><p class="overtext">2024 한전KDN의 테마제안 공모</p></div>
-                            <div class="banner-link"><span>제안하러가기<img src="../images/main/ic_arrowright.svg" alt="제안하러가기"></span></div>
-                        </a>
-                        <a href="#none" class="banner-content swiper-slide">
-                            <div class="banner-tag">국민제안</div>
-                            <div class="banner-title"><p class="overtext">2024 한전KDN의 효율적인 업무개선을 위한 국민제안을 공모합니다.</p></div>
-                            <div class="banner-link"><span>제안하러가기<img src="../images/main/ic_arrowright.svg" alt="제안하러가기"></span></div>
-                        </a>
-                    </div>
-                </div>
-                <div class="banner-paging">
-                    <a href="#none" class="swiper-button-prev"></a>
-                    <a href="#none" class="swiper-button-next"></a>
+                <div class="main-banner-wrap">
+                    <div class="banner-content-wrap swiper-container swiper2">
+                        <div class="banner-content-track swiper-wrapper">
+                            <a href="#none" class="banner-content swiper-slide">
+                                <div class="banner-tag">경진대회</div>
+                                <div class="banner-title"><p class="overtext">2024 한전KDN의 효율적인 업무개선을 위한 우수제안 경진대회 우수제안 경진대회 우수제안 경진대회</p></div>
+                                <div class="banner-link"><span>제안하러가기<img src="../images/main/ic_arrowright.svg" alt="제안하러가기"></span></div>
+                            </a>
+                            <a href="#none" class="banner-content swiper-slide">
+                                <div class="banner-tag">테마제안</div>
+                                <div class="banner-title"><p class="overtext">2024 한전KDN의 테마제안 공모 테마제안 공모 테마제안 공모 테마제안 공모 테마제안 공모 테마제안 공모</p></div>
+                                <div class="banner-link"><span>제안하러가기<img src="../images/main/ic_arrowright.svg" alt="제안하러가기"></span></div>
+                            </a>
+                            <a href="#none" class="banner-content swiper-slide">
+                                <div class="banner-tag">국민제안</div>
+                                <div class="banner-title"><p class="overtext">2024 한전KDN의 효율적인 업무개선을 위한 국민제안을 공모합니다. 국민제안을 공모합니다. 국민제안을 공모합니다.</p></div>
+                                <div class="banner-link"><span>제안하러가기<img src="../images/main/ic_arrowright.svg" alt="제안하러가기"></span></div>
+                            </a>
+                        </div>
+                        </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="banner-paging"></div>
                 </div>
             </div>
             <!-- 상단 롤링배너:e -->
@@ -518,27 +542,22 @@
     });
 
     var mySwiper = new Swiper('.swiper2', {
-        //direction: 'vertical',
+//             direction: 'vertical',
         mousewheel: true,
+        slidesPerView: 2,
         loop: true,
         autoplay: {
             delay: 5000
         },
         pagination: {
             el: '.banner-paging',
-            type: 'bullets',
+            type: 'fraction',
             clickable: true,
         },
-        // grabCursor: true,
-        effect: "creative",
-        creativeEffect: {
-            prev: {
-                translate: [0, "28px", 0],
-            },
-            next: {
-                translate: [0, 0, 0],
-            },
-        },
+        navigation: {
+            nextEl: ".swiper-button-next", 
+            prevEl: ".swiper-button-prev"
+        }
     });
 </script>
 </html>
